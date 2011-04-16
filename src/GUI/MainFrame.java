@@ -31,8 +31,8 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        tabs = new javax.swing.JTabbedPane();
+        tabGamePlay = new javax.swing.JPanel();
         cmbGameStyle = new javax.swing.JComboBox();
         lblGameStyle = new javax.swing.JLabel();
         lblMaxShots = new javax.swing.JLabel();
@@ -54,6 +54,35 @@ public class MainFrame extends javax.swing.JFrame {
         spnMaxTeamScore = new javax.swing.JSpinner();
         spnGameTime = new javax.swing.JSpinner();
         spnMaxPlayers = new javax.swing.JSpinner();
+        tabMisc = new javax.swing.JPanel();
+        jSlider1 = new javax.swing.JSlider();
+        jLabel1 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        jSpinner2 = new javax.swing.JSpinner();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        tabWorld = new javax.swing.JPanel();
+        cmbMaps = new javax.swing.JComboBox();
+        lblMap = new javax.swing.JLabel();
+        chkRandomWorld = new javax.swing.JCheckBox();
+        chkRandomRotateObjects = new javax.swing.JCheckBox();
+        chkAddTeleporters = new javax.swing.JCheckBox();
+        chkRandomHeightBuildings = new javax.swing.JCheckBox();
+        spnBuildingDensity = new javax.swing.JSpinner();
+        lblBuildingDensity = new javax.swing.JLabel();
+        spnWorldSize = new javax.swing.JSpinner();
+        lblWorldSize = new javax.swing.JLabel();
+        tabServer = new javax.swing.JPanel();
+        tabChat = new javax.swing.JPanel();
+        tabAdmin = new javax.swing.JPanel();
+        passAdminPassword = new javax.swing.JPasswordField();
+        passConfirmAdminPassword = new javax.swing.JPasswordField();
+        lblAdminPassword = new javax.swing.JLabel();
+        lblConfirmAdminPassword = new javax.swing.JLabel();
+        tabFlags = new javax.swing.JPanel();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
         btnPlay = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,9 +90,9 @@ public class MainFrame extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        jTabbedPane1.setAutoscrolls(true);
+        tabs.setAutoscrolls(true);
 
-        jPanel1.setAutoscrolls(true);
+        tabGamePlay.setAutoscrolls(true);
 
         cmbGameStyle.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Free for all", "Capture the flag", "Rabbit based on score", "Rabbit based on killer", "Rabbit random" }));
         cmbGameStyle.addActionListener(new java.awt.event.ActionListener() {
@@ -124,48 +153,44 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnMaxPlayers.setModel(new javax.swing.SpinnerNumberModel(12, 2, 50, 1));
 
-        org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
+        org.jdesktop.layout.GroupLayout tabGamePlayLayout = new org.jdesktop.layout.GroupLayout(tabGamePlay);
+        tabGamePlay.setLayout(tabGamePlayLayout);
+        tabGamePlayLayout.setHorizontalGroup(
+            tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabGamePlayLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel1Layout.createSequentialGroup()
+                .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(tabGamePlayLayout.createSequentialGroup()
                         .add(lblGameStyle)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(cmbGameStyle, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel1Layout.createSequentialGroup()
+                    .add(tabGamePlayLayout.createSequentialGroup()
                         .add(spnMaxShots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(lblMaxShots)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 56, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(lblMaxShots))
+                    .add(tabGamePlayLayout.createSequentialGroup()
                         .add(spnMaxPlayerScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(lblMaxPlayerScore)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 74, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel1Layout.createSequentialGroup()
+                        .add(lblMaxPlayerScore))
+                    .add(tabGamePlayLayout.createSequentialGroup()
                         .add(spnMaxTeamScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(lblMaxTeamScore)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 81, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel1Layout.createSequentialGroup()
+                        .add(lblMaxTeamScore))
+                    .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, tabGamePlayLayout.createSequentialGroup()
                             .add(spnGameTime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(lblGameTime))
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, jPanel1Layout.createSequentialGroup()
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, tabGamePlayLayout.createSequentialGroup()
                             .add(spnMaxTeamKills, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                             .add(lblMaxTeamKills)))
-                    .add(jPanel1Layout.createSequentialGroup()
+                    .add(tabGamePlayLayout.createSequentialGroup()
                         .add(spnMaxPlayers, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(lblMaxPlayers)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 72, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(lblMaxPlayers)))
                 .add(42, 42, 42)
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(chkSpanOnBuilding)
                     .add(chkJumping)
                     .add(chkRicochet)
@@ -175,12 +200,12 @@ public class MainFrame extends javax.swing.JFrame {
                     .add(jCheckBox3))
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
+        tabGamePlayLayout.setVerticalGroup(
+            tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabGamePlayLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel1Layout.createSequentialGroup()
+                .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(tabGamePlayLayout.createSequentialGroup()
                         .add(chkRicochet)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(chkJumping)
@@ -194,38 +219,272 @@ public class MainFrame extends javax.swing.JFrame {
                         .add(chkManuallyStartTimedGame)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jCheckBox3))
-                    .add(jPanel1Layout.createSequentialGroup()
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(tabGamePlayLayout.createSequentialGroup()
+                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(lblGameStyle)
                             .add(cmbGameStyle, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, spnMaxShots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, lblMaxShots))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                             .add(spnMaxTeamKills, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(lblMaxTeamKills))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                             .add(spnMaxPlayerScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(lblMaxPlayerScore))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                             .add(spnMaxTeamScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(lblMaxTeamScore))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                             .add(spnGameTime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(lblGameTime))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                             .add(spnMaxPlayers, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(lblMaxPlayers))))
                 .add(89, 89, 89))
         );
 
-        jTabbedPane1.addTab("Game Play", jPanel1);
+        tabs.addTab("Game Play", tabGamePlay);
+
+        jSlider1.setMajorTickSpacing(1);
+        jSlider1.setMaximum(4);
+        jSlider1.setPaintLabels(true);
+        jSlider1.setPaintTicks(true);
+        jSlider1.setSnapToTicks(true);
+
+        jLabel1.setText("Debug level");
+
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
+
+        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
+
+        jLabel2.setText("Inertia X");
+
+        jLabel3.setText("Inertia Y");
+
+        jCheckBox1.setText("Print score to console");
+
+        org.jdesktop.layout.GroupLayout tabMiscLayout = new org.jdesktop.layout.GroupLayout(tabMisc);
+        tabMisc.setLayout(tabMiscLayout);
+        tabMiscLayout.setHorizontalGroup(
+            tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabMiscLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(tabMiscLayout.createSequentialGroup()
+                        .add(jSlider1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 89, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jLabel1))
+                    .add(tabMiscLayout.createSequentialGroup()
+                        .add(jSpinner1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jLabel2))
+                    .add(tabMiscLayout.createSequentialGroup()
+                        .add(jSpinner2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(jLabel3)))
+                .addContainerGap(355, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabMiscLayout.createSequentialGroup()
+                .addContainerGap(311, Short.MAX_VALUE)
+                .add(jCheckBox1)
+                .add(76, 76, 76))
+        );
+        tabMiscLayout.setVerticalGroup(
+            tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabMiscLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jSlider1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel1))
+                .add(18, 18, 18)
+                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jSpinner1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel2))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jSpinner2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel3))
+                .add(124, 124, 124)
+                .add(jCheckBox1)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        tabs.addTab("Misc", tabMisc);
+
+        lblMap.setText("Map");
+
+        chkRandomWorld.setText("Generate random world");
+
+        chkRandomRotateObjects.setText("Randomly rotate world objects");
+
+        chkAddTeleporters.setText("Add teleporters");
+
+        chkRandomHeightBuildings.setText("Buildings have random height");
+
+        spnBuildingDensity.setModel(new javax.swing.SpinnerNumberModel(5, 0, 10, 1));
+
+        lblBuildingDensity.setText("Building density");
+
+        spnWorldSize.setModel(new javax.swing.SpinnerNumberModel(800, 10, 9990, 10));
+
+        lblWorldSize.setText("World size");
+
+        org.jdesktop.layout.GroupLayout tabWorldLayout = new org.jdesktop.layout.GroupLayout(tabWorld);
+        tabWorld.setLayout(tabWorldLayout);
+        tabWorldLayout.setHorizontalGroup(
+            tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabWorldLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(chkRandomHeightBuildings)
+                    .add(chkAddTeleporters)
+                    .add(chkRandomRotateObjects)
+                    .add(tabWorldLayout.createSequentialGroup()
+                        .add(lblMap)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(cmbMaps, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(chkRandomWorld)
+                    .add(tabWorldLayout.createSequentialGroup()
+                        .add(spnBuildingDensity, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(lblBuildingDensity))
+                    .add(tabWorldLayout.createSequentialGroup()
+                        .add(spnWorldSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(lblWorldSize)))
+                .addContainerGap(289, Short.MAX_VALUE))
+        );
+        tabWorldLayout.setVerticalGroup(
+            tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabWorldLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(lblMap)
+                    .add(cmbMaps, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(chkRandomWorld)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(chkRandomRotateObjects)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(chkAddTeleporters)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(chkRandomHeightBuildings)
+                .add(18, 18, 18)
+                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(spnBuildingDensity, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(lblBuildingDensity))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(spnWorldSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(lblWorldSize))
+                .addContainerGap(103, Short.MAX_VALUE))
+        );
+
+        tabs.addTab("World", tabWorld);
+
+        org.jdesktop.layout.GroupLayout tabServerLayout = new org.jdesktop.layout.GroupLayout(tabServer);
+        tabServer.setLayout(tabServerLayout);
+        tabServerLayout.setHorizontalGroup(
+            tabServerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 556, Short.MAX_VALUE)
+        );
+        tabServerLayout.setVerticalGroup(
+            tabServerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 326, Short.MAX_VALUE)
+        );
+
+        tabs.addTab("Server", tabServer);
+
+        org.jdesktop.layout.GroupLayout tabChatLayout = new org.jdesktop.layout.GroupLayout(tabChat);
+        tabChat.setLayout(tabChatLayout);
+        tabChatLayout.setHorizontalGroup(
+            tabChatLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 556, Short.MAX_VALUE)
+        );
+        tabChatLayout.setVerticalGroup(
+            tabChatLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 326, Short.MAX_VALUE)
+        );
+
+        tabs.addTab("Chat", tabChat);
+
+        passAdminPassword.setText("abcdef");
+        passAdminPassword.setPreferredSize(new java.awt.Dimension(125, 28));
+
+        passConfirmAdminPassword.setText("abcdef");
+        passConfirmAdminPassword.setPreferredSize(new java.awt.Dimension(125, 28));
+
+        lblAdminPassword.setText("Admin password");
+
+        lblConfirmAdminPassword.setText("Confirm admin password");
+
+        org.jdesktop.layout.GroupLayout tabAdminLayout = new org.jdesktop.layout.GroupLayout(tabAdmin);
+        tabAdmin.setLayout(tabAdminLayout);
+        tabAdminLayout.setHorizontalGroup(
+            tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabAdminLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(tabAdminLayout.createSequentialGroup()
+                        .add(passAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(lblAdminPassword))
+                    .add(tabAdminLayout.createSequentialGroup()
+                        .add(passConfirmAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(lblConfirmAdminPassword)))
+                .addContainerGap(239, Short.MAX_VALUE))
+        );
+        tabAdminLayout.setVerticalGroup(
+            tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(tabAdminLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(passAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(lblAdminPassword))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(passConfirmAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(lblConfirmAdminPassword))
+                .addContainerGap(242, Short.MAX_VALUE))
+        );
+
+        tabs.addTab("Admin", tabAdmin);
+
+        jCheckBox5.setText("Flags on buildings");
+
+        jCheckBox6.setText("Antidote flags");
+
+        org.jdesktop.layout.GroupLayout tabFlagsLayout = new org.jdesktop.layout.GroupLayout(tabFlags);
+        tabFlags.setLayout(tabFlagsLayout);
+        tabFlagsLayout.setHorizontalGroup(
+            tabFlagsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabFlagsLayout.createSequentialGroup()
+                .addContainerGap(331, Short.MAX_VALUE)
+                .add(jCheckBox5)
+                .add(77, 77, 77))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabFlagsLayout.createSequentialGroup()
+                .addContainerGap(383, Short.MAX_VALUE)
+                .add(jCheckBox6)
+                .add(52, 52, 52))
+        );
+        tabFlagsLayout.setVerticalGroup(
+            tabFlagsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabFlagsLayout.createSequentialGroup()
+                .addContainerGap(246, Short.MAX_VALUE)
+                .add(jCheckBox6)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jCheckBox5)
+                .add(34, 34, 34))
+        );
+
+        tabs.addTab("Flags", tabFlags);
 
         btnPlay.setText("Play");
 
@@ -234,18 +493,21 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, btnPlay))
+                    .add(layout.createSequentialGroup()
+                        .addContainerGap(519, Short.MAX_VALUE)
+                        .add(btnPlay))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                        .add(17, 17, 17)
+                        .add(tabs, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jTabbedPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 372, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 27, Short.MAX_VALUE)
+                .add(tabs, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 372, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(btnPlay)
                 .addContainerGap())
         );
@@ -278,29 +540,58 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPlay;
+    private javax.swing.JCheckBox chkAddTeleporters;
     private javax.swing.JCheckBox chkDieOnTeamKill;
     private javax.swing.JCheckBox chkDisableBots;
     private javax.swing.JCheckBox chkJumping;
     private javax.swing.JCheckBox chkManuallyStartTimedGame;
+    private javax.swing.JCheckBox chkRandomHeightBuildings;
+    private javax.swing.JCheckBox chkRandomRotateObjects;
+    private javax.swing.JCheckBox chkRandomWorld;
     private javax.swing.JCheckBox chkRicochet;
     private javax.swing.JCheckBox chkSpanOnBuilding;
     private javax.swing.JComboBox cmbGameStyle;
+    private javax.swing.JComboBox cmbMaps;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JSlider jSlider1;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JLabel lblAdminPassword;
+    private javax.swing.JLabel lblBuildingDensity;
+    private javax.swing.JLabel lblConfirmAdminPassword;
     private javax.swing.JLabel lblGameStyle;
     private javax.swing.JLabel lblGameTime;
+    private javax.swing.JLabel lblMap;
     private javax.swing.JLabel lblMaxPlayerScore;
     private javax.swing.JLabel lblMaxPlayers;
     private javax.swing.JLabel lblMaxShots;
     private javax.swing.JLabel lblMaxTeamKills;
     private javax.swing.JLabel lblMaxTeamScore;
+    private javax.swing.JLabel lblWorldSize;
+    private javax.swing.JPasswordField passAdminPassword;
+    private javax.swing.JPasswordField passConfirmAdminPassword;
+    private javax.swing.JSpinner spnBuildingDensity;
     private javax.swing.JSpinner spnGameTime;
     private javax.swing.JSpinner spnMaxPlayerScore;
     private javax.swing.JSpinner spnMaxPlayers;
     private javax.swing.JSpinner spnMaxShots;
     private javax.swing.JSpinner spnMaxTeamKills;
     private javax.swing.JSpinner spnMaxTeamScore;
+    private javax.swing.JSpinner spnWorldSize;
+    private javax.swing.JPanel tabAdmin;
+    private javax.swing.JPanel tabChat;
+    private javax.swing.JPanel tabFlags;
+    private javax.swing.JPanel tabGamePlay;
+    private javax.swing.JPanel tabMisc;
+    private javax.swing.JPanel tabServer;
+    private javax.swing.JPanel tabWorld;
+    private javax.swing.JTabbedPane tabs;
     // End of variables declaration//GEN-END:variables
 
 }
