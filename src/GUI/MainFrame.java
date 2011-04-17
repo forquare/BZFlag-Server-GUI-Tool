@@ -131,91 +131,92 @@ public class MainFrame extends javax.swing.JFrame {
         chkFlagsOnBuildings = new javax.swing.JCheckBox();
         chkAntidoteFlags = new javax.swing.JCheckBox();
         lblGoodFlags = new javax.swing.JLabel();
-        lblRicochetFlag1 = new javax.swing.JLabel();
-        spnRicochetFlag1 = new javax.swing.JSpinner();
-        spnRicochetFlag2 = new javax.swing.JSpinner();
-        lblRicochetFlag2 = new javax.swing.JLabel();
-        spnRicochetFlag3 = new javax.swing.JSpinner();
-        lblRicochetFlag3 = new javax.swing.JLabel();
-        spnRicochetFlag4 = new javax.swing.JSpinner();
-        lblRicochetFlag4 = new javax.swing.JLabel();
-        spnRicochetFlag5 = new javax.swing.JSpinner();
-        lblRicochetFlag5 = new javax.swing.JLabel();
-        spnRicochetFlag6 = new javax.swing.JSpinner();
-        lblRicochetFlag6 = new javax.swing.JLabel();
-        spnRicochetFlag7 = new javax.swing.JSpinner();
-        lblRicochetFlag7 = new javax.swing.JLabel();
-        spnRicochetFlag8 = new javax.swing.JSpinner();
-        lblRicochetFlag8 = new javax.swing.JLabel();
-        spnRicochetFlag9 = new javax.swing.JSpinner();
-        lblRicochetFlag9 = new javax.swing.JLabel();
-        spnRicochetFlag10 = new javax.swing.JSpinner();
-        lblRicochetFlag10 = new javax.swing.JLabel();
-        spnRicochetFlag11 = new javax.swing.JSpinner();
-        lblRicochetFlag11 = new javax.swing.JLabel();
-        spnRicochetFlag12 = new javax.swing.JSpinner();
-        lblRicochetFlag12 = new javax.swing.JLabel();
-        spnRicochetFlag13 = new javax.swing.JSpinner();
-        lblRicochetFlag13 = new javax.swing.JLabel();
-        spnRicochetFlag14 = new javax.swing.JSpinner();
-        lblRicochetFlag14 = new javax.swing.JLabel();
-        spnRicochetFlag15 = new javax.swing.JSpinner();
-        lblRicochetFlag15 = new javax.swing.JLabel();
-        spnRicochetFlag16 = new javax.swing.JSpinner();
-        lblRicochetFlag16 = new javax.swing.JLabel();
-        spnRicochetFlag17 = new javax.swing.JSpinner();
-        lblRicochetFlag17 = new javax.swing.JLabel();
-        spnRicochetFlag18 = new javax.swing.JSpinner();
-        lblRicochetFlag18 = new javax.swing.JLabel();
-        spnRicochetFlag19 = new javax.swing.JSpinner();
-        lblRicochetFlag19 = new javax.swing.JLabel();
-        spnRicochetFlag20 = new javax.swing.JSpinner();
-        lblRicochetFlag20 = new javax.swing.JLabel();
-        spnRicochetFlag21 = new javax.swing.JSpinner();
-        lblRicochetFlag21 = new javax.swing.JLabel();
-        spnRicochetFlag22 = new javax.swing.JSpinner();
-        lblRicochetFlag22 = new javax.swing.JLabel();
-        spnRicochetFlag23 = new javax.swing.JSpinner();
-        lblRicochetFlag23 = new javax.swing.JLabel();
-        chkAllGoodflagsOn = new javax.swing.JCheckBox();
-        lblRicochetFlag24 = new javax.swing.JLabel();
-        spnRicochetFlag24 = new javax.swing.JSpinner();
-        spnRicochetFlag25 = new javax.swing.JSpinner();
-        lblRicochetFlag25 = new javax.swing.JLabel();
-        spnRicochetFlag26 = new javax.swing.JSpinner();
-        lblRicochetFlag26 = new javax.swing.JLabel();
-        spnRicochetFlag27 = new javax.swing.JSpinner();
-        lblRicochetFlag27 = new javax.swing.JLabel();
-        spnRicochetFlag28 = new javax.swing.JSpinner();
-        lblRicochetFlag28 = new javax.swing.JLabel();
-        spnRicochetFlag29 = new javax.swing.JSpinner();
-        lblRicochetFlag29 = new javax.swing.JLabel();
-        spnRicochetFlag30 = new javax.swing.JSpinner();
-        lblRicochetFlag30 = new javax.swing.JLabel();
-        spnRicochetFlag31 = new javax.swing.JSpinner();
-        lblRicochetFlag31 = new javax.swing.JLabel();
-        spnRicochetFlag32 = new javax.swing.JSpinner();
-        lblRicochetFlag32 = new javax.swing.JLabel();
-        spnRicochetFlag33 = new javax.swing.JSpinner();
-        lblRicochetFlag33 = new javax.swing.JLabel();
-        spnRicochetFlag34 = new javax.swing.JSpinner();
-        lblRicochetFlag34 = new javax.swing.JLabel();
-        spnRicochetFlag35 = new javax.swing.JSpinner();
-        lblRicochetFlag35 = new javax.swing.JLabel();
-        spnRicochetFlag36 = new javax.swing.JSpinner();
-        lblRicochetFlag36 = new javax.swing.JLabel();
-        spnRicochetFlag37 = new javax.swing.JSpinner();
-        lblRicochetFlag37 = new javax.swing.JLabel();
+        lblAgility = new javax.swing.JLabel();
+        spnAgility = new javax.swing.JSpinner();
+        spnCloaking = new javax.swing.JSpinner();
+        lblCloaking = new javax.swing.JLabel();
+        spnRapidFire = new javax.swing.JSpinner();
+        lblRapiFire = new javax.swing.JLabel();
+        spnGenocide = new javax.swing.JSpinner();
+        lblGenocide = new javax.swing.JLabel();
+        spnGuidedMissile = new javax.swing.JSpinner();
+        lblGuidedMissile = new javax.swing.JLabel();
+        spnInvisibleBullet = new javax.swing.JSpinner();
+        lblInvisibleBullet = new javax.swing.JLabel();
+        spnLaser = new javax.swing.JSpinner();
+        lblLaser = new javax.swing.JLabel();
+        spnMachineGun = new javax.swing.JSpinner();
+        lblMachineGun = new javax.swing.JLabel();
+        spnNarrow = new javax.swing.JSpinner();
+        lblNarrow = new javax.swing.JLabel();
+        spnOscillationOverthruster = new javax.swing.JSpinner();
+        lblOscillationOverthruster = new javax.swing.JLabel();
+        spnPhantomZone = new javax.swing.JSpinner();
+        lblPhantomZone = new javax.swing.JLabel();
+        spnQuickturn = new javax.swing.JSpinner();
+        lblQuickTurn = new javax.swing.JLabel();
+        spnSuperBullet = new javax.swing.JSpinner();
+        lblSuperBullet = new javax.swing.JLabel();
+        spnSeer = new javax.swing.JSpinner();
+        lblSeer = new javax.swing.JLabel();
+        spnSheild = new javax.swing.JSpinner();
+        lblShield = new javax.swing.JLabel();
+        spnSteamroller = new javax.swing.JSpinner();
+        lblSteamroller = new javax.swing.JLabel();
+        spnStealth = new javax.swing.JSpinner();
+        lblStealth = new javax.swing.JLabel();
+        spnShockwave = new javax.swing.JSpinner();
+        lblShockwave = new javax.swing.JLabel();
+        spnTiny = new javax.swing.JSpinner();
+        lblTiny = new javax.swing.JLabel();
+        spnTheif = new javax.swing.JSpinner();
+        lblTheif = new javax.swing.JLabel();
+        spnUseless = new javax.swing.JSpinner();
+        lblUseless = new javax.swing.JLabel();
+        spnHighSpeed = new javax.swing.JSpinner();
+        lblHighSpeed = new javax.swing.JLabel();
+        spnWings = new javax.swing.JSpinner();
+        lblWings = new javax.swing.JLabel();
+        chkAllBadflagsOn = new javax.swing.JCheckBox();
+        lblBlindness = new javax.swing.JLabel();
+        spnBlindness = new javax.swing.JSpinner();
+        spnBouncy = new javax.swing.JSpinner();
+        lblBouncy = new javax.swing.JLabel();
+        spnColourBlindness = new javax.swing.JSpinner();
+        lblColourBlindness = new javax.swing.JLabel();
+        spnForwardOnly = new javax.swing.JSpinner();
+        lblForwardOnly = new javax.swing.JLabel();
+        spnJamming = new javax.swing.JSpinner();
+        lblJamming = new javax.swing.JLabel();
+        spnLeftTurnOnly = new javax.swing.JSpinner();
+        lblLeftTurnOnly = new javax.swing.JLabel();
+        spnMomentum = new javax.swing.JSpinner();
+        lblMomentum = new javax.swing.JLabel();
+        spnNoJumping = new javax.swing.JSpinner();
+        lblNoJumping = new javax.swing.JLabel();
+        spnObesity = new javax.swing.JSpinner();
+        lblObesity = new javax.swing.JLabel();
+        spnReverseControlls = new javax.swing.JSpinner();
+        ReverseControlls = new javax.swing.JLabel();
+        spnReverseOnly = new javax.swing.JSpinner();
+        lblReverseOnly = new javax.swing.JLabel();
+        spnRightTurnOnly = new javax.swing.JSpinner();
+        lblRightTurnOnly = new javax.swing.JLabel();
+        spnTriggerHappy = new javax.swing.JSpinner();
+        lblTriggerHappy = new javax.swing.JLabel();
+        spnWideAngle = new javax.swing.JSpinner();
+        lblWideAngle = new javax.swing.JLabel();
         lblGoodFlags1 = new javax.swing.JLabel();
-        chkAllGoodflagsOn1 = new javax.swing.JCheckBox();
-        spnRicochetFlag38 = new javax.swing.JSpinner();
-        lblRicochetFlag38 = new javax.swing.JLabel();
-        spnRicochetFlag39 = new javax.swing.JSpinner();
-        lblRicochetFlag39 = new javax.swing.JLabel();
+        chkAllGoodflagsOn = new javax.swing.JCheckBox();
+        spnExtraFlags = new javax.swing.JSpinner();
+        lblExtraFlags = new javax.swing.JLabel();
+        spnNumberOfFlags = new javax.swing.JSpinner();
+        lblNumberOfFlags = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         btnLaunchServer = new javax.swing.JButton();
         btnImportSettings = new javax.swing.JButton();
         btnExportSettings = new javax.swing.JButton();
+        btnKillServer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BZFlag Server GUI");
@@ -545,289 +546,289 @@ public class MainFrame extends javax.swing.JFrame {
         lblGoodFlags.setText("Bad Flags");
         tabFlags.add(lblGoodFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
 
-        lblRicochetFlag1.setText("Agility");
-        tabFlags.add(lblRicochetFlag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
+        lblAgility.setText("Agility");
+        tabFlags.add(lblAgility, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
 
-        spnRicochetFlag1.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag1.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        spnAgility.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnAgility.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnAgility, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
-        spnRicochetFlag2.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag2.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        spnCloaking.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnCloaking.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnCloaking, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        lblRicochetFlag2.setText("Cloaking");
-        tabFlags.add(lblRicochetFlag2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+        lblCloaking.setText("Cloaking");
+        tabFlags.add(lblCloaking, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
 
-        spnRicochetFlag3.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag3.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        spnRapidFire.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRapidFire.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRapidFire, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
-        lblRicochetFlag3.setText("Rapid fire");
-        tabFlags.add(lblRicochetFlag3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
+        lblRapiFire.setText("Rapid fire");
+        tabFlags.add(lblRapiFire, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
 
-        spnRicochetFlag4.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag4.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        spnGenocide.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnGenocide.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnGenocide, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        lblRicochetFlag4.setText("Genocide");
-        tabFlags.add(lblRicochetFlag4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+        lblGenocide.setText("Genocide");
+        tabFlags.add(lblGenocide, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
 
-        spnRicochetFlag5.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag5.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        spnGuidedMissile.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnGuidedMissile.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnGuidedMissile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
-        lblRicochetFlag5.setText("Guided missile");
-        tabFlags.add(lblRicochetFlag5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+        lblGuidedMissile.setText("Guided missile");
+        tabFlags.add(lblGuidedMissile, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
 
-        spnRicochetFlag6.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag6.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        spnInvisibleBullet.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnInvisibleBullet.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnInvisibleBullet, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
-        lblRicochetFlag6.setText("Invisible bullet");
-        tabFlags.add(lblRicochetFlag6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
+        lblInvisibleBullet.setText("Invisible bullet");
+        tabFlags.add(lblInvisibleBullet, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
 
-        spnRicochetFlag7.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag7.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+        spnLaser.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnLaser.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnLaser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        lblRicochetFlag7.setText("Laser");
-        tabFlags.add(lblRicochetFlag7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, -1));
+        lblLaser.setText("Laser");
+        tabFlags.add(lblLaser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, -1));
 
-        spnRicochetFlag8.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag8.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        spnMachineGun.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnMachineGun.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnMachineGun, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
-        lblRicochetFlag8.setText("Machine gun");
-        tabFlags.add(lblRicochetFlag8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+        lblMachineGun.setText("Machine gun");
+        tabFlags.add(lblMachineGun, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
 
-        spnRicochetFlag9.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag9.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        spnNarrow.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnNarrow.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnNarrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
-        lblRicochetFlag9.setText("Narrow");
-        tabFlags.add(lblRicochetFlag9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
+        lblNarrow.setText("Narrow");
+        tabFlags.add(lblNarrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
 
-        spnRicochetFlag10.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag10.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        spnOscillationOverthruster.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnOscillationOverthruster.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnOscillationOverthruster, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
 
-        lblRicochetFlag10.setText("Oscillation Overthruster");
-        tabFlags.add(lblRicochetFlag10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, -1, -1));
+        lblOscillationOverthruster.setText("Oscillation Overthruster");
+        tabFlags.add(lblOscillationOverthruster, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, -1, -1));
 
-        spnRicochetFlag11.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag11.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+        spnPhantomZone.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnPhantomZone.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnPhantomZone, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
-        lblRicochetFlag11.setText("Phantom zone");
-        tabFlags.add(lblRicochetFlag11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, -1, -1));
+        lblPhantomZone.setText("Phantom zone");
+        tabFlags.add(lblPhantomZone, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, -1, -1));
 
-        spnRicochetFlag12.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag12.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
+        spnQuickturn.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnQuickturn.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnQuickturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
 
-        lblRicochetFlag12.setText("Quick turn");
-        tabFlags.add(lblRicochetFlag12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
+        lblQuickTurn.setText("Quick turn");
+        tabFlags.add(lblQuickTurn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
 
-        spnRicochetFlag13.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag13.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+        spnSuperBullet.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnSuperBullet.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnSuperBullet, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
-        lblRicochetFlag13.setText("Super bullet");
-        tabFlags.add(lblRicochetFlag13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+        lblSuperBullet.setText("Super bullet");
+        tabFlags.add(lblSuperBullet, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
 
-        spnRicochetFlag14.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag14.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
+        spnSeer.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnSeer.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnSeer, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
-        lblRicochetFlag14.setText("Seer");
-        tabFlags.add(lblRicochetFlag14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, -1, -1));
+        lblSeer.setText("Seer");
+        tabFlags.add(lblSeer, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, -1, -1));
 
-        spnRicochetFlag15.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag15.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
+        spnSheild.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnSheild.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnSheild, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
 
-        lblRicochetFlag15.setText("Shield");
-        tabFlags.add(lblRicochetFlag15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 470, -1, -1));
+        lblShield.setText("Shield");
+        tabFlags.add(lblShield, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 470, -1, -1));
 
-        spnRicochetFlag16.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag16.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
+        spnSteamroller.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnSteamroller.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnSteamroller, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
-        lblRicochetFlag16.setText("Steamroller");
-        tabFlags.add(lblRicochetFlag16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, -1, -1));
+        lblSteamroller.setText("Steamroller");
+        tabFlags.add(lblSteamroller, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, -1, -1));
 
-        spnRicochetFlag17.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag17.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
+        spnStealth.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnStealth.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnStealth, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
 
-        lblRicochetFlag17.setText("Stealth");
-        tabFlags.add(lblRicochetFlag17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, -1, -1));
+        lblStealth.setText("Stealth");
+        tabFlags.add(lblStealth, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, -1, -1));
 
-        spnRicochetFlag18.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag18.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
+        spnShockwave.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnShockwave.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnShockwave, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
 
-        lblRicochetFlag18.setText("Shockwave");
-        tabFlags.add(lblRicochetFlag18, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
+        lblShockwave.setText("Shockwave");
+        tabFlags.add(lblShockwave, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
 
-        spnRicochetFlag19.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag19.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag19, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
+        spnTiny.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnTiny.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnTiny, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
 
-        lblRicochetFlag19.setText("Tiny");
-        tabFlags.add(lblRicochetFlag19, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
+        lblTiny.setText("Tiny");
+        tabFlags.add(lblTiny, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
 
-        spnRicochetFlag20.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag20.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag20, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
+        spnTheif.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnTheif.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnTheif, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
 
-        lblRicochetFlag20.setText("Theif");
-        tabFlags.add(lblRicochetFlag20, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
+        lblTheif.setText("Theif");
+        tabFlags.add(lblTheif, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
 
-        spnRicochetFlag21.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag21.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag21, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+        spnUseless.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnUseless.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnUseless, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
 
-        lblRicochetFlag21.setText("Useless");
-        tabFlags.add(lblRicochetFlag21, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
+        lblUseless.setText("Useless");
+        tabFlags.add(lblUseless, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
 
-        spnRicochetFlag22.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag22.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag22, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
+        spnHighSpeed.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnHighSpeed.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnHighSpeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
 
-        lblRicochetFlag22.setText("High speed");
-        tabFlags.add(lblRicochetFlag22, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, -1));
+        lblHighSpeed.setText("High speed");
+        tabFlags.add(lblHighSpeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, -1));
 
-        spnRicochetFlag23.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag23.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
+        spnWings.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnWings.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnWings, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
 
-        lblRicochetFlag23.setText("Wings");
-        tabFlags.add(lblRicochetFlag23, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
+        lblWings.setText("Wings");
+        tabFlags.add(lblWings, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
 
-        chkAllGoodflagsOn.setSelected(true);
-        chkAllGoodflagsOn.setText("All bad flags on");
-        tabFlags.add(chkAllGoodflagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
+        chkAllBadflagsOn.setSelected(true);
+        chkAllBadflagsOn.setText("All bad flags on");
+        tabFlags.add(chkAllBadflagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
 
-        lblRicochetFlag24.setText("Blindness");
-        tabFlags.add(lblRicochetFlag24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
+        lblBlindness.setText("Blindness");
+        tabFlags.add(lblBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
 
-        spnRicochetFlag24.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag24.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag24, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, -1, -1));
+        spnBlindness.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnBlindness.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, -1, -1));
 
-        spnRicochetFlag25.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag25.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag25, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
+        spnBouncy.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnBouncy.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnBouncy, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
 
-        lblRicochetFlag25.setText("Bouncy");
-        tabFlags.add(lblRicochetFlag25, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
+        lblBouncy.setText("Bouncy");
+        tabFlags.add(lblBouncy, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
 
-        spnRicochetFlag26.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag26.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag26, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
+        spnColourBlindness.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnColourBlindness.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnColourBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
 
-        lblRicochetFlag26.setText("Colour blindness");
-        tabFlags.add(lblRicochetFlag26, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
+        lblColourBlindness.setText("Colour blindness");
+        tabFlags.add(lblColourBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
 
-        spnRicochetFlag27.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag27.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag27, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
+        spnForwardOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnForwardOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnForwardOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
 
-        lblRicochetFlag27.setText("Forward only");
-        tabFlags.add(lblRicochetFlag27, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
+        lblForwardOnly.setText("Forward only");
+        tabFlags.add(lblForwardOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
 
-        spnRicochetFlag28.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag28.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag28, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
+        spnJamming.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnJamming.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnJamming, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
 
-        lblRicochetFlag28.setText("Jamming");
-        tabFlags.add(lblRicochetFlag28, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, -1, -1));
+        lblJamming.setText("Jamming");
+        tabFlags.add(lblJamming, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, -1, -1));
 
-        spnRicochetFlag29.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag29.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag29, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
+        spnLeftTurnOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnLeftTurnOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnLeftTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
 
-        lblRicochetFlag29.setText("Left turn only");
-        tabFlags.add(lblRicochetFlag29, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
+        lblLeftTurnOnly.setText("Left turn only");
+        tabFlags.add(lblLeftTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
 
-        spnRicochetFlag30.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag30.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag30, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
+        spnMomentum.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnMomentum.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnMomentum, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
 
-        lblRicochetFlag30.setText("Momentum");
-        tabFlags.add(lblRicochetFlag30, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, -1, -1));
+        lblMomentum.setText("Momentum");
+        tabFlags.add(lblMomentum, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, -1, -1));
 
-        spnRicochetFlag31.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag31.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag31, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
+        spnNoJumping.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnNoJumping.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnNoJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
 
-        lblRicochetFlag31.setText("No jumping");
-        tabFlags.add(lblRicochetFlag31, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
+        lblNoJumping.setText("No jumping");
+        tabFlags.add(lblNoJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
 
-        spnRicochetFlag32.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag32.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag32, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, -1, -1));
+        spnObesity.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnObesity.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnObesity, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, -1, -1));
 
-        lblRicochetFlag32.setText("Obesity");
-        tabFlags.add(lblRicochetFlag32, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
+        lblObesity.setText("Obesity");
+        tabFlags.add(lblObesity, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
 
-        spnRicochetFlag33.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag33.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag33, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
+        spnReverseControlls.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnReverseControlls.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
 
-        lblRicochetFlag33.setText("Reverse controlls");
-        tabFlags.add(lblRicochetFlag33, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+        ReverseControlls.setText("Reverse controlls");
+        tabFlags.add(ReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
 
-        spnRicochetFlag34.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag34.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
+        spnReverseOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnReverseOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnReverseOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
 
-        lblRicochetFlag34.setText("Reverse only");
-        tabFlags.add(lblRicochetFlag34, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, -1, -1));
+        lblReverseOnly.setText("Reverse only");
+        tabFlags.add(lblReverseOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, -1, -1));
 
-        spnRicochetFlag35.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag35.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag35, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
+        spnRightTurnOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRightTurnOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRightTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
 
-        lblRicochetFlag35.setText("Right turn only");
-        tabFlags.add(lblRicochetFlag35, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+        lblRightTurnOnly.setText("Right turn only");
+        tabFlags.add(lblRightTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
 
-        spnRicochetFlag36.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag36.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag36, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, -1, -1));
+        spnTriggerHappy.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnTriggerHappy.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnTriggerHappy, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, -1, -1));
 
-        lblRicochetFlag36.setText("Trigger happy");
-        tabFlags.add(lblRicochetFlag36, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, -1, -1));
+        lblTriggerHappy.setText("Trigger happy");
+        tabFlags.add(lblTriggerHappy, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, -1, -1));
 
-        spnRicochetFlag37.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag37.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag37, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, -1));
+        spnWideAngle.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnWideAngle.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnWideAngle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, -1));
 
-        lblRicochetFlag37.setText("Wide angle");
-        tabFlags.add(lblRicochetFlag37, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
+        lblWideAngle.setText("Wide angle");
+        tabFlags.add(lblWideAngle, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
 
         lblGoodFlags1.setText("Good Flags");
         tabFlags.add(lblGoodFlags1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
-        chkAllGoodflagsOn1.setSelected(true);
-        chkAllGoodflagsOn1.setText("All good flags on");
-        tabFlags.add(chkAllGoodflagsOn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+        chkAllGoodflagsOn.setSelected(true);
+        chkAllGoodflagsOn.setText("All good flags on");
+        tabFlags.add(chkAllGoodflagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
 
-        spnRicochetFlag38.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag38.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag38, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, -1, -1));
+        spnExtraFlags.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnExtraFlags.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnExtraFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, -1, -1));
 
-        lblRicochetFlag38.setText("Extra flags");
-        tabFlags.add(lblRicochetFlag38, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
+        lblExtraFlags.setText("Extra flags");
+        tabFlags.add(lblExtraFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
 
-        spnRicochetFlag39.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
-        spnRicochetFlag39.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
-        tabFlags.add(spnRicochetFlag39, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, -1, -1));
+        spnNumberOfFlags.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnNumberOfFlags.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnNumberOfFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, -1, -1));
 
-        lblRicochetFlag39.setText("Number of flags");
-        tabFlags.add(lblRicochetFlag39, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 530, -1, -1));
+        lblNumberOfFlags.setText("Number of flags");
+        tabFlags.add(lblNumberOfFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 530, -1, -1));
         tabFlags.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 160, -1));
 
         tabAllTabs.addTab("Flags", tabFlags);
@@ -835,8 +836,12 @@ public class MainFrame extends javax.swing.JFrame {
         btnLaunchServer.setText("Launch Server");
 
         btnImportSettings.setText("Import settings");
+        btnImportSettings.setEnabled(false);
 
         btnExportSettings.setText("Export settings");
+        btnExportSettings.setEnabled(false);
+
+        btnKillServer.setText("Kill Server");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -844,13 +849,15 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
                 .addContainerGap()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(tabAllTabs, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 620, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(layout.createSequentialGroup()
                         .add(btnImportSettings)
-                        .add(18, 18, 18)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(btnExportSettings)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 190, Short.MAX_VALUE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(btnKillServer)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(btnLaunchServer)))
                 .addContainerGap())
         );
@@ -863,7 +870,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(btnLaunchServer)
                     .add(btnImportSettings)
-                    .add(btnExportSettings))
+                    .add(btnExportSettings)
+                    .add(btnKillServer))
                 .addContainerGap())
         );
 
@@ -882,25 +890,17 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
 }//GEN-LAST:event_cmbGameStyleActionPerformed
 
-    /**
-    * @param args the command line arguments
-    */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ReverseControlls;
     private javax.swing.JButton btnExportSettings;
     private javax.swing.JButton btnImportSettings;
+    private javax.swing.JButton btnKillServer;
     private javax.swing.JButton btnLaunchServer;
     private javax.swing.JCheckBox chkAddTeleporters;
     private javax.swing.JCheckBox chkAddTimestampToLog;
+    private javax.swing.JCheckBox chkAllBadflagsOn;
     private javax.swing.JCheckBox chkAllGoodflagsOn;
-    private javax.swing.JCheckBox chkAllGoodflagsOn1;
     private javax.swing.JCheckBox chkAnnounceTKToAdmins;
     private javax.swing.JCheckBox chkAntidoteFlags;
     private javax.swing.JCheckBox chkAutoTeam;
@@ -931,21 +931,36 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblAdminAnnounceLag;
     private javax.swing.JLabel lblAdminPassword;
+    private javax.swing.JLabel lblAgility;
     private javax.swing.JLabel lblAnnounceLag;
     private javax.swing.JLabel lblAnnounceLag1;
     private javax.swing.JLabel lblBanAddresses;
+    private javax.swing.JLabel lblBlindness;
+    private javax.swing.JLabel lblBouncy;
     private javax.swing.JLabel lblBroadcastMessage;
     private javax.swing.JLabel lblBuildingDensity;
+    private javax.swing.JLabel lblCloaking;
+    private javax.swing.JLabel lblColourBlindness;
     private javax.swing.JLabel lblConfirmAdminPassword;
     private javax.swing.JLabel lblDebugLevel;
+    private javax.swing.JLabel lblExtraFlags;
+    private javax.swing.JLabel lblForwardOnly;
     private javax.swing.JLabel lblGameStyle;
     private javax.swing.JLabel lblGameTime;
+    private javax.swing.JLabel lblGenocide;
     private javax.swing.JLabel lblGoodFlags;
     private javax.swing.JLabel lblGoodFlags1;
+    private javax.swing.JLabel lblGuidedMissile;
+    private javax.swing.JLabel lblHighSpeed;
     private javax.swing.JLabel lblInertiaX;
     private javax.swing.JLabel lblInertiaY;
+    private javax.swing.JLabel lblInvisibleBullet;
+    private javax.swing.JLabel lblJamming;
+    private javax.swing.JLabel lblLaser;
+    private javax.swing.JLabel lblLeftTurnOnly;
     private javax.swing.JLabel lblListeningAddress;
     private javax.swing.JLabel lblListeningPort;
+    private javax.swing.JLabel lblMachineGun;
     private javax.swing.JLabel lblMap;
     private javax.swing.JLabel lblMaxIdleTime;
     private javax.swing.JLabel lblMaxPlayerScore;
@@ -953,113 +968,97 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblMaxShots;
     private javax.swing.JLabel lblMaxTeamKills;
     private javax.swing.JLabel lblMaxTeamScore;
+    private javax.swing.JLabel lblMomentum;
+    private javax.swing.JLabel lblNarrow;
+    private javax.swing.JLabel lblNoJumping;
+    private javax.swing.JLabel lblNumberOfFlags;
+    private javax.swing.JLabel lblObesity;
+    private javax.swing.JLabel lblOscillationOverthruster;
     private javax.swing.JLabel lblPathToBadWords;
     private javax.swing.JLabel lblPathToBanFile;
     private javax.swing.JLabel lblPathToGroupDatabase;
     private javax.swing.JLabel lblPathToPIDFile;
     private javax.swing.JLabel lblPathToPasswordDatabase;
     private javax.swing.JLabel lblPathToUserDatabase;
+    private javax.swing.JLabel lblPhantomZone;
     private javax.swing.JLabel lblPublicAddress;
     private javax.swing.JLabel lblPublicMessage;
+    private javax.swing.JLabel lblQuickTurn;
+    private javax.swing.JLabel lblRapiFire;
     private javax.swing.JLabel lblRegisteredGroupName;
-    private javax.swing.JLabel lblRicochetFlag1;
-    private javax.swing.JLabel lblRicochetFlag10;
-    private javax.swing.JLabel lblRicochetFlag11;
-    private javax.swing.JLabel lblRicochetFlag12;
-    private javax.swing.JLabel lblRicochetFlag13;
-    private javax.swing.JLabel lblRicochetFlag14;
-    private javax.swing.JLabel lblRicochetFlag15;
-    private javax.swing.JLabel lblRicochetFlag16;
-    private javax.swing.JLabel lblRicochetFlag17;
-    private javax.swing.JLabel lblRicochetFlag18;
-    private javax.swing.JLabel lblRicochetFlag19;
-    private javax.swing.JLabel lblRicochetFlag2;
-    private javax.swing.JLabel lblRicochetFlag20;
-    private javax.swing.JLabel lblRicochetFlag21;
-    private javax.swing.JLabel lblRicochetFlag22;
-    private javax.swing.JLabel lblRicochetFlag23;
-    private javax.swing.JLabel lblRicochetFlag24;
-    private javax.swing.JLabel lblRicochetFlag25;
-    private javax.swing.JLabel lblRicochetFlag26;
-    private javax.swing.JLabel lblRicochetFlag27;
-    private javax.swing.JLabel lblRicochetFlag28;
-    private javax.swing.JLabel lblRicochetFlag29;
-    private javax.swing.JLabel lblRicochetFlag3;
-    private javax.swing.JLabel lblRicochetFlag30;
-    private javax.swing.JLabel lblRicochetFlag31;
-    private javax.swing.JLabel lblRicochetFlag32;
-    private javax.swing.JLabel lblRicochetFlag33;
-    private javax.swing.JLabel lblRicochetFlag34;
-    private javax.swing.JLabel lblRicochetFlag35;
-    private javax.swing.JLabel lblRicochetFlag36;
-    private javax.swing.JLabel lblRicochetFlag37;
-    private javax.swing.JLabel lblRicochetFlag38;
-    private javax.swing.JLabel lblRicochetFlag39;
-    private javax.swing.JLabel lblRicochetFlag4;
-    private javax.swing.JLabel lblRicochetFlag5;
-    private javax.swing.JLabel lblRicochetFlag6;
-    private javax.swing.JLabel lblRicochetFlag7;
-    private javax.swing.JLabel lblRicochetFlag8;
-    private javax.swing.JLabel lblRicochetFlag9;
+    private javax.swing.JLabel lblReverseOnly;
+    private javax.swing.JLabel lblRightTurnOnly;
+    private javax.swing.JLabel lblSeer;
+    private javax.swing.JLabel lblShield;
+    private javax.swing.JLabel lblShockwave;
     private javax.swing.JLabel lblSpamTime;
+    private javax.swing.JLabel lblStealth;
+    private javax.swing.JLabel lblSteamroller;
+    private javax.swing.JLabel lblSuperBullet;
+    private javax.swing.JLabel lblTheif;
+    private javax.swing.JLabel lblTiny;
+    private javax.swing.JLabel lblTriggerHappy;
+    private javax.swing.JLabel lblUseless;
     private javax.swing.JLabel lblWelcomeMessage;
+    private javax.swing.JLabel lblWideAngle;
+    private javax.swing.JLabel lblWings;
     private javax.swing.JLabel lblWorldSize;
     private javax.swing.JPasswordField passAdminPassword;
     private javax.swing.JPasswordField passConfirmAdminPassword;
     private javax.swing.JSlider sldDebugLevel;
     private javax.swing.JSpinner spnAdminAnnounceLag;
+    private javax.swing.JSpinner spnAgility;
     private javax.swing.JSpinner spnAnnounceLag;
     private javax.swing.JSpinner spnAnnounceLag1;
+    private javax.swing.JSpinner spnBlindness;
+    private javax.swing.JSpinner spnBouncy;
     private javax.swing.JSpinner spnBuildingDensity;
+    private javax.swing.JSpinner spnCloaking;
+    private javax.swing.JSpinner spnColourBlindness;
+    private javax.swing.JSpinner spnExtraFlags;
+    private javax.swing.JSpinner spnForwardOnly;
     private javax.swing.JSpinner spnGameTime;
+    private javax.swing.JSpinner spnGenocide;
+    private javax.swing.JSpinner spnGuidedMissile;
+    private javax.swing.JSpinner spnHighSpeed;
     private javax.swing.JSpinner spnInertiaX;
     private javax.swing.JSpinner spnInertiaY;
+    private javax.swing.JSpinner spnInvisibleBullet;
+    private javax.swing.JSpinner spnJamming;
+    private javax.swing.JSpinner spnLaser;
+    private javax.swing.JSpinner spnLeftTurnOnly;
+    private javax.swing.JSpinner spnMachineGun;
     private javax.swing.JSpinner spnMaxIdleTime;
     private javax.swing.JSpinner spnMaxPlayerScore;
     private javax.swing.JSpinner spnMaxPlayers;
     private javax.swing.JSpinner spnMaxShots;
     private javax.swing.JSpinner spnMaxTeamKills;
     private javax.swing.JSpinner spnMaxTeamScore;
-    private javax.swing.JSpinner spnRicochetFlag1;
-    private javax.swing.JSpinner spnRicochetFlag10;
-    private javax.swing.JSpinner spnRicochetFlag11;
-    private javax.swing.JSpinner spnRicochetFlag12;
-    private javax.swing.JSpinner spnRicochetFlag13;
-    private javax.swing.JSpinner spnRicochetFlag14;
-    private javax.swing.JSpinner spnRicochetFlag15;
-    private javax.swing.JSpinner spnRicochetFlag16;
-    private javax.swing.JSpinner spnRicochetFlag17;
-    private javax.swing.JSpinner spnRicochetFlag18;
-    private javax.swing.JSpinner spnRicochetFlag19;
-    private javax.swing.JSpinner spnRicochetFlag2;
-    private javax.swing.JSpinner spnRicochetFlag20;
-    private javax.swing.JSpinner spnRicochetFlag21;
-    private javax.swing.JSpinner spnRicochetFlag22;
-    private javax.swing.JSpinner spnRicochetFlag23;
-    private javax.swing.JSpinner spnRicochetFlag24;
-    private javax.swing.JSpinner spnRicochetFlag25;
-    private javax.swing.JSpinner spnRicochetFlag26;
-    private javax.swing.JSpinner spnRicochetFlag27;
-    private javax.swing.JSpinner spnRicochetFlag28;
-    private javax.swing.JSpinner spnRicochetFlag29;
-    private javax.swing.JSpinner spnRicochetFlag3;
-    private javax.swing.JSpinner spnRicochetFlag30;
-    private javax.swing.JSpinner spnRicochetFlag31;
-    private javax.swing.JSpinner spnRicochetFlag32;
-    private javax.swing.JSpinner spnRicochetFlag33;
-    private javax.swing.JSpinner spnRicochetFlag34;
-    private javax.swing.JSpinner spnRicochetFlag35;
-    private javax.swing.JSpinner spnRicochetFlag36;
-    private javax.swing.JSpinner spnRicochetFlag37;
-    private javax.swing.JSpinner spnRicochetFlag38;
-    private javax.swing.JSpinner spnRicochetFlag39;
-    private javax.swing.JSpinner spnRicochetFlag4;
-    private javax.swing.JSpinner spnRicochetFlag5;
-    private javax.swing.JSpinner spnRicochetFlag6;
-    private javax.swing.JSpinner spnRicochetFlag7;
-    private javax.swing.JSpinner spnRicochetFlag8;
-    private javax.swing.JSpinner spnRicochetFlag9;
+    private javax.swing.JSpinner spnMomentum;
+    private javax.swing.JSpinner spnNarrow;
+    private javax.swing.JSpinner spnNoJumping;
+    private javax.swing.JSpinner spnNumberOfFlags;
+    private javax.swing.JSpinner spnObesity;
+    private javax.swing.JSpinner spnOscillationOverthruster;
+    private javax.swing.JSpinner spnPhantomZone;
+    private javax.swing.JSpinner spnQuickturn;
+    private javax.swing.JSpinner spnRapidFire;
+    private javax.swing.JSpinner spnReverseControlls;
+    private javax.swing.JSpinner spnReverseOnly;
+    private javax.swing.JSpinner spnRightTurnOnly;
+    private javax.swing.JSpinner spnSeer;
+    private javax.swing.JSpinner spnSheild;
+    private javax.swing.JSpinner spnShockwave;
     private javax.swing.JSpinner spnSpamTime;
+    private javax.swing.JSpinner spnStealth;
+    private javax.swing.JSpinner spnSteamroller;
+    private javax.swing.JSpinner spnSuperBullet;
+    private javax.swing.JSpinner spnTheif;
+    private javax.swing.JSpinner spnTiny;
+    private javax.swing.JSpinner spnTriggerHappy;
+    private javax.swing.JSpinner spnUseless;
+    private javax.swing.JSpinner spnWideAngle;
+    private javax.swing.JSpinner spnWings;
     private javax.swing.JSpinner spnWorldSize;
     private javax.swing.JTabbedPane tabAllTabs;
     private javax.swing.JPanel tabFlags;

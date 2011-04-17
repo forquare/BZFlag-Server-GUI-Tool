@@ -33,13 +33,15 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="tabAllTabs" alignment="0" min="-2" pref="620" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="1">
                       <Component id="btnImportSettings" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnExportSettings" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="190" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnKillServer" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnLaunchServer" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -57,6 +59,7 @@
                   <Component id="btnLaunchServer" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnImportSettings" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnExportSettings" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnKillServer" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -1128,7 +1131,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag1">
+            <Component class="javax.swing.JLabel" name="lblAgility">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agility"/>
               </Properties>
@@ -1138,7 +1141,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag1">
+            <Component class="javax.swing.JSpinner" name="spnAgility">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1151,7 +1154,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag2">
+            <Component class="javax.swing.JSpinner" name="spnCloaking">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1164,7 +1167,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag2">
+            <Component class="javax.swing.JLabel" name="lblCloaking">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cloaking"/>
               </Properties>
@@ -1174,7 +1177,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag3">
+            <Component class="javax.swing.JSpinner" name="spnRapidFire">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1187,7 +1190,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag3">
+            <Component class="javax.swing.JLabel" name="lblRapiFire">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rapid fire"/>
               </Properties>
@@ -1197,7 +1200,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag4">
+            <Component class="javax.swing.JSpinner" name="spnGenocide">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1210,7 +1213,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag4">
+            <Component class="javax.swing.JLabel" name="lblGenocide">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Genocide"/>
               </Properties>
@@ -1220,7 +1223,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag5">
+            <Component class="javax.swing.JSpinner" name="spnGuidedMissile">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1233,7 +1236,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag5">
+            <Component class="javax.swing.JLabel" name="lblGuidedMissile">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guided missile"/>
               </Properties>
@@ -1243,7 +1246,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag6">
+            <Component class="javax.swing.JSpinner" name="spnInvisibleBullet">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1256,7 +1259,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag6">
+            <Component class="javax.swing.JLabel" name="lblInvisibleBullet">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Invisible bullet"/>
               </Properties>
@@ -1266,7 +1269,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag7">
+            <Component class="javax.swing.JSpinner" name="spnLaser">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1279,7 +1282,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag7">
+            <Component class="javax.swing.JLabel" name="lblLaser">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Laser"/>
               </Properties>
@@ -1289,7 +1292,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag8">
+            <Component class="javax.swing.JSpinner" name="spnMachineGun">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1302,7 +1305,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag8">
+            <Component class="javax.swing.JLabel" name="lblMachineGun">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Machine gun"/>
               </Properties>
@@ -1312,7 +1315,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag9">
+            <Component class="javax.swing.JSpinner" name="spnNarrow">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1325,7 +1328,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag9">
+            <Component class="javax.swing.JLabel" name="lblNarrow">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Narrow"/>
               </Properties>
@@ -1335,7 +1338,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag10">
+            <Component class="javax.swing.JSpinner" name="spnOscillationOverthruster">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1348,7 +1351,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag10">
+            <Component class="javax.swing.JLabel" name="lblOscillationOverthruster">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Oscillation Overthruster"/>
               </Properties>
@@ -1358,7 +1361,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag11">
+            <Component class="javax.swing.JSpinner" name="spnPhantomZone">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1371,7 +1374,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag11">
+            <Component class="javax.swing.JLabel" name="lblPhantomZone">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Phantom zone"/>
               </Properties>
@@ -1381,7 +1384,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag12">
+            <Component class="javax.swing.JSpinner" name="spnQuickturn">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1394,7 +1397,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag12">
+            <Component class="javax.swing.JLabel" name="lblQuickTurn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Quick turn"/>
               </Properties>
@@ -1404,7 +1407,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag13">
+            <Component class="javax.swing.JSpinner" name="spnSuperBullet">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1417,7 +1420,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag13">
+            <Component class="javax.swing.JLabel" name="lblSuperBullet">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Super bullet"/>
               </Properties>
@@ -1427,7 +1430,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag14">
+            <Component class="javax.swing.JSpinner" name="spnSeer">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1440,7 +1443,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag14">
+            <Component class="javax.swing.JLabel" name="lblSeer">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Seer"/>
               </Properties>
@@ -1450,7 +1453,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag15">
+            <Component class="javax.swing.JSpinner" name="spnSheild">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1463,7 +1466,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag15">
+            <Component class="javax.swing.JLabel" name="lblShield">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Shield"/>
               </Properties>
@@ -1473,7 +1476,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag16">
+            <Component class="javax.swing.JSpinner" name="spnSteamroller">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1486,7 +1489,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag16">
+            <Component class="javax.swing.JLabel" name="lblSteamroller">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Steamroller"/>
               </Properties>
@@ -1496,7 +1499,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag17">
+            <Component class="javax.swing.JSpinner" name="spnStealth">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1509,7 +1512,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag17">
+            <Component class="javax.swing.JLabel" name="lblStealth">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Stealth"/>
               </Properties>
@@ -1519,7 +1522,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag18">
+            <Component class="javax.swing.JSpinner" name="spnShockwave">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1532,7 +1535,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag18">
+            <Component class="javax.swing.JLabel" name="lblShockwave">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Shockwave"/>
               </Properties>
@@ -1542,7 +1545,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag19">
+            <Component class="javax.swing.JSpinner" name="spnTiny">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1555,7 +1558,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag19">
+            <Component class="javax.swing.JLabel" name="lblTiny">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Tiny"/>
               </Properties>
@@ -1565,7 +1568,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag20">
+            <Component class="javax.swing.JSpinner" name="spnTheif">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1578,7 +1581,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag20">
+            <Component class="javax.swing.JLabel" name="lblTheif">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Theif"/>
               </Properties>
@@ -1588,7 +1591,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag21">
+            <Component class="javax.swing.JSpinner" name="spnUseless">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1601,7 +1604,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag21">
+            <Component class="javax.swing.JLabel" name="lblUseless">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Useless"/>
               </Properties>
@@ -1611,7 +1614,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag22">
+            <Component class="javax.swing.JSpinner" name="spnHighSpeed">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1624,7 +1627,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag22">
+            <Component class="javax.swing.JLabel" name="lblHighSpeed">
               <Properties>
                 <Property name="text" type="java.lang.String" value="High speed"/>
               </Properties>
@@ -1634,7 +1637,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag23">
+            <Component class="javax.swing.JSpinner" name="spnWings">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1647,7 +1650,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag23">
+            <Component class="javax.swing.JLabel" name="lblWings">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wings"/>
               </Properties>
@@ -1657,7 +1660,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkAllGoodflagsOn">
+            <Component class="javax.swing.JCheckBox" name="chkAllBadflagsOn">
               <Properties>
                 <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="All bad flags on"/>
@@ -1668,7 +1671,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag24">
+            <Component class="javax.swing.JLabel" name="lblBlindness">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Blindness"/>
               </Properties>
@@ -1678,7 +1681,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag24">
+            <Component class="javax.swing.JSpinner" name="spnBlindness">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1691,7 +1694,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag25">
+            <Component class="javax.swing.JSpinner" name="spnBouncy">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1704,7 +1707,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag25">
+            <Component class="javax.swing.JLabel" name="lblBouncy">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bouncy"/>
               </Properties>
@@ -1714,7 +1717,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag26">
+            <Component class="javax.swing.JSpinner" name="spnColourBlindness">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1727,7 +1730,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag26">
+            <Component class="javax.swing.JLabel" name="lblColourBlindness">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Colour blindness"/>
               </Properties>
@@ -1737,7 +1740,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag27">
+            <Component class="javax.swing.JSpinner" name="spnForwardOnly">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1750,7 +1753,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag27">
+            <Component class="javax.swing.JLabel" name="lblForwardOnly">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Forward only"/>
               </Properties>
@@ -1760,7 +1763,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag28">
+            <Component class="javax.swing.JSpinner" name="spnJamming">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1773,7 +1776,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag28">
+            <Component class="javax.swing.JLabel" name="lblJamming">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Jamming"/>
               </Properties>
@@ -1783,7 +1786,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag29">
+            <Component class="javax.swing.JSpinner" name="spnLeftTurnOnly">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1796,7 +1799,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag29">
+            <Component class="javax.swing.JLabel" name="lblLeftTurnOnly">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Left turn only"/>
               </Properties>
@@ -1806,7 +1809,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag30">
+            <Component class="javax.swing.JSpinner" name="spnMomentum">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1819,7 +1822,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag30">
+            <Component class="javax.swing.JLabel" name="lblMomentum">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Momentum"/>
               </Properties>
@@ -1829,7 +1832,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag31">
+            <Component class="javax.swing.JSpinner" name="spnNoJumping">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1842,7 +1845,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag31">
+            <Component class="javax.swing.JLabel" name="lblNoJumping">
               <Properties>
                 <Property name="text" type="java.lang.String" value="No jumping"/>
               </Properties>
@@ -1852,7 +1855,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag32">
+            <Component class="javax.swing.JSpinner" name="spnObesity">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1865,7 +1868,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag32">
+            <Component class="javax.swing.JLabel" name="lblObesity">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Obesity"/>
               </Properties>
@@ -1875,7 +1878,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag33">
+            <Component class="javax.swing.JSpinner" name="spnReverseControlls">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1888,7 +1891,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag33">
+            <Component class="javax.swing.JLabel" name="ReverseControlls">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reverse controlls"/>
               </Properties>
@@ -1898,7 +1901,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag34">
+            <Component class="javax.swing.JSpinner" name="spnReverseOnly">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1911,7 +1914,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag34">
+            <Component class="javax.swing.JLabel" name="lblReverseOnly">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reverse only"/>
               </Properties>
@@ -1921,7 +1924,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag35">
+            <Component class="javax.swing.JSpinner" name="spnRightTurnOnly">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1934,7 +1937,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag35">
+            <Component class="javax.swing.JLabel" name="lblRightTurnOnly">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Right turn only"/>
               </Properties>
@@ -1944,7 +1947,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag36">
+            <Component class="javax.swing.JSpinner" name="spnTriggerHappy">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1957,7 +1960,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag36">
+            <Component class="javax.swing.JLabel" name="lblTriggerHappy">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Trigger happy"/>
               </Properties>
@@ -1967,7 +1970,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag37">
+            <Component class="javax.swing.JSpinner" name="spnWideAngle">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -1980,7 +1983,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag37">
+            <Component class="javax.swing.JLabel" name="lblWideAngle">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wide angle"/>
               </Properties>
@@ -2000,7 +2003,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkAllGoodflagsOn1">
+            <Component class="javax.swing.JCheckBox" name="chkAllGoodflagsOn">
               <Properties>
                 <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="All good flags on"/>
@@ -2011,7 +2014,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag38">
+            <Component class="javax.swing.JSpinner" name="spnExtraFlags">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -2024,7 +2027,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag38">
+            <Component class="javax.swing.JLabel" name="lblExtraFlags">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Extra flags"/>
               </Properties>
@@ -2034,7 +2037,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnRicochetFlag39">
+            <Component class="javax.swing.JSpinner" name="spnNumberOfFlags">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="100" minimum="-1" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -2047,7 +2050,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblRicochetFlag39">
+            <Component class="javax.swing.JLabel" name="lblNumberOfFlags">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Number of flags"/>
               </Properties>
@@ -2076,11 +2079,18 @@
     <Component class="javax.swing.JButton" name="btnImportSettings">
       <Properties>
         <Property name="text" type="java.lang.String" value="Import settings"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnExportSettings">
       <Properties>
         <Property name="text" type="java.lang.String" value="Export settings"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnKillServer">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kill Server"/>
       </Properties>
     </Component>
   </SubComponents>
