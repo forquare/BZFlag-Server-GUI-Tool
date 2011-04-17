@@ -13,10 +13,26 @@ import GUI.MainFrame;
  */
 public class Controller {
 
-    MainFrame gui;
+    private MainFrame gui;
 
     public Controller(MainFrame mf){
         gui = mf;
+    }
+
+    public void launchServer(){
+        
+    }
+
+    public void killServer(){
+
+    }
+
+    public void importSettings(){
+
+    }
+
+    public void exportSettings(){
+
     }
 
 }

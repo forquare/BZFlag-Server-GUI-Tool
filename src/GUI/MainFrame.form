@@ -397,7 +397,7 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="cmbMaps">
               <Properties>
-                <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;This list is generated from the contents of a directory. &lt;br /&gt;&#xa;It will look for map or bzw files in the following directories:&#xa;&lt;ul&gt;&#xa;&lt;li&gt;C:\Program Files\bzflag*\maps - On a Windows based system&lt;/li&gt;&#xa;&lt;li&gt;/opt/local/lib/bzflag/maps - On a UNIX based system&lt;/li&gt;&#xa;&lt;li&gt;In a directory called &quot;.maps&quot; in the home directory of the current user - All systems&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+                <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;This list is generated from the contents of a directory. &lt;br /&gt;&#xa;It will look for map or bzw files in the following directories:&#xa;&lt;ul&gt;&#xa;&lt;li&gt;On Windows&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;C:\Program Files\BZFlag*\maps&lt;/li&gt;&#xa;&lt;li&gt;Path\to\user\home\maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&#xa;&lt;li&gt;On UNIX&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;/opt/local/lib/bzflag/maps&lt;/li&gt;&#xa;&lt;li&gt;~/.maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1025,11 +1025,15 @@
               <Properties>
                 <Property name="majorTickSpacing" type="int" value="1"/>
                 <Property name="maximum" type="int" value="4"/>
+                <Property name="minimum" type="int" value="1"/>
                 <Property name="paintLabels" type="boolean" value="true"/>
                 <Property name="paintTicks" type="boolean" value="true"/>
                 <Property name="snapToTicks" type="boolean" value="true"/>
                 <Property name="value" type="int" value="2"/>
               </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sldDebugLevelStateChanged"/>
+              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="360" y="450" width="89" height="-1"/>

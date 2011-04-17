@@ -348,7 +348,7 @@ public class MainFrame extends javax.swing.JFrame {
         chkRandomWorld.setText("Generate random world");
         tabGamePlay.add(chkRandomWorld, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
-        cmbMaps.setToolTipText("<html>\nThis list is generated from the contents of a directory. <br />\nIt will look for map or bzw files in the following directories:\n<ul>\n<li>C:\\Program Files\\bzflag*\\maps - On a Windows based system</li>\n<li>/opt/local/lib/bzflag/maps - On a UNIX based system</li>\n<li>In a directory called \".maps\" in the home directory of the current user - All systems</li>\n</ul>\n</html>");
+        cmbMaps.setToolTipText("<html>\nThis list is generated from the contents of a directory. <br />\nIt will look for map or bzw files in the following directories:\n<ul>\n<li>On Windows</li>\n<ul>\n<li>C:\\Program Files\\BZFlag*\\maps</li>\n<li>Path\\to\\user\\home\\maps</li>\n</ul>\n\n<li>On UNIX</li>\n<ul>\n<li>/opt/local/lib/bzflag/maps</li>\n<li>~/.maps</li>\n</ul>\n</ul>\n</html>");
         tabGamePlay.add(cmbMaps, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, -1));
 
         chkRandomHeightBuildings.setText("Buildings have random height");
@@ -537,10 +537,16 @@ public class MainFrame extends javax.swing.JFrame {
 
         sldDebugLevel.setMajorTickSpacing(1);
         sldDebugLevel.setMaximum(4);
+        sldDebugLevel.setMinimum(1);
         sldDebugLevel.setPaintLabels(true);
         sldDebugLevel.setPaintTicks(true);
         sldDebugLevel.setSnapToTicks(true);
         sldDebugLevel.setValue(2);
+        sldDebugLevel.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sldDebugLevelStateChanged(evt);
+            }
+        });
         tabServer.add(sldDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 89, -1));
 
         lblDebugLevel.setText("Debug level");
@@ -1402,8 +1408,6 @@ public class MainFrame extends javax.swing.JFrame {
 
 
 
-
-
     private void chkJumpingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkJumpingActionPerformed
         if(Integer.parseInt(spnJumpingFlag.getValue().toString()) >= 0 && chkJumping.isSelected()){
             spnJumpingFlag.setValue(-1);
@@ -1519,20 +1523,29 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_chkAllBadFlagsOnActionPerformed
 
     private void btnKillServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKillServerActionPerformed
-        JOptionPane.showMessageDialog(null, "I don't do anything yet!");
+        JOptionPane.showMessageDialog(null, "I will kill the server");
     }//GEN-LAST:event_btnKillServerActionPerformed
 
     private void btnExportSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportSettingsActionPerformed
-        JOptionPane.showMessageDialog(null, "I don't do anything yet!");
+        JOptionPane.showMessageDialog(null, "I will export your settings");
     }//GEN-LAST:event_btnExportSettingsActionPerformed
 
     private void btnImportSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportSettingsActionPerformed
-        JOptionPane.showMessageDialog(null, "I don't do anything yet!");
+        JOptionPane.showMessageDialog(null, "I will import your settings");
     }//GEN-LAST:event_btnImportSettingsActionPerformed
 
     private void btnLaunchServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaunchServerActionPerformed
-        
+        JOptionPane.showMessageDialog(null, "I will launch the server");
+        if(passAdminPassword.getPassword().equals(passConfirmAdminPassword.getPassword())){
+            //Launch server
+        }else{
+            JOptionPane.showMessageDialog(null, "Admin passwords don't match!");
+        }
     }//GEN-LAST:event_btnLaunchServerActionPerformed
+
+    private void sldDebugLevelStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDebugLevelStateChanged
+        
+    }//GEN-LAST:event_sldDebugLevelStateChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
