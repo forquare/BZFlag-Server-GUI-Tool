@@ -10,16 +10,34 @@
  */
 
 package GUI;
-
+import GUI.MainFrame;
+import Main.Controller;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JSlider;
+import javax.swing.JSpinner;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 /**
  *
  * @author benlavery
  */
 public class MainFrame extends javax.swing.JFrame {
 
+    private Controller controller;
+
     /** Creates new form MainFrame */
     public MainFrame() {
         initComponents();
+    }
+
+    public void setController(Controller c){
+        controller = c;
     }
 
     /** This method is called from within the constructor to
@@ -177,7 +195,7 @@ public class MainFrame extends javax.swing.JFrame {
         lblHighSpeed = new javax.swing.JLabel();
         spnWings = new javax.swing.JSpinner();
         lblWings = new javax.swing.JLabel();
-        chkAllBadflagsOn = new javax.swing.JCheckBox();
+        chkAllBadFlagsOn = new javax.swing.JCheckBox();
         lblBlindness = new javax.swing.JLabel();
         spnBlindness = new javax.swing.JSpinner();
         spnBouncy = new javax.swing.JSpinner();
@@ -197,7 +215,7 @@ public class MainFrame extends javax.swing.JFrame {
         spnObesity = new javax.swing.JSpinner();
         lblObesity = new javax.swing.JLabel();
         spnReverseControlls = new javax.swing.JSpinner();
-        ReverseControlls = new javax.swing.JLabel();
+        lblReverseControlls = new javax.swing.JLabel();
         spnReverseOnly = new javax.swing.JSpinner();
         lblReverseOnly = new javax.swing.JLabel();
         spnRightTurnOnly = new javax.swing.JSpinner();
@@ -207,12 +225,16 @@ public class MainFrame extends javax.swing.JFrame {
         spnWideAngle = new javax.swing.JSpinner();
         lblWideAngle = new javax.swing.JLabel();
         lblGoodFlags1 = new javax.swing.JLabel();
-        chkAllGoodflagsOn = new javax.swing.JCheckBox();
+        chkAllGoodFlagsOn = new javax.swing.JCheckBox();
         spnExtraFlags = new javax.swing.JSpinner();
         lblExtraFlags = new javax.swing.JLabel();
         spnNumberOfFlags = new javax.swing.JSpinner();
         lblNumberOfFlags = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        spnJumpingFlag = new javax.swing.JSpinner();
+        lblJumpingFlag = new javax.swing.JLabel();
+        spnRicochetingFlag = new javax.swing.JSpinner();
+        lblRicochetingFlag = new javax.swing.JLabel();
         btnLaunchServer = new javax.swing.JButton();
         btnImportSettings = new javax.swing.JButton();
         btnExportSettings = new javax.swing.JButton();
@@ -325,6 +347,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         chkRandomWorld.setText("Generate random world");
         tabGamePlay.add(chkRandomWorld, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
+
+        cmbMaps.setToolTipText("<html>\nThis list is generated from the contents of a directory. <br />\nIt will look for map or bzw files in the following directories:\n<ul>\n<li>C:\\Program Files\\bzflag*\\maps - On a Windows based system</li>\n<li>/opt/local/lib/bzflag/maps - On a UNIX based system</li>\n<li>In a directory called \".maps\" in the home directory of the current user - All systems</li>\n</ul>\n</html>");
         tabGamePlay.add(cmbMaps, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, -1));
 
         chkRandomHeightBuildings.setText("Buildings have random height");
@@ -516,6 +540,7 @@ public class MainFrame extends javax.swing.JFrame {
         sldDebugLevel.setPaintLabels(true);
         sldDebugLevel.setPaintTicks(true);
         sldDebugLevel.setSnapToTicks(true);
+        sldDebugLevel.setValue(2);
         tabServer.add(sldDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 89, -1));
 
         lblDebugLevel.setText("Debug level");
@@ -551,10 +576,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnAgility.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnAgility.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnAgility.setEnabled(false);
         tabFlags.add(spnAgility, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         spnCloaking.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnCloaking.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnCloaking.setEnabled(false);
         tabFlags.add(spnCloaking, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         lblCloaking.setText("Cloaking");
@@ -562,6 +589,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnRapidFire.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnRapidFire.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnRapidFire.setEnabled(false);
         tabFlags.add(spnRapidFire, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         lblRapiFire.setText("Rapid fire");
@@ -569,6 +597,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnGenocide.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnGenocide.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnGenocide.setEnabled(false);
         tabFlags.add(spnGenocide, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         lblGenocide.setText("Genocide");
@@ -576,6 +605,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnGuidedMissile.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnGuidedMissile.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnGuidedMissile.setEnabled(false);
         tabFlags.add(spnGuidedMissile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         lblGuidedMissile.setText("Guided missile");
@@ -583,6 +613,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnInvisibleBullet.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnInvisibleBullet.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnInvisibleBullet.setEnabled(false);
         tabFlags.add(spnInvisibleBullet, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         lblInvisibleBullet.setText("Invisible bullet");
@@ -590,6 +621,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnLaser.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnLaser.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnLaser.setEnabled(false);
         tabFlags.add(spnLaser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         lblLaser.setText("Laser");
@@ -597,6 +629,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnMachineGun.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnMachineGun.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnMachineGun.setEnabled(false);
         tabFlags.add(spnMachineGun, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         lblMachineGun.setText("Machine gun");
@@ -604,6 +637,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnNarrow.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnNarrow.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnNarrow.setEnabled(false);
         tabFlags.add(spnNarrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
         lblNarrow.setText("Narrow");
@@ -611,6 +645,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnOscillationOverthruster.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnOscillationOverthruster.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnOscillationOverthruster.setEnabled(false);
         tabFlags.add(spnOscillationOverthruster, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
 
         lblOscillationOverthruster.setText("Oscillation Overthruster");
@@ -618,6 +653,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnPhantomZone.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnPhantomZone.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnPhantomZone.setEnabled(false);
         tabFlags.add(spnPhantomZone, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
         lblPhantomZone.setText("Phantom zone");
@@ -625,6 +661,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnQuickturn.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnQuickturn.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnQuickturn.setEnabled(false);
         tabFlags.add(spnQuickturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
 
         lblQuickTurn.setText("Quick turn");
@@ -632,6 +669,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnSuperBullet.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnSuperBullet.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnSuperBullet.setEnabled(false);
         tabFlags.add(spnSuperBullet, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
         lblSuperBullet.setText("Super bullet");
@@ -639,6 +677,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnSeer.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnSeer.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnSeer.setEnabled(false);
         tabFlags.add(spnSeer, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
 
         lblSeer.setText("Seer");
@@ -646,6 +685,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnSheild.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnSheild.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnSheild.setEnabled(false);
         tabFlags.add(spnSheild, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
 
         lblShield.setText("Shield");
@@ -653,6 +693,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnSteamroller.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnSteamroller.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnSteamroller.setEnabled(false);
         tabFlags.add(spnSteamroller, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
         lblSteamroller.setText("Steamroller");
@@ -660,6 +701,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnStealth.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnStealth.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnStealth.setEnabled(false);
         tabFlags.add(spnStealth, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
 
         lblStealth.setText("Stealth");
@@ -667,6 +709,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnShockwave.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnShockwave.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnShockwave.setEnabled(false);
         tabFlags.add(spnShockwave, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
 
         lblShockwave.setText("Shockwave");
@@ -674,6 +717,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnTiny.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnTiny.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnTiny.setEnabled(false);
         tabFlags.add(spnTiny, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
 
         lblTiny.setText("Tiny");
@@ -681,6 +725,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnTheif.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnTheif.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnTheif.setEnabled(false);
         tabFlags.add(spnTheif, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
 
         lblTheif.setText("Theif");
@@ -688,6 +733,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnUseless.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnUseless.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnUseless.setEnabled(false);
         tabFlags.add(spnUseless, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
 
         lblUseless.setText("Useless");
@@ -695,6 +741,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnHighSpeed.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnHighSpeed.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnHighSpeed.setEnabled(false);
         tabFlags.add(spnHighSpeed, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
 
         lblHighSpeed.setText("High speed");
@@ -702,24 +749,32 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnWings.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnWings.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnWings.setEnabled(false);
         tabFlags.add(spnWings, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
 
         lblWings.setText("Wings");
         tabFlags.add(lblWings, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
 
-        chkAllBadflagsOn.setSelected(true);
-        chkAllBadflagsOn.setText("All bad flags on");
-        tabFlags.add(chkAllBadflagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
+        chkAllBadFlagsOn.setSelected(true);
+        chkAllBadFlagsOn.setText("All bad flags on");
+        chkAllBadFlagsOn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkAllBadFlagsOnActionPerformed(evt);
+            }
+        });
+        tabFlags.add(chkAllBadFlagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
 
         lblBlindness.setText("Blindness");
         tabFlags.add(lblBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
 
         spnBlindness.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnBlindness.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnBlindness.setEnabled(false);
         tabFlags.add(spnBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, -1, -1));
 
         spnBouncy.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnBouncy.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnBouncy.setEnabled(false);
         tabFlags.add(spnBouncy, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
 
         lblBouncy.setText("Bouncy");
@@ -727,6 +782,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnColourBlindness.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnColourBlindness.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnColourBlindness.setEnabled(false);
         tabFlags.add(spnColourBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
 
         lblColourBlindness.setText("Colour blindness");
@@ -734,6 +790,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnForwardOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnForwardOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnForwardOnly.setEnabled(false);
         tabFlags.add(spnForwardOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
 
         lblForwardOnly.setText("Forward only");
@@ -741,6 +798,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnJamming.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnJamming.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnJamming.setEnabled(false);
         tabFlags.add(spnJamming, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
 
         lblJamming.setText("Jamming");
@@ -748,6 +806,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnLeftTurnOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnLeftTurnOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnLeftTurnOnly.setEnabled(false);
         tabFlags.add(spnLeftTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
 
         lblLeftTurnOnly.setText("Left turn only");
@@ -755,6 +814,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnMomentum.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnMomentum.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnMomentum.setEnabled(false);
         tabFlags.add(spnMomentum, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
 
         lblMomentum.setText("Momentum");
@@ -762,6 +822,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnNoJumping.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnNoJumping.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnNoJumping.setEnabled(false);
         tabFlags.add(spnNoJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
 
         lblNoJumping.setText("No jumping");
@@ -769,6 +830,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnObesity.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnObesity.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnObesity.setEnabled(false);
         tabFlags.add(spnObesity, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, -1, -1));
 
         lblObesity.setText("Obesity");
@@ -776,13 +838,15 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnReverseControlls.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnReverseControlls.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnReverseControlls.setEnabled(false);
         tabFlags.add(spnReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
 
-        ReverseControlls.setText("Reverse controlls");
-        tabFlags.add(ReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+        lblReverseControlls.setText("Reverse controlls");
+        tabFlags.add(lblReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
 
         spnReverseOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnReverseOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnReverseOnly.setEnabled(false);
         tabFlags.add(spnReverseOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
 
         lblReverseOnly.setText("Reverse only");
@@ -790,6 +854,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnRightTurnOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnRightTurnOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnRightTurnOnly.setEnabled(false);
         tabFlags.add(spnRightTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
 
         lblRightTurnOnly.setText("Right turn only");
@@ -797,6 +862,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnTriggerHappy.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnTriggerHappy.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnTriggerHappy.setEnabled(false);
         tabFlags.add(spnTriggerHappy, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, -1, -1));
 
         lblTriggerHappy.setText("Trigger happy");
@@ -804,6 +870,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         spnWideAngle.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnWideAngle.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnWideAngle.setEnabled(false);
         tabFlags.add(spnWideAngle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, -1));
 
         lblWideAngle.setText("Wide angle");
@@ -812,9 +879,14 @@ public class MainFrame extends javax.swing.JFrame {
         lblGoodFlags1.setText("Good Flags");
         tabFlags.add(lblGoodFlags1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
-        chkAllGoodflagsOn.setSelected(true);
-        chkAllGoodflagsOn.setText("All good flags on");
-        tabFlags.add(chkAllGoodflagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+        chkAllGoodFlagsOn.setSelected(true);
+        chkAllGoodFlagsOn.setText("All good flags on");
+        chkAllGoodFlagsOn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkAllGoodFlagsOnActionPerformed(evt);
+            }
+        });
+        tabFlags.add(chkAllGoodFlagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, -1, -1));
 
         spnExtraFlags.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnExtraFlags.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
@@ -823,7 +895,7 @@ public class MainFrame extends javax.swing.JFrame {
         lblExtraFlags.setText("Extra flags");
         tabFlags.add(lblExtraFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
 
-        spnNumberOfFlags.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnNumberOfFlags.setModel(new javax.swing.SpinnerNumberModel(30, -1, 100, 1));
         spnNumberOfFlags.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         tabFlags.add(spnNumberOfFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, -1, -1));
 
@@ -831,17 +903,53 @@ public class MainFrame extends javax.swing.JFrame {
         tabFlags.add(lblNumberOfFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 530, -1, -1));
         tabFlags.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 160, -1));
 
+        spnJumpingFlag.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnJumpingFlag.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnJumpingFlag.setEnabled(false);
+        tabFlags.add(spnJumpingFlag, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+
+        lblJumpingFlag.setText("Jumping");
+        tabFlags.add(lblJumpingFlag, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, -1, -1));
+
+        spnRicochetingFlag.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetingFlag.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        spnRicochetingFlag.setEnabled(false);
+        tabFlags.add(spnRicochetingFlag, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
+
+        lblRicochetingFlag.setText("Ricocheting");
+        tabFlags.add(lblRicochetingFlag, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
+
         tabAllTabs.addTab("Flags", tabFlags);
 
         btnLaunchServer.setText("Launch Server");
+        btnLaunchServer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLaunchServerActionPerformed(evt);
+            }
+        });
 
         btnImportSettings.setText("Import settings");
         btnImportSettings.setEnabled(false);
+        btnImportSettings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImportSettingsActionPerformed(evt);
+            }
+        });
 
         btnExportSettings.setText("Export settings");
         btnExportSettings.setEnabled(false);
+        btnExportSettings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExportSettingsActionPerformed(evt);
+            }
+        });
 
         btnKillServer.setText("Kill Server");
+        btnKillServer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKillServerActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -878,29 +986,564 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void setCmbMaps(JComboBox cmbMaps) {
+        this.cmbMaps = cmbMaps;
+    }
+
+    public JCheckBox getChkAddTeleporters() {
+        return chkAddTeleporters;
+    }
+
+    public JCheckBox getChkAddTimestampToLog() {
+        return chkAddTimestampToLog;
+    }
+
+    public JCheckBox getChkAllBadflagsOn() {
+        return chkAllBadFlagsOn;
+    }
+
+    public JCheckBox getChkAllGoodflagsOn() {
+        return chkAllGoodFlagsOn;
+    }
+
+    public JCheckBox getChkAnnounceTKToAdmins() {
+        return chkAnnounceTKToAdmins;
+    }
+
+    public JCheckBox getChkAntidoteFlags() {
+        return chkAntidoteFlags;
+    }
+
+    public JCheckBox getChkAutoTeam() {
+        return chkAutoTeam;
+    }
+
+    public JCheckBox getChkDieOnTeamKill() {
+        return chkDieOnTeamKill;
+    }
+
+    public JCheckBox getChkDisableBots() {
+        return chkDisableBots;
+    }
+
+    public JCheckBox getChkFilterCallSigns() {
+        return chkFilterCallSigns;
+    }
+
+    public JCheckBox getChkFilterChat() {
+        return chkFilterChat;
+    }
+
+    public JCheckBox getChkFilterChatSimple() {
+        return chkFilterChatSimple;
+    }
+
+    public JCheckBox getChkFlagsOnBuildings() {
+        return chkFlagsOnBuildings;
+    }
+
+    public JCheckBox getChkJumping() {
+        return chkJumping;
+    }
+
+    public JCheckBox getChkMakeServerPrivate() {
+        return chkMakeServerPrivate;
+    }
+
+    public JCheckBox getChkManuallyStartTimedGame() {
+        return chkManuallyStartTimedGame;
+    }
+
+    public JCheckBox getChkPrintScoreToConsole() {
+        return chkPrintScoreToConsole;
+    }
+
+    public JCheckBox getChkQuiteAfterOneGame() {
+        return chkQuiteAfterOneGame;
+    }
+
+    public JCheckBox getChkRandomHeightBuildings() {
+        return chkRandomHeightBuildings;
+    }
+
+    public JCheckBox getChkRandomRotateObjects() {
+        return chkRandomRotateObjects;
+    }
+
+    public JCheckBox getChkRandomWorld() {
+        return chkRandomWorld;
+    }
+
+    public JCheckBox getChkRequireUDP() {
+        return chkRequireUDP;
+    }
+
+    public JCheckBox getChkRicochet() {
+        return chkRicochet;
+    }
+
+    public JCheckBox getChkSpanOnBuilding() {
+        return chkSpanOnBuilding;
+    }
+
+    public JCheckBox getChkSyncTimeWithServer() {
+        return chkSyncTimeWithServer;
+    }
+
+    public JComboBox getCmbGameStyle() {
+        return cmbGameStyle;
+    }
+
+    public JComboBox getCmbMaps() {
+        return cmbMaps;
+    }
+
+    public Controller getController() {
+        return controller;
+    }
+
+    public JPasswordField getPassAdminPassword() {
+        return passAdminPassword;
+    }
+
+    public JPasswordField getPassConfirmAdminPassword() {
+        return passConfirmAdminPassword;
+    }
+
+    public JSlider getSldDebugLevel() {
+        return sldDebugLevel;
+    }
+
+    public JSpinner getSpnAdminAnnounceLag() {
+        return spnAdminAnnounceLag;
+    }
+
+    public JSpinner getSpnAgility() {
+        return spnAgility;
+    }
+
+    public JSpinner getSpnAnnounceLag() {
+        return spnAnnounceLag;
+    }
+
+    public JSpinner getSpnAnnounceLag1() {
+        return spnAnnounceLag1;
+    }
+
+    public JSpinner getSpnBlindness() {
+        return spnBlindness;
+    }
+
+    public JSpinner getSpnBouncy() {
+        return spnBouncy;
+    }
+
+    public JSpinner getSpnBuildingDensity() {
+        return spnBuildingDensity;
+    }
+
+    public JSpinner getSpnCloaking() {
+        return spnCloaking;
+    }
+
+    public JSpinner getSpnColourBlindness() {
+        return spnColourBlindness;
+    }
+
+    public JSpinner getSpnExtraFlags() {
+        return spnExtraFlags;
+    }
+
+    public JSpinner getSpnForwardOnly() {
+        return spnForwardOnly;
+    }
+
+    public JSpinner getSpnGameTime() {
+        return spnGameTime;
+    }
+
+    public JSpinner getSpnGenocide() {
+        return spnGenocide;
+    }
+
+    public JSpinner getSpnGuidedMissile() {
+        return spnGuidedMissile;
+    }
+
+    public JSpinner getSpnHighSpeed() {
+        return spnHighSpeed;
+    }
+
+    public JSpinner getSpnInertiaX() {
+        return spnInertiaX;
+    }
+
+    public JSpinner getSpnInertiaY() {
+        return spnInertiaY;
+    }
+
+    public JSpinner getSpnInvisibleBullet() {
+        return spnInvisibleBullet;
+    }
+
+    public JSpinner getSpnJamming() {
+        return spnJamming;
+    }
+
+    public JSpinner getSpnJumpingFlag() {
+        return spnJumpingFlag;
+    }
+
+    public JSpinner getSpnLaser() {
+        return spnLaser;
+    }
+
+    public JSpinner getSpnLeftTurnOnly() {
+        return spnLeftTurnOnly;
+    }
+
+    public JSpinner getSpnMachineGun() {
+        return spnMachineGun;
+    }
+
+    public JSpinner getSpnMaxIdleTime() {
+        return spnMaxIdleTime;
+    }
+
+    public JSpinner getSpnMaxPlayerScore() {
+        return spnMaxPlayerScore;
+    }
+
+    public JSpinner getSpnMaxPlayers() {
+        return spnMaxPlayers;
+    }
+
+    public JSpinner getSpnMaxShots() {
+        return spnMaxShots;
+    }
+
+    public JSpinner getSpnMaxTeamKills() {
+        return spnMaxTeamKills;
+    }
+
+    public JSpinner getSpnMaxTeamScore() {
+        return spnMaxTeamScore;
+    }
+
+    public JSpinner getSpnMomentum() {
+        return spnMomentum;
+    }
+
+    public JSpinner getSpnNarrow() {
+        return spnNarrow;
+    }
+
+    public JSpinner getSpnNoJumping() {
+        return spnNoJumping;
+    }
+
+    public JSpinner getSpnNumberOfFlags() {
+        return spnNumberOfFlags;
+    }
+
+    public JSpinner getSpnObesity() {
+        return spnObesity;
+    }
+
+    public JSpinner getSpnOscillationOverthruster() {
+        return spnOscillationOverthruster;
+    }
+
+    public JSpinner getSpnPhantomZone() {
+        return spnPhantomZone;
+    }
+
+    public JSpinner getSpnQuickturn() {
+        return spnQuickturn;
+    }
+
+    public JSpinner getSpnRapidFire() {
+        return spnRapidFire;
+    }
+
+    public JSpinner getSpnReverseControlls() {
+        return spnReverseControlls;
+    }
+
+    public JSpinner getSpnReverseOnly() {
+        return spnReverseOnly;
+    }
+
+    public JSpinner getSpnRicochetingFlag() {
+        return spnRicochetingFlag;
+    }
+
+    public JSpinner getSpnRightTurnOnly() {
+        return spnRightTurnOnly;
+    }
+
+    public JSpinner getSpnSeer() {
+        return spnSeer;
+    }
+
+    public JSpinner getSpnSheild() {
+        return spnSheild;
+    }
+
+    public JSpinner getSpnShockwave() {
+        return spnShockwave;
+    }
+
+    public JSpinner getSpnSpamTime() {
+        return spnSpamTime;
+    }
+
+    public JSpinner getSpnStealth() {
+        return spnStealth;
+    }
+
+    public JSpinner getSpnSteamroller() {
+        return spnSteamroller;
+    }
+
+    public JSpinner getSpnSuperBullet() {
+        return spnSuperBullet;
+    }
+
+    public JSpinner getSpnTheif() {
+        return spnTheif;
+    }
+
+    public JSpinner getSpnTiny() {
+        return spnTiny;
+    }
+
+    public JSpinner getSpnTriggerHappy() {
+        return spnTriggerHappy;
+    }
+
+    public JSpinner getSpnUseless() {
+        return spnUseless;
+    }
+
+    public JSpinner getSpnWideAngle() {
+        return spnWideAngle;
+    }
+
+    public JSpinner getSpnWings() {
+        return spnWings;
+    }
+
+    public JSpinner getSpnWorldSize() {
+        return spnWorldSize;
+    }
+
+    public JTextField getTxtBanAddresses() {
+        return txtBanAddresses;
+    }
+
+    public JTextArea getTxtBroadcastMessage() {
+        return txtBroadcastMessage;
+    }
+
+    public JTextField getTxtListeningAddress() {
+        return txtListeningAddress;
+    }
+
+    public JTextField getTxtListeningPort() {
+        return txtListeningPort;
+    }
+
+    public JTextField getTxtPathToBadWords() {
+        return txtPathToBadWords;
+    }
+
+    public JTextField getTxtPathToBanFile() {
+        return txtPathToBanFile;
+    }
+
+    public JTextField getTxtPathToGroupDatabase() {
+        return txtPathToGroupDatabase;
+    }
+
+    public JTextField getTxtPathToPIDFile() {
+        return txtPathToPIDFile;
+    }
+
+    public JTextField getTxtPathToPasswordDatabase() {
+        return txtPathToPasswordDatabase;
+    }
+
+    public JTextField getTxtPathToUserDatabase() {
+        return txtPathToUserDatabase;
+    }
+
+    public JTextField getTxtPublicAddress() {
+        return txtPublicAddress;
+    }
+
+    public JTextField getTxtPublicMessage() {
+        return txtPublicMessage;
+    }
+
+    public JTextField getTxtRegisteredGroupName() {
+        return txtRegisteredGroupName;
+    }
+
+    public JTextArea getTxtWelcomeMessage() {
+        return txtWelcomeMessage;
+    }
+
+
+
+
+
+
+
+
+
+
+
     private void chkJumpingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkJumpingActionPerformed
-        // TODO add your handling code here:
+        if(Integer.parseInt(spnJumpingFlag.getValue().toString()) >= 0 && chkJumping.isSelected()){
+            spnJumpingFlag.setValue(-1);
+        }
+        if(!chkJumping.isSelected()){
+            spnJumpingFlag.setValue(0);
+        }
 }//GEN-LAST:event_chkJumpingActionPerformed
 
     private void chkRicochetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRicochetActionPerformed
-        // TODO add your handling code here:
+        if(Integer.parseInt(spnRicochetingFlag.getValue().toString()) >= 0 && chkRicochet.isSelected()){
+            spnRicochetingFlag.setValue(-1);
+        }
+        if(!chkRicochet.isSelected()){
+            spnRicochetingFlag.setValue(0);
+        }
 }//GEN-LAST:event_chkRicochetActionPerformed
 
     private void cmbGameStyleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbGameStyleActionPerformed
         // TODO add your handling code here:
 }//GEN-LAST:event_cmbGameStyleActionPerformed
 
+    private void chkAllGoodFlagsOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkAllGoodFlagsOnActionPerformed
+        if(chkAllGoodFlagsOn.isSelected()){
+            spnAgility.setEnabled(false);
+            spnCloaking.setEnabled(false);
+            spnGenocide.setEnabled(false);
+            spnGuidedMissile.setEnabled(false);
+            spnHighSpeed.setEnabled(false);
+            spnInvisibleBullet.setEnabled(false);
+            spnJumpingFlag.setEnabled(false);
+            spnLaser.setEnabled(false);
+            spnMachineGun.setEnabled(false);
+            spnNarrow.setEnabled(false);
+            spnOscillationOverthruster.setEnabled(false);
+            spnPhantomZone.setEnabled(false);
+            spnQuickturn.setEnabled(false);
+            spnRapidFire.setEnabled(false);
+            spnRicochetingFlag.setEnabled(false);
+            spnSeer.setEnabled(false);
+            spnSheild.setEnabled(false);
+            spnShockwave.setEnabled(false);
+            spnStealth.setEnabled(false);
+            spnSteamroller.setEnabled(false);
+            spnSuperBullet.setEnabled(false);
+            spnTheif.setEnabled(false);
+            spnTiny.setEnabled(false);
+            spnUseless.setEnabled(false);
+            spnWings.setEnabled(false);
+        }else{
+            spnAgility.setEnabled(true);
+            spnCloaking.setEnabled(true);
+            spnGenocide.setEnabled(true);
+            spnGuidedMissile.setEnabled(true);
+            spnHighSpeed.setEnabled(true);
+            spnInvisibleBullet.setEnabled(true);
+            spnJumpingFlag.setEnabled(true);
+            spnLaser.setEnabled(true);
+            spnMachineGun.setEnabled(true);
+            spnNarrow.setEnabled(true);
+            spnOscillationOverthruster.setEnabled(true);
+            spnPhantomZone.setEnabled(true);
+            spnQuickturn.setEnabled(true);
+            spnRapidFire.setEnabled(true);
+            spnRicochetingFlag.setEnabled(true);
+            spnSeer.setEnabled(true);
+            spnSheild.setEnabled(true);
+            spnShockwave.setEnabled(true);
+            spnStealth.setEnabled(true);
+            spnSteamroller.setEnabled(true);
+            spnSuperBullet.setEnabled(true);
+            spnTheif.setEnabled(true);
+            spnTiny.setEnabled(true);
+            spnUseless.setEnabled(true);
+            spnWings.setEnabled(true);
+        }
+    }//GEN-LAST:event_chkAllGoodFlagsOnActionPerformed
+
+    private void chkAllBadFlagsOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkAllBadFlagsOnActionPerformed
+        if(chkAllBadFlagsOn.isSelected()){
+            spnBlindness.setEnabled(false);
+            spnBouncy.setEnabled(false);
+            spnColourBlindness.setEnabled(false);
+            spnForwardOnly.setEnabled(false);
+            spnJamming.setEnabled(false);
+            spnLeftTurnOnly.setEnabled(false);
+            spnLeftTurnOnly.setEnabled(false);
+            spnMomentum.setEnabled(false);
+            spnNoJumping.setEnabled(false);
+            spnObesity.setEnabled(false);
+            spnReverseControlls.setEnabled(false);
+            spnReverseOnly.setEnabled(false);
+            spnRightTurnOnly.setEnabled(false);
+            spnTriggerHappy.setEnabled(false);
+            spnWideAngle.setEnabled(false);
+        }else{
+            spnBlindness.setEnabled(true);
+            spnBouncy.setEnabled(true);
+            spnColourBlindness.setEnabled(true);
+            spnForwardOnly.setEnabled(true);
+            spnJamming.setEnabled(true);
+            spnLeftTurnOnly.setEnabled(true);
+            spnLeftTurnOnly.setEnabled(true);
+            spnMomentum.setEnabled(true);
+            spnNoJumping.setEnabled(true);
+            spnObesity.setEnabled(true);
+            spnReverseControlls.setEnabled(true);
+            spnReverseOnly.setEnabled(true);
+            spnRightTurnOnly.setEnabled(true);
+            spnTriggerHappy.setEnabled(true);
+            spnWideAngle.setEnabled(true);
+        }
+    }//GEN-LAST:event_chkAllBadFlagsOnActionPerformed
+
+    private void btnKillServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKillServerActionPerformed
+        JOptionPane.showMessageDialog(null, "I don't do anything yet!");
+    }//GEN-LAST:event_btnKillServerActionPerformed
+
+    private void btnExportSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportSettingsActionPerformed
+        JOptionPane.showMessageDialog(null, "I don't do anything yet!");
+    }//GEN-LAST:event_btnExportSettingsActionPerformed
+
+    private void btnImportSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportSettingsActionPerformed
+        JOptionPane.showMessageDialog(null, "I don't do anything yet!");
+    }//GEN-LAST:event_btnImportSettingsActionPerformed
+
+    private void btnLaunchServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaunchServerActionPerformed
+        
+    }//GEN-LAST:event_btnLaunchServerActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ReverseControlls;
     private javax.swing.JButton btnExportSettings;
     private javax.swing.JButton btnImportSettings;
     private javax.swing.JButton btnKillServer;
     private javax.swing.JButton btnLaunchServer;
     private javax.swing.JCheckBox chkAddTeleporters;
     private javax.swing.JCheckBox chkAddTimestampToLog;
-    private javax.swing.JCheckBox chkAllBadflagsOn;
-    private javax.swing.JCheckBox chkAllGoodflagsOn;
+    private javax.swing.JCheckBox chkAllBadFlagsOn;
+    private javax.swing.JCheckBox chkAllGoodFlagsOn;
     private javax.swing.JCheckBox chkAnnounceTKToAdmins;
     private javax.swing.JCheckBox chkAntidoteFlags;
     private javax.swing.JCheckBox chkAutoTeam;
@@ -956,6 +1599,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblInertiaY;
     private javax.swing.JLabel lblInvisibleBullet;
     private javax.swing.JLabel lblJamming;
+    private javax.swing.JLabel lblJumpingFlag;
     private javax.swing.JLabel lblLaser;
     private javax.swing.JLabel lblLeftTurnOnly;
     private javax.swing.JLabel lblListeningAddress;
@@ -986,7 +1630,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblQuickTurn;
     private javax.swing.JLabel lblRapiFire;
     private javax.swing.JLabel lblRegisteredGroupName;
+    private javax.swing.JLabel lblReverseControlls;
     private javax.swing.JLabel lblReverseOnly;
+    private javax.swing.JLabel lblRicochetingFlag;
     private javax.swing.JLabel lblRightTurnOnly;
     private javax.swing.JLabel lblSeer;
     private javax.swing.JLabel lblShield;
@@ -1025,6 +1671,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSpinner spnInertiaY;
     private javax.swing.JSpinner spnInvisibleBullet;
     private javax.swing.JSpinner spnJamming;
+    private javax.swing.JSpinner spnJumpingFlag;
     private javax.swing.JSpinner spnLaser;
     private javax.swing.JSpinner spnLeftTurnOnly;
     private javax.swing.JSpinner spnMachineGun;
@@ -1045,6 +1692,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSpinner spnRapidFire;
     private javax.swing.JSpinner spnReverseControlls;
     private javax.swing.JSpinner spnReverseOnly;
+    private javax.swing.JSpinner spnRicochetingFlag;
     private javax.swing.JSpinner spnRightTurnOnly;
     private javax.swing.JSpinner spnSeer;
     private javax.swing.JSpinner spnSheild;
