@@ -31,7 +31,8 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tabs = new javax.swing.JTabbedPane();
+        jFileChooser1 = new javax.swing.JFileChooser();
+        tabAllTabs = new javax.swing.JTabbedPane();
         tabGamePlay = new javax.swing.JPanel();
         cmbGameStyle = new javax.swing.JComboBox();
         lblGameStyle = new javax.swing.JLabel();
@@ -46,7 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
         lblMaxTeamScore = new javax.swing.JLabel();
         lblGameTime = new javax.swing.JLabel();
         chkManuallyStartTimedGame = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        chkAutoTeam = new javax.swing.JCheckBox();
         lblMaxPlayers = new javax.swing.JLabel();
         spnMaxShots = new javax.swing.JSpinner();
         spnMaxTeamKills = new javax.swing.JSpinner();
@@ -54,45 +55,177 @@ public class MainFrame extends javax.swing.JFrame {
         spnMaxTeamScore = new javax.swing.JSpinner();
         spnGameTime = new javax.swing.JSpinner();
         spnMaxPlayers = new javax.swing.JSpinner();
-        tabMisc = new javax.swing.JPanel();
-        jSlider1 = new javax.swing.JSlider();
-        jLabel1 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jSpinner2 = new javax.swing.JSpinner();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        tabWorld = new javax.swing.JPanel();
-        cmbMaps = new javax.swing.JComboBox();
+        lblWorldSize = new javax.swing.JLabel();
+        spnWorldSize = new javax.swing.JSpinner();
+        lblBuildingDensity = new javax.swing.JLabel();
+        spnBuildingDensity = new javax.swing.JSpinner();
         lblMap = new javax.swing.JLabel();
         chkRandomWorld = new javax.swing.JCheckBox();
+        cmbMaps = new javax.swing.JComboBox();
+        chkRandomHeightBuildings = new javax.swing.JCheckBox();
         chkRandomRotateObjects = new javax.swing.JCheckBox();
         chkAddTeleporters = new javax.swing.JCheckBox();
-        chkRandomHeightBuildings = new javax.swing.JCheckBox();
-        spnBuildingDensity = new javax.swing.JSpinner();
-        lblBuildingDensity = new javax.swing.JLabel();
-        spnWorldSize = new javax.swing.JSpinner();
-        lblWorldSize = new javax.swing.JLabel();
-        tabServer = new javax.swing.JPanel();
-        tabChat = new javax.swing.JPanel();
-        tabAdmin = new javax.swing.JPanel();
+        jSeparator2 = new javax.swing.JSeparator();
         passAdminPassword = new javax.swing.JPasswordField();
         passConfirmAdminPassword = new javax.swing.JPasswordField();
         lblAdminPassword = new javax.swing.JLabel();
         lblConfirmAdminPassword = new javax.swing.JLabel();
+        chkAnnounceTKToAdmins = new javax.swing.JCheckBox();
+        txtPathToBadWords = new javax.swing.JTextField();
+        lblPathToBadWords = new javax.swing.JLabel();
+        chkFilterChat = new javax.swing.JCheckBox();
+        chkFilterChatSimple = new javax.swing.JCheckBox();
+        chkFilterCallSigns = new javax.swing.JCheckBox();
+        tabServer = new javax.swing.JPanel();
+        chkQuiteAfterOneGame = new javax.swing.JCheckBox();
+        txtPublicMessage = new javax.swing.JTextField();
+        lblPublicMessage = new javax.swing.JLabel();
+        lblPublicAddress = new javax.swing.JLabel();
+        txtPublicAddress = new javax.swing.JTextField();
+        txtListeningPort = new javax.swing.JTextField();
+        lblListeningPort = new javax.swing.JLabel();
+        chkMakeServerPrivate = new javax.swing.JCheckBox();
+        lblListeningAddress = new javax.swing.JLabel();
+        txtListeningAddress = new javax.swing.JTextField();
+        chkRequireUDP = new javax.swing.JCheckBox();
+        txtPathToPasswordDatabase = new javax.swing.JTextField();
+        lblPathToPasswordDatabase = new javax.swing.JLabel();
+        txtPathToUserDatabase = new javax.swing.JTextField();
+        lblPathToUserDatabase = new javax.swing.JLabel();
+        txtPathToGroupDatabase = new javax.swing.JTextField();
+        lblPathToGroupDatabase = new javax.swing.JLabel();
+        lblRegisteredGroupName = new javax.swing.JLabel();
+        txtRegisteredGroupName = new javax.swing.JTextField();
+        spnMaxIdleTime = new javax.swing.JSpinner();
+        lblMaxIdleTime = new javax.swing.JLabel();
+        lblAdminAnnounceLag = new javax.swing.JLabel();
+        spnAdminAnnounceLag = new javax.swing.JSpinner();
+        spnAnnounceLag = new javax.swing.JSpinner();
+        lblAnnounceLag = new javax.swing.JLabel();
+        lblAnnounceLag1 = new javax.swing.JLabel();
+        spnAnnounceLag1 = new javax.swing.JSpinner();
+        lblPathToBanFile = new javax.swing.JLabel();
+        txtPathToBanFile = new javax.swing.JTextField();
+        txtBanAddresses = new javax.swing.JTextField();
+        lblBanAddresses = new javax.swing.JLabel();
+        lblPathToPIDFile = new javax.swing.JLabel();
+        txtPathToPIDFile = new javax.swing.JTextField();
+        lblWelcomeMessage = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtWelcomeMessage = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtBroadcastMessage = new javax.swing.JTextArea();
+        lblBroadcastMessage = new javax.swing.JLabel();
+        spnSpamTime = new javax.swing.JSpinner();
+        lblSpamTime = new javax.swing.JLabel();
+        chkSyncTimeWithServer = new javax.swing.JCheckBox();
+        lblInertiaX = new javax.swing.JLabel();
+        lblInertiaY = new javax.swing.JLabel();
+        sldDebugLevel = new javax.swing.JSlider();
+        lblDebugLevel = new javax.swing.JLabel();
+        spnInertiaX = new javax.swing.JSpinner();
+        spnInertiaY = new javax.swing.JSpinner();
+        chkPrintScoreToConsole = new javax.swing.JCheckBox();
+        chkAddTimestampToLog = new javax.swing.JCheckBox();
         tabFlags = new javax.swing.JPanel();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        btnPlay = new javax.swing.JButton();
+        chkFlagsOnBuildings = new javax.swing.JCheckBox();
+        chkAntidoteFlags = new javax.swing.JCheckBox();
+        lblGoodFlags = new javax.swing.JLabel();
+        lblRicochetFlag1 = new javax.swing.JLabel();
+        spnRicochetFlag1 = new javax.swing.JSpinner();
+        spnRicochetFlag2 = new javax.swing.JSpinner();
+        lblRicochetFlag2 = new javax.swing.JLabel();
+        spnRicochetFlag3 = new javax.swing.JSpinner();
+        lblRicochetFlag3 = new javax.swing.JLabel();
+        spnRicochetFlag4 = new javax.swing.JSpinner();
+        lblRicochetFlag4 = new javax.swing.JLabel();
+        spnRicochetFlag5 = new javax.swing.JSpinner();
+        lblRicochetFlag5 = new javax.swing.JLabel();
+        spnRicochetFlag6 = new javax.swing.JSpinner();
+        lblRicochetFlag6 = new javax.swing.JLabel();
+        spnRicochetFlag7 = new javax.swing.JSpinner();
+        lblRicochetFlag7 = new javax.swing.JLabel();
+        spnRicochetFlag8 = new javax.swing.JSpinner();
+        lblRicochetFlag8 = new javax.swing.JLabel();
+        spnRicochetFlag9 = new javax.swing.JSpinner();
+        lblRicochetFlag9 = new javax.swing.JLabel();
+        spnRicochetFlag10 = new javax.swing.JSpinner();
+        lblRicochetFlag10 = new javax.swing.JLabel();
+        spnRicochetFlag11 = new javax.swing.JSpinner();
+        lblRicochetFlag11 = new javax.swing.JLabel();
+        spnRicochetFlag12 = new javax.swing.JSpinner();
+        lblRicochetFlag12 = new javax.swing.JLabel();
+        spnRicochetFlag13 = new javax.swing.JSpinner();
+        lblRicochetFlag13 = new javax.swing.JLabel();
+        spnRicochetFlag14 = new javax.swing.JSpinner();
+        lblRicochetFlag14 = new javax.swing.JLabel();
+        spnRicochetFlag15 = new javax.swing.JSpinner();
+        lblRicochetFlag15 = new javax.swing.JLabel();
+        spnRicochetFlag16 = new javax.swing.JSpinner();
+        lblRicochetFlag16 = new javax.swing.JLabel();
+        spnRicochetFlag17 = new javax.swing.JSpinner();
+        lblRicochetFlag17 = new javax.swing.JLabel();
+        spnRicochetFlag18 = new javax.swing.JSpinner();
+        lblRicochetFlag18 = new javax.swing.JLabel();
+        spnRicochetFlag19 = new javax.swing.JSpinner();
+        lblRicochetFlag19 = new javax.swing.JLabel();
+        spnRicochetFlag20 = new javax.swing.JSpinner();
+        lblRicochetFlag20 = new javax.swing.JLabel();
+        spnRicochetFlag21 = new javax.swing.JSpinner();
+        lblRicochetFlag21 = new javax.swing.JLabel();
+        spnRicochetFlag22 = new javax.swing.JSpinner();
+        lblRicochetFlag22 = new javax.swing.JLabel();
+        spnRicochetFlag23 = new javax.swing.JSpinner();
+        lblRicochetFlag23 = new javax.swing.JLabel();
+        chkAllGoodflagsOn = new javax.swing.JCheckBox();
+        lblRicochetFlag24 = new javax.swing.JLabel();
+        spnRicochetFlag24 = new javax.swing.JSpinner();
+        spnRicochetFlag25 = new javax.swing.JSpinner();
+        lblRicochetFlag25 = new javax.swing.JLabel();
+        spnRicochetFlag26 = new javax.swing.JSpinner();
+        lblRicochetFlag26 = new javax.swing.JLabel();
+        spnRicochetFlag27 = new javax.swing.JSpinner();
+        lblRicochetFlag27 = new javax.swing.JLabel();
+        spnRicochetFlag28 = new javax.swing.JSpinner();
+        lblRicochetFlag28 = new javax.swing.JLabel();
+        spnRicochetFlag29 = new javax.swing.JSpinner();
+        lblRicochetFlag29 = new javax.swing.JLabel();
+        spnRicochetFlag30 = new javax.swing.JSpinner();
+        lblRicochetFlag30 = new javax.swing.JLabel();
+        spnRicochetFlag31 = new javax.swing.JSpinner();
+        lblRicochetFlag31 = new javax.swing.JLabel();
+        spnRicochetFlag32 = new javax.swing.JSpinner();
+        lblRicochetFlag32 = new javax.swing.JLabel();
+        spnRicochetFlag33 = new javax.swing.JSpinner();
+        lblRicochetFlag33 = new javax.swing.JLabel();
+        spnRicochetFlag34 = new javax.swing.JSpinner();
+        lblRicochetFlag34 = new javax.swing.JLabel();
+        spnRicochetFlag35 = new javax.swing.JSpinner();
+        lblRicochetFlag35 = new javax.swing.JLabel();
+        spnRicochetFlag36 = new javax.swing.JSpinner();
+        lblRicochetFlag36 = new javax.swing.JLabel();
+        spnRicochetFlag37 = new javax.swing.JSpinner();
+        lblRicochetFlag37 = new javax.swing.JLabel();
+        lblGoodFlags1 = new javax.swing.JLabel();
+        chkAllGoodflagsOn1 = new javax.swing.JCheckBox();
+        spnRicochetFlag38 = new javax.swing.JSpinner();
+        lblRicochetFlag38 = new javax.swing.JLabel();
+        spnRicochetFlag39 = new javax.swing.JSpinner();
+        lblRicochetFlag39 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnLaunchServer = new javax.swing.JButton();
+        btnImportSettings = new javax.swing.JButton();
+        btnExportSettings = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BZFlag Server GUI");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        tabs.setAutoscrolls(true);
+        tabAllTabs.setAutoscrolls(true);
 
         tabGamePlay.setAutoscrolls(true);
+        tabGamePlay.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmbGameStyle.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Free for all", "Capture the flag", "Rabbit based on score", "Rabbit based on killer", "Rabbit random" }));
         cmbGameStyle.addActionListener(new java.awt.event.ActionListener() {
@@ -100,10 +233,13 @@ public class MainFrame extends javax.swing.JFrame {
                 cmbGameStyleActionPerformed(evt);
             }
         });
+        tabGamePlay.add(cmbGameStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 17, -1, -1));
 
         lblGameStyle.setText("Game Style");
+        tabGamePlay.add(lblGameStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 22, -1, -1));
 
         lblMaxShots.setText("Max. Shots before reload");
+        tabGamePlay.add(lblMaxShots, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
 
         chkRicochet.setText("Allow shots to ricochet");
         chkRicochet.addActionListener(new java.awt.event.ActionListener() {
@@ -111,6 +247,7 @@ public class MainFrame extends javax.swing.JFrame {
                 chkRicochetActionPerformed(evt);
             }
         });
+        tabGamePlay.add(chkRicochet, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 17, -1, -1));
 
         chkJumping.setText("Allow jumping");
         chkJumping.addActionListener(new java.awt.event.ActionListener() {
@@ -118,397 +255,615 @@ public class MainFrame extends javax.swing.JFrame {
                 chkJumpingActionPerformed(evt);
             }
         });
+        tabGamePlay.add(chkJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 40, -1, -1));
 
         chkSpanOnBuilding.setText("Spawn tanks on buildings");
+        tabGamePlay.add(chkSpanOnBuilding, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 63, -1, -1));
 
         chkDieOnTeamKill.setSelected(true);
         chkDieOnTeamKill.setText("Die on team kill");
+        tabGamePlay.add(chkDieOnTeamKill, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 86, -1, -1));
 
         lblMaxTeamKills.setText("Kick on percentage of team kills");
+        tabGamePlay.add(lblMaxTeamKills, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, -1));
 
         chkDisableBots.setText("Disable bots");
+        tabGamePlay.add(chkDisableBots, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 109, -1, -1));
 
         lblMaxPlayerScore.setText("Max player score");
+        tabGamePlay.add(lblMaxPlayerScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
 
         lblMaxTeamScore.setText("Max team score");
+        tabGamePlay.add(lblMaxTeamScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
 
         lblGameTime.setText("Game time limit (in seconds)");
+        tabGamePlay.add(lblGameTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
 
         chkManuallyStartTimedGame.setText("Manually start timed game");
+        tabGamePlay.add(chkManuallyStartTimedGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 132, -1, -1));
 
-        jCheckBox3.setSelected(true);
-        jCheckBox3.setText("Auto-team");
+        chkAutoTeam.setSelected(true);
+        chkAutoTeam.setText("Auto-team");
+        tabGamePlay.add(chkAutoTeam, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 155, -1, -1));
 
         lblMaxPlayers.setText("Max number of players");
+        tabGamePlay.add(lblMaxPlayers, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
 
         spnMaxShots.setModel(new javax.swing.SpinnerNumberModel(5, 1, 50, 1));
+        tabGamePlay.add(spnMaxShots, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
         spnMaxTeamKills.setModel(new javax.swing.SpinnerNumberModel(32, 1, 100, 1));
+        tabGamePlay.add(spnMaxTeamKills, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         spnMaxPlayerScore.setModel(new javax.swing.SpinnerNumberModel(100, 1, 1000, 1));
+        tabGamePlay.add(spnMaxPlayerScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         spnMaxTeamScore.setModel(new javax.swing.SpinnerNumberModel(250, 1, 2500, 1));
+        tabGamePlay.add(spnMaxTeamScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         spnGameTime.setModel(new javax.swing.SpinnerNumberModel(3600, 60, 9999, 1));
+        tabGamePlay.add(spnGameTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
         spnMaxPlayers.setModel(new javax.swing.SpinnerNumberModel(12, 2, 50, 1));
-
-        org.jdesktop.layout.GroupLayout tabGamePlayLayout = new org.jdesktop.layout.GroupLayout(tabGamePlay);
-        tabGamePlay.setLayout(tabGamePlayLayout);
-        tabGamePlayLayout.setHorizontalGroup(
-            tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabGamePlayLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(tabGamePlayLayout.createSequentialGroup()
-                        .add(lblGameStyle)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cmbGameStyle, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(tabGamePlayLayout.createSequentialGroup()
-                        .add(spnMaxShots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(lblMaxShots))
-                    .add(tabGamePlayLayout.createSequentialGroup()
-                        .add(spnMaxPlayerScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(lblMaxPlayerScore))
-                    .add(tabGamePlayLayout.createSequentialGroup()
-                        .add(spnMaxTeamScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(lblMaxTeamScore))
-                    .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, tabGamePlayLayout.createSequentialGroup()
-                            .add(spnGameTime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(lblGameTime))
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, tabGamePlayLayout.createSequentialGroup()
-                            .add(spnMaxTeamKills, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                            .add(lblMaxTeamKills)))
-                    .add(tabGamePlayLayout.createSequentialGroup()
-                        .add(spnMaxPlayers, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(lblMaxPlayers)))
-                .add(42, 42, 42)
-                .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(chkSpanOnBuilding)
-                    .add(chkJumping)
-                    .add(chkRicochet)
-                    .add(chkDieOnTeamKill)
-                    .add(chkDisableBots)
-                    .add(chkManuallyStartTimedGame)
-                    .add(jCheckBox3))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        tabGamePlayLayout.setVerticalGroup(
-            tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabGamePlayLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(tabGamePlayLayout.createSequentialGroup()
-                        .add(chkRicochet)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chkJumping)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chkSpanOnBuilding)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chkDieOnTeamKill)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chkDisableBots)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(chkManuallyStartTimedGame)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jCheckBox3))
-                    .add(tabGamePlayLayout.createSequentialGroup()
-                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(lblGameStyle)
-                            .add(cmbGameStyle, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(18, 18, 18)
-                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, spnMaxShots, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(org.jdesktop.layout.GroupLayout.TRAILING, lblMaxShots))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(spnMaxTeamKills, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(lblMaxTeamKills))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(spnMaxPlayerScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(lblMaxPlayerScore))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(spnMaxTeamScore, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(lblMaxTeamScore))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(spnGameTime, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(lblGameTime))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(tabGamePlayLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(spnMaxPlayers, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(lblMaxPlayers))))
-                .add(89, 89, 89))
-        );
-
-        tabs.addTab("Game Play", tabGamePlay);
-
-        jSlider1.setMajorTickSpacing(1);
-        jSlider1.setMaximum(4);
-        jSlider1.setPaintLabels(true);
-        jSlider1.setPaintTicks(true);
-        jSlider1.setSnapToTicks(true);
-
-        jLabel1.setText("Debug level");
-
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
-
-        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
-
-        jLabel2.setText("Inertia X");
-
-        jLabel3.setText("Inertia Y");
-
-        jCheckBox1.setText("Print score to console");
-
-        org.jdesktop.layout.GroupLayout tabMiscLayout = new org.jdesktop.layout.GroupLayout(tabMisc);
-        tabMisc.setLayout(tabMiscLayout);
-        tabMiscLayout.setHorizontalGroup(
-            tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabMiscLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(tabMiscLayout.createSequentialGroup()
-                        .add(jSlider1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 89, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(jLabel1))
-                    .add(tabMiscLayout.createSequentialGroup()
-                        .add(jSpinner1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(jLabel2))
-                    .add(tabMiscLayout.createSequentialGroup()
-                        .add(jSpinner2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(jLabel3)))
-                .addContainerGap(355, Short.MAX_VALUE))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabMiscLayout.createSequentialGroup()
-                .addContainerGap(311, Short.MAX_VALUE)
-                .add(jCheckBox1)
-                .add(76, 76, 76))
-        );
-        tabMiscLayout.setVerticalGroup(
-            tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabMiscLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jSlider1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel1))
-                .add(18, 18, 18)
-                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jSpinner1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel2))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(tabMiscLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jSpinner2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel3))
-                .add(124, 124, 124)
-                .add(jCheckBox1)
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
-
-        tabs.addTab("Misc", tabMisc);
-
-        lblMap.setText("Map");
-
-        chkRandomWorld.setText("Generate random world");
-
-        chkRandomRotateObjects.setText("Randomly rotate world objects");
-
-        chkAddTeleporters.setText("Add teleporters");
-
-        chkRandomHeightBuildings.setText("Buildings have random height");
-
-        spnBuildingDensity.setModel(new javax.swing.SpinnerNumberModel(5, 0, 10, 1));
-
-        lblBuildingDensity.setText("Building density");
-
-        spnWorldSize.setModel(new javax.swing.SpinnerNumberModel(800, 10, 9990, 10));
+        tabGamePlay.add(spnMaxPlayers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         lblWorldSize.setText("World size");
+        tabGamePlay.add(lblWorldSize, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, -1, -1));
 
-        org.jdesktop.layout.GroupLayout tabWorldLayout = new org.jdesktop.layout.GroupLayout(tabWorld);
-        tabWorld.setLayout(tabWorldLayout);
-        tabWorldLayout.setHorizontalGroup(
-            tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabWorldLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(chkRandomHeightBuildings)
-                    .add(chkAddTeleporters)
-                    .add(chkRandomRotateObjects)
-                    .add(tabWorldLayout.createSequentialGroup()
-                        .add(lblMap)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(cmbMaps, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 210, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(chkRandomWorld)
-                    .add(tabWorldLayout.createSequentialGroup()
-                        .add(spnBuildingDensity, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(lblBuildingDensity))
-                    .add(tabWorldLayout.createSequentialGroup()
-                        .add(spnWorldSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(lblWorldSize)))
-                .addContainerGap(289, Short.MAX_VALUE))
-        );
-        tabWorldLayout.setVerticalGroup(
-            tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabWorldLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(lblMap)
-                    .add(cmbMaps, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(chkRandomWorld)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(chkRandomRotateObjects)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(chkAddTeleporters)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(chkRandomHeightBuildings)
-                .add(18, 18, 18)
-                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(spnBuildingDensity, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(lblBuildingDensity))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(tabWorldLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(spnWorldSize, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(lblWorldSize))
-                .addContainerGap(103, Short.MAX_VALUE))
-        );
+        spnWorldSize.setModel(new javax.swing.SpinnerNumberModel(800, 10, 9990, 10));
+        tabGamePlay.add(spnWorldSize, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
 
-        tabs.addTab("World", tabWorld);
+        lblBuildingDensity.setText("Building density");
+        tabGamePlay.add(lblBuildingDensity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, -1, -1));
 
-        org.jdesktop.layout.GroupLayout tabServerLayout = new org.jdesktop.layout.GroupLayout(tabServer);
-        tabServer.setLayout(tabServerLayout);
-        tabServerLayout.setHorizontalGroup(
-            tabServerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 556, Short.MAX_VALUE)
-        );
-        tabServerLayout.setVerticalGroup(
-            tabServerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 326, Short.MAX_VALUE)
-        );
+        spnBuildingDensity.setModel(new javax.swing.SpinnerNumberModel(5, 0, 10, 1));
+        tabGamePlay.add(spnBuildingDensity, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
 
-        tabs.addTab("Server", tabServer);
+        lblMap.setText("Map");
+        tabGamePlay.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
-        org.jdesktop.layout.GroupLayout tabChatLayout = new org.jdesktop.layout.GroupLayout(tabChat);
-        tabChat.setLayout(tabChatLayout);
-        tabChatLayout.setHorizontalGroup(
-            tabChatLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 556, Short.MAX_VALUE)
-        );
-        tabChatLayout.setVerticalGroup(
-            tabChatLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 326, Short.MAX_VALUE)
-        );
+        chkRandomWorld.setText("Generate random world");
+        tabGamePlay.add(chkRandomWorld, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
+        tabGamePlay.add(cmbMaps, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, -1));
 
-        tabs.addTab("Chat", tabChat);
+        chkRandomHeightBuildings.setText("Buildings have random height");
+        tabGamePlay.add(chkRandomHeightBuildings, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, -1, -1));
+
+        chkRandomRotateObjects.setText("Randomly rotate world objects");
+        tabGamePlay.add(chkRandomRotateObjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
+
+        chkAddTeleporters.setText("Add teleporters");
+        tabGamePlay.add(chkAddTeleporters, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
+        tabGamePlay.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 440, 10));
 
         passAdminPassword.setText("abcdef");
         passAdminPassword.setPreferredSize(new java.awt.Dimension(125, 28));
+        tabGamePlay.add(passAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
 
         passConfirmAdminPassword.setText("abcdef");
         passConfirmAdminPassword.setPreferredSize(new java.awt.Dimension(125, 28));
+        tabGamePlay.add(passConfirmAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
         lblAdminPassword.setText("Admin password");
+        tabGamePlay.add(lblAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, -1, -1));
 
         lblConfirmAdminPassword.setText("Confirm admin password");
+        tabGamePlay.add(lblConfirmAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, -1, -1));
 
-        org.jdesktop.layout.GroupLayout tabAdminLayout = new org.jdesktop.layout.GroupLayout(tabAdmin);
-        tabAdmin.setLayout(tabAdminLayout);
-        tabAdminLayout.setHorizontalGroup(
-            tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabAdminLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(tabAdminLayout.createSequentialGroup()
-                        .add(passAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(lblAdminPassword))
-                    .add(tabAdminLayout.createSequentialGroup()
-                        .add(passConfirmAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(lblConfirmAdminPassword)))
-                .addContainerGap(239, Short.MAX_VALUE))
-        );
-        tabAdminLayout.setVerticalGroup(
-            tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabAdminLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(passAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(lblAdminPassword))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(tabAdminLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(passConfirmAdminPassword, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(lblConfirmAdminPassword))
-                .addContainerGap(242, Short.MAX_VALUE))
-        );
+        chkAnnounceTKToAdmins.setText("Announce team kills to admins");
+        tabGamePlay.add(chkAnnounceTKToAdmins, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, -1, -1));
 
-        tabs.addTab("Admin", tabAdmin);
+        txtPathToBadWords.setToolTipText("None is used if left blank");
+        tabGamePlay.add(txtPathToBadWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 130, -1));
 
-        jCheckBox5.setText("Flags on buildings");
+        lblPathToBadWords.setText("Path to bad word file");
+        tabGamePlay.add(lblPathToBadWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
 
-        jCheckBox6.setText("Antidote flags");
+        chkFilterChat.setText("Filter chat");
+        tabGamePlay.add(chkFilterChat, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
 
-        org.jdesktop.layout.GroupLayout tabFlagsLayout = new org.jdesktop.layout.GroupLayout(tabFlags);
-        tabFlags.setLayout(tabFlagsLayout);
-        tabFlagsLayout.setHorizontalGroup(
-            tabFlagsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabFlagsLayout.createSequentialGroup()
-                .addContainerGap(331, Short.MAX_VALUE)
-                .add(jCheckBox5)
-                .add(77, 77, 77))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabFlagsLayout.createSequentialGroup()
-                .addContainerGap(383, Short.MAX_VALUE)
-                .add(jCheckBox6)
-                .add(52, 52, 52))
-        );
-        tabFlagsLayout.setVerticalGroup(
-            tabFlagsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, tabFlagsLayout.createSequentialGroup()
-                .addContainerGap(246, Short.MAX_VALUE)
-                .add(jCheckBox6)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jCheckBox5)
-                .add(34, 34, 34))
-        );
+        chkFilterChatSimple.setText("Filter chat simple");
+        tabGamePlay.add(chkFilterChatSimple, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
 
-        tabs.addTab("Flags", tabFlags);
+        chkFilterCallSigns.setText("Filter callsigns");
+        tabGamePlay.add(chkFilterCallSigns, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, -1, -1));
 
-        btnPlay.setText("Play");
+        tabAllTabs.addTab("Game Play", tabGamePlay);
+
+        tabServer.setAutoscrolls(true);
+        tabServer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        chkQuiteAfterOneGame.setText("Quit after one game");
+        tabServer.add(chkQuiteAfterOneGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
+
+        txtPublicMessage.setText("Noo BZFlag Server");
+        tabServer.add(txtPublicMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 208, -1));
+
+        lblPublicMessage.setText("Public message");
+        tabServer.add(lblPublicMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
+
+        lblPublicAddress.setText("Public address");
+        tabServer.add(lblPublicAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
+
+        txtPublicAddress.setText("123.456.789.000:5154");
+        tabServer.add(txtPublicAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        txtListeningPort.setText("5154");
+        tabServer.add(txtListeningPort, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 58, -1));
+
+        lblListeningPort.setText("Listening port");
+        tabServer.add(lblListeningPort, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
+
+        chkMakeServerPrivate.setText("Private server");
+        tabServer.add(chkMakeServerPrivate, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
+
+        lblListeningAddress.setText("Listening address (interface)");
+        tabServer.add(lblListeningAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
+
+        txtListeningAddress.setToolTipText("Default is used if left blank");
+        tabServer.add(txtListeningAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 129, -1));
+
+        chkRequireUDP.setSelected(true);
+        chkRequireUDP.setText("Require UDP");
+        tabServer.add(chkRequireUDP, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, -1, -1));
+
+        txtPathToPasswordDatabase.setToolTipText("None is used if left blank");
+        tabServer.add(txtPathToPasswordDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 129, -1));
+
+        lblPathToPasswordDatabase.setText("Path to password database");
+        tabServer.add(lblPathToPasswordDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+
+        txtPathToUserDatabase.setToolTipText("None is used if left blank");
+        tabServer.add(txtPathToUserDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 129, -1));
+
+        lblPathToUserDatabase.setText("Path to user database");
+        tabServer.add(lblPathToUserDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+
+        txtPathToGroupDatabase.setToolTipText("None is used if left blank");
+        tabServer.add(txtPathToGroupDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 129, -1));
+
+        lblPathToGroupDatabase.setText("Path to group database");
+        tabServer.add(lblPathToGroupDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
+
+        lblRegisteredGroupName.setText("Registered group name");
+        tabServer.add(lblRegisteredGroupName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
+
+        txtRegisteredGroupName.setToolTipText("None is used if left blank");
+        tabServer.add(txtRegisteredGroupName, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 129, -1));
+
+        spnMaxIdleTime.setModel(new javax.swing.SpinnerNumberModel(300, 1, 999, 1));
+        tabServer.add(spnMaxIdleTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 57, -1));
+
+        lblMaxIdleTime.setText("Max idle time (seconds)");
+        tabServer.add(lblMaxIdleTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, -1, 20));
+
+        lblAdminAnnounceLag.setText("Admin annouce lag time (milliseconds)");
+        tabServer.add(lblAdminAnnounceLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
+
+        spnAdminAnnounceLag.setModel(new javax.swing.SpinnerNumberModel(0, 0, 999, 1));
+        tabServer.add(spnAdminAnnounceLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 57, -1));
+
+        spnAnnounceLag.setModel(new javax.swing.SpinnerNumberModel(0, 0, 999, 1));
+        tabServer.add(spnAnnounceLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 57, -1));
+
+        lblAnnounceLag.setText("Annouce lag time (milliseconds)");
+        tabServer.add(lblAnnounceLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, -1, -1));
+
+        lblAnnounceLag1.setText("Kick player after this many lag warnings");
+        tabServer.add(lblAnnounceLag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, -1, -1));
+
+        spnAnnounceLag1.setModel(new javax.swing.SpinnerNumberModel(3, 1, 999, 1));
+        tabServer.add(spnAnnounceLag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 57, -1));
+
+        lblPathToBanFile.setText("Path to ban file");
+        tabServer.add(lblPathToBanFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
+
+        txtPathToBanFile.setToolTipText("None is used if left blank");
+        tabServer.add(txtPathToBanFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 129, -1));
+
+        txtBanAddresses.setToolTipText("<html>None is used if left blank.  <br />Use * as wild card for ranges.</html>");
+        tabServer.add(txtBanAddresses, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 129, -1));
+
+        lblBanAddresses.setText("Ban addresses");
+        tabServer.add(lblBanAddresses, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, -1, -1));
+
+        lblPathToPIDFile.setText("Path to PID file");
+        tabServer.add(lblPathToPIDFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, -1, -1));
+
+        txtPathToPIDFile.setToolTipText("None is used if left blank");
+        tabServer.add(txtPathToPIDFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 129, -1));
+
+        lblWelcomeMessage.setText("Server welcome message");
+        tabServer.add(lblWelcomeMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
+
+        txtWelcomeMessage.setColumns(19);
+        txtWelcomeMessage.setRows(5);
+        txtWelcomeMessage.setText("This is a Noo BZflag server\nHave Fun and Play Nice");
+        txtWelcomeMessage.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txtWelcomeMessage);
+
+        tabServer.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, -1, 111));
+
+        txtBroadcastMessage.setColumns(19);
+        txtBroadcastMessage.setRows(5);
+        txtBroadcastMessage.setText("Noo BZflag Server\nBZFlag is Fun");
+        txtBroadcastMessage.setWrapStyleWord(true);
+        jScrollPane2.setViewportView(txtBroadcastMessage);
+
+        tabServer.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, 111));
+
+        lblBroadcastMessage.setText("Server broadcast message");
+        tabServer.add(lblBroadcastMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, -1));
+
+        spnSpamTime.setModel(new javax.swing.SpinnerNumberModel(15, 1, 999, 1));
+        tabServer.add(spnSpamTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 57, -1));
+
+        lblSpamTime.setText("Spam time (seconds)");
+        tabServer.add(lblSpamTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
+
+        chkSyncTimeWithServer.setText("Sync time with server");
+        tabServer.add(chkSyncTimeWithServer, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
+
+        lblInertiaX.setText("Inertia X");
+        tabServer.add(lblInertiaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
+
+        lblInertiaY.setText("Inertia Y");
+        tabServer.add(lblInertiaY, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, -1, -1));
+
+        sldDebugLevel.setMajorTickSpacing(1);
+        sldDebugLevel.setMaximum(4);
+        sldDebugLevel.setPaintLabels(true);
+        sldDebugLevel.setPaintTicks(true);
+        sldDebugLevel.setSnapToTicks(true);
+        tabServer.add(sldDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 89, -1));
+
+        lblDebugLevel.setText("Debug level");
+        tabServer.add(lblDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, -1, -1));
+
+        spnInertiaX.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
+        tabServer.add(spnInertiaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
+
+        spnInertiaY.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
+        tabServer.add(spnInertiaY, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        chkPrintScoreToConsole.setText("Print score to console");
+        tabServer.add(chkPrintScoreToConsole, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, -1, -1));
+
+        chkAddTimestampToLog.setText("Add timestamps to log");
+        tabServer.add(chkAddTimestampToLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, -1, -1));
+
+        tabAllTabs.addTab("Server", tabServer);
+
+        tabFlags.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        chkFlagsOnBuildings.setText("Flags on buildings");
+        tabFlags.add(chkFlagsOnBuildings, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, -1, -1));
+
+        chkAntidoteFlags.setText("Antidote flags");
+        tabFlags.add(chkAntidoteFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, -1, -1));
+
+        lblGoodFlags.setText("Bad Flags");
+        tabFlags.add(lblGoodFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
+
+        lblRicochetFlag1.setText("Agility");
+        tabFlags.add(lblRicochetFlag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
+
+        spnRicochetFlag1.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag1.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        spnRicochetFlag2.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag2.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        lblRicochetFlag2.setText("Cloaking");
+        tabFlags.add(lblRicochetFlag2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+
+        spnRicochetFlag3.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag3.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        lblRicochetFlag3.setText("Rapid fire");
+        tabFlags.add(lblRicochetFlag3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
+
+        spnRicochetFlag4.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag4.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+
+        lblRicochetFlag4.setText("Genocide");
+        tabFlags.add(lblRicochetFlag4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+
+        spnRicochetFlag5.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag5.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        lblRicochetFlag5.setText("Guided missile");
+        tabFlags.add(lblRicochetFlag5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        spnRicochetFlag6.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag6.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+
+        lblRicochetFlag6.setText("Invisible bullet");
+        tabFlags.add(lblRicochetFlag6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
+
+        spnRicochetFlag7.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag7.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        lblRicochetFlag7.setText("Laser");
+        tabFlags.add(lblRicochetFlag7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, -1));
+
+        spnRicochetFlag8.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag8.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+
+        lblRicochetFlag8.setText("Machine gun");
+        tabFlags.add(lblRicochetFlag8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+
+        spnRicochetFlag9.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag9.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        lblRicochetFlag9.setText("Narrow");
+        tabFlags.add(lblRicochetFlag9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
+
+        spnRicochetFlag10.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag10.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+
+        lblRicochetFlag10.setText("Oscillation Overthruster");
+        tabFlags.add(lblRicochetFlag10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, -1, -1));
+
+        spnRicochetFlag11.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag11.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+
+        lblRicochetFlag11.setText("Phantom zone");
+        tabFlags.add(lblRicochetFlag11, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, -1, -1));
+
+        spnRicochetFlag12.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag12.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
+
+        lblRicochetFlag12.setText("Quick turn");
+        tabFlags.add(lblRicochetFlag12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
+
+        spnRicochetFlag13.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag13.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+
+        lblRicochetFlag13.setText("Super bullet");
+        tabFlags.add(lblRicochetFlag13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
+
+        spnRicochetFlag14.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag14.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, -1, -1));
+
+        lblRicochetFlag14.setText("Seer");
+        tabFlags.add(lblRicochetFlag14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, -1, -1));
+
+        spnRicochetFlag15.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag15.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
+
+        lblRicochetFlag15.setText("Shield");
+        tabFlags.add(lblRicochetFlag15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 470, -1, -1));
+
+        spnRicochetFlag16.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag16.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
+
+        lblRicochetFlag16.setText("Steamroller");
+        tabFlags.add(lblRicochetFlag16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, -1, -1));
+
+        spnRicochetFlag17.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag17.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
+
+        lblRicochetFlag17.setText("Stealth");
+        tabFlags.add(lblRicochetFlag17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, -1, -1));
+
+        spnRicochetFlag18.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag18.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
+
+        lblRicochetFlag18.setText("Shockwave");
+        tabFlags.add(lblRicochetFlag18, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
+
+        spnRicochetFlag19.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag19.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag19, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
+
+        lblRicochetFlag19.setText("Tiny");
+        tabFlags.add(lblRicochetFlag19, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
+
+        spnRicochetFlag20.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag20.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag20, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
+
+        lblRicochetFlag20.setText("Theif");
+        tabFlags.add(lblRicochetFlag20, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
+
+        spnRicochetFlag21.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag21.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag21, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+
+        lblRicochetFlag21.setText("Useless");
+        tabFlags.add(lblRicochetFlag21, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
+
+        spnRicochetFlag22.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag22.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag22, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
+
+        lblRicochetFlag22.setText("High speed");
+        tabFlags.add(lblRicochetFlag22, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, -1));
+
+        spnRicochetFlag23.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag23.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
+
+        lblRicochetFlag23.setText("Wings");
+        tabFlags.add(lblRicochetFlag23, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
+
+        chkAllGoodflagsOn.setSelected(true);
+        chkAllGoodflagsOn.setText("All bad flags on");
+        tabFlags.add(chkAllGoodflagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
+
+        lblRicochetFlag24.setText("Blindness");
+        tabFlags.add(lblRicochetFlag24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
+
+        spnRicochetFlag24.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag24.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag24, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, -1, -1));
+
+        spnRicochetFlag25.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag25.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag25, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
+
+        lblRicochetFlag25.setText("Bouncy");
+        tabFlags.add(lblRicochetFlag25, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
+
+        spnRicochetFlag26.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag26.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag26, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
+
+        lblRicochetFlag26.setText("Colour blindness");
+        tabFlags.add(lblRicochetFlag26, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
+
+        spnRicochetFlag27.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag27.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag27, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
+
+        lblRicochetFlag27.setText("Forward only");
+        tabFlags.add(lblRicochetFlag27, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
+
+        spnRicochetFlag28.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag28.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag28, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
+
+        lblRicochetFlag28.setText("Jamming");
+        tabFlags.add(lblRicochetFlag28, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, -1, -1));
+
+        spnRicochetFlag29.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag29.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag29, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
+
+        lblRicochetFlag29.setText("Left turn only");
+        tabFlags.add(lblRicochetFlag29, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
+
+        spnRicochetFlag30.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag30.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag30, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
+
+        lblRicochetFlag30.setText("Momentum");
+        tabFlags.add(lblRicochetFlag30, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, -1, -1));
+
+        spnRicochetFlag31.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag31.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag31, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
+
+        lblRicochetFlag31.setText("No jumping");
+        tabFlags.add(lblRicochetFlag31, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
+
+        spnRicochetFlag32.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag32.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag32, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, -1, -1));
+
+        lblRicochetFlag32.setText("Obesity");
+        tabFlags.add(lblRicochetFlag32, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
+
+        spnRicochetFlag33.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag33.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag33, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
+
+        lblRicochetFlag33.setText("Reverse controlls");
+        tabFlags.add(lblRicochetFlag33, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+
+        spnRicochetFlag34.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag34.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag34, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
+
+        lblRicochetFlag34.setText("Reverse only");
+        tabFlags.add(lblRicochetFlag34, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, -1, -1));
+
+        spnRicochetFlag35.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag35.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag35, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
+
+        lblRicochetFlag35.setText("Right turn only");
+        tabFlags.add(lblRicochetFlag35, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+
+        spnRicochetFlag36.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag36.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag36, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, -1, -1));
+
+        lblRicochetFlag36.setText("Trigger happy");
+        tabFlags.add(lblRicochetFlag36, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, -1, -1));
+
+        spnRicochetFlag37.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag37.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag37, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, -1));
+
+        lblRicochetFlag37.setText("Wide angle");
+        tabFlags.add(lblRicochetFlag37, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
+
+        lblGoodFlags1.setText("Good Flags");
+        tabFlags.add(lblGoodFlags1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+
+        chkAllGoodflagsOn1.setSelected(true);
+        chkAllGoodflagsOn1.setText("All good flags on");
+        tabFlags.add(chkAllGoodflagsOn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+
+        spnRicochetFlag38.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag38.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag38, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, -1, -1));
+
+        lblRicochetFlag38.setText("Extra flags");
+        tabFlags.add(lblRicochetFlag38, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, -1, -1));
+
+        spnRicochetFlag39.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
+        spnRicochetFlag39.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
+        tabFlags.add(spnRicochetFlag39, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 520, -1, -1));
+
+        lblRicochetFlag39.setText("Number of flags");
+        tabFlags.add(lblRicochetFlag39, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 530, -1, -1));
+        tabFlags.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 160, -1));
+
+        tabAllTabs.addTab("Flags", tabFlags);
+
+        btnLaunchServer.setText("Launch Server");
+
+        btnImportSettings.setText("Import settings");
+
+        btnExportSettings.setText("Export settings");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
+                .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(tabAllTabs, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 620, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(layout.createSequentialGroup()
-                        .addContainerGap(519, Short.MAX_VALUE)
-                        .add(btnPlay))
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                        .add(17, 17, 17)
-                        .add(tabs, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)))
+                        .add(btnImportSettings)
+                        .add(18, 18, 18)
+                        .add(btnExportSettings)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 190, Short.MAX_VALUE)
+                        .add(btnLaunchServer)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .add(tabs, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 372, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(tabAllTabs, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 615, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(btnPlay)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(btnLaunchServer)
+                    .add(btnImportSettings)
+                    .add(btnExportSettings))
                 .addContainerGap())
         );
 
@@ -539,59 +894,191 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnPlay;
+    private javax.swing.JButton btnExportSettings;
+    private javax.swing.JButton btnImportSettings;
+    private javax.swing.JButton btnLaunchServer;
     private javax.swing.JCheckBox chkAddTeleporters;
+    private javax.swing.JCheckBox chkAddTimestampToLog;
+    private javax.swing.JCheckBox chkAllGoodflagsOn;
+    private javax.swing.JCheckBox chkAllGoodflagsOn1;
+    private javax.swing.JCheckBox chkAnnounceTKToAdmins;
+    private javax.swing.JCheckBox chkAntidoteFlags;
+    private javax.swing.JCheckBox chkAutoTeam;
     private javax.swing.JCheckBox chkDieOnTeamKill;
     private javax.swing.JCheckBox chkDisableBots;
+    private javax.swing.JCheckBox chkFilterCallSigns;
+    private javax.swing.JCheckBox chkFilterChat;
+    private javax.swing.JCheckBox chkFilterChatSimple;
+    private javax.swing.JCheckBox chkFlagsOnBuildings;
     private javax.swing.JCheckBox chkJumping;
+    private javax.swing.JCheckBox chkMakeServerPrivate;
     private javax.swing.JCheckBox chkManuallyStartTimedGame;
+    private javax.swing.JCheckBox chkPrintScoreToConsole;
+    private javax.swing.JCheckBox chkQuiteAfterOneGame;
     private javax.swing.JCheckBox chkRandomHeightBuildings;
     private javax.swing.JCheckBox chkRandomRotateObjects;
     private javax.swing.JCheckBox chkRandomWorld;
+    private javax.swing.JCheckBox chkRequireUDP;
     private javax.swing.JCheckBox chkRicochet;
     private javax.swing.JCheckBox chkSpanOnBuilding;
+    private javax.swing.JCheckBox chkSyncTimeWithServer;
     private javax.swing.JComboBox cmbGameStyle;
     private javax.swing.JComboBox cmbMaps;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel lblAdminAnnounceLag;
     private javax.swing.JLabel lblAdminPassword;
+    private javax.swing.JLabel lblAnnounceLag;
+    private javax.swing.JLabel lblAnnounceLag1;
+    private javax.swing.JLabel lblBanAddresses;
+    private javax.swing.JLabel lblBroadcastMessage;
     private javax.swing.JLabel lblBuildingDensity;
     private javax.swing.JLabel lblConfirmAdminPassword;
+    private javax.swing.JLabel lblDebugLevel;
     private javax.swing.JLabel lblGameStyle;
     private javax.swing.JLabel lblGameTime;
+    private javax.swing.JLabel lblGoodFlags;
+    private javax.swing.JLabel lblGoodFlags1;
+    private javax.swing.JLabel lblInertiaX;
+    private javax.swing.JLabel lblInertiaY;
+    private javax.swing.JLabel lblListeningAddress;
+    private javax.swing.JLabel lblListeningPort;
     private javax.swing.JLabel lblMap;
+    private javax.swing.JLabel lblMaxIdleTime;
     private javax.swing.JLabel lblMaxPlayerScore;
     private javax.swing.JLabel lblMaxPlayers;
     private javax.swing.JLabel lblMaxShots;
     private javax.swing.JLabel lblMaxTeamKills;
     private javax.swing.JLabel lblMaxTeamScore;
+    private javax.swing.JLabel lblPathToBadWords;
+    private javax.swing.JLabel lblPathToBanFile;
+    private javax.swing.JLabel lblPathToGroupDatabase;
+    private javax.swing.JLabel lblPathToPIDFile;
+    private javax.swing.JLabel lblPathToPasswordDatabase;
+    private javax.swing.JLabel lblPathToUserDatabase;
+    private javax.swing.JLabel lblPublicAddress;
+    private javax.swing.JLabel lblPublicMessage;
+    private javax.swing.JLabel lblRegisteredGroupName;
+    private javax.swing.JLabel lblRicochetFlag1;
+    private javax.swing.JLabel lblRicochetFlag10;
+    private javax.swing.JLabel lblRicochetFlag11;
+    private javax.swing.JLabel lblRicochetFlag12;
+    private javax.swing.JLabel lblRicochetFlag13;
+    private javax.swing.JLabel lblRicochetFlag14;
+    private javax.swing.JLabel lblRicochetFlag15;
+    private javax.swing.JLabel lblRicochetFlag16;
+    private javax.swing.JLabel lblRicochetFlag17;
+    private javax.swing.JLabel lblRicochetFlag18;
+    private javax.swing.JLabel lblRicochetFlag19;
+    private javax.swing.JLabel lblRicochetFlag2;
+    private javax.swing.JLabel lblRicochetFlag20;
+    private javax.swing.JLabel lblRicochetFlag21;
+    private javax.swing.JLabel lblRicochetFlag22;
+    private javax.swing.JLabel lblRicochetFlag23;
+    private javax.swing.JLabel lblRicochetFlag24;
+    private javax.swing.JLabel lblRicochetFlag25;
+    private javax.swing.JLabel lblRicochetFlag26;
+    private javax.swing.JLabel lblRicochetFlag27;
+    private javax.swing.JLabel lblRicochetFlag28;
+    private javax.swing.JLabel lblRicochetFlag29;
+    private javax.swing.JLabel lblRicochetFlag3;
+    private javax.swing.JLabel lblRicochetFlag30;
+    private javax.swing.JLabel lblRicochetFlag31;
+    private javax.swing.JLabel lblRicochetFlag32;
+    private javax.swing.JLabel lblRicochetFlag33;
+    private javax.swing.JLabel lblRicochetFlag34;
+    private javax.swing.JLabel lblRicochetFlag35;
+    private javax.swing.JLabel lblRicochetFlag36;
+    private javax.swing.JLabel lblRicochetFlag37;
+    private javax.swing.JLabel lblRicochetFlag38;
+    private javax.swing.JLabel lblRicochetFlag39;
+    private javax.swing.JLabel lblRicochetFlag4;
+    private javax.swing.JLabel lblRicochetFlag5;
+    private javax.swing.JLabel lblRicochetFlag6;
+    private javax.swing.JLabel lblRicochetFlag7;
+    private javax.swing.JLabel lblRicochetFlag8;
+    private javax.swing.JLabel lblRicochetFlag9;
+    private javax.swing.JLabel lblSpamTime;
+    private javax.swing.JLabel lblWelcomeMessage;
     private javax.swing.JLabel lblWorldSize;
     private javax.swing.JPasswordField passAdminPassword;
     private javax.swing.JPasswordField passConfirmAdminPassword;
+    private javax.swing.JSlider sldDebugLevel;
+    private javax.swing.JSpinner spnAdminAnnounceLag;
+    private javax.swing.JSpinner spnAnnounceLag;
+    private javax.swing.JSpinner spnAnnounceLag1;
     private javax.swing.JSpinner spnBuildingDensity;
     private javax.swing.JSpinner spnGameTime;
+    private javax.swing.JSpinner spnInertiaX;
+    private javax.swing.JSpinner spnInertiaY;
+    private javax.swing.JSpinner spnMaxIdleTime;
     private javax.swing.JSpinner spnMaxPlayerScore;
     private javax.swing.JSpinner spnMaxPlayers;
     private javax.swing.JSpinner spnMaxShots;
     private javax.swing.JSpinner spnMaxTeamKills;
     private javax.swing.JSpinner spnMaxTeamScore;
+    private javax.swing.JSpinner spnRicochetFlag1;
+    private javax.swing.JSpinner spnRicochetFlag10;
+    private javax.swing.JSpinner spnRicochetFlag11;
+    private javax.swing.JSpinner spnRicochetFlag12;
+    private javax.swing.JSpinner spnRicochetFlag13;
+    private javax.swing.JSpinner spnRicochetFlag14;
+    private javax.swing.JSpinner spnRicochetFlag15;
+    private javax.swing.JSpinner spnRicochetFlag16;
+    private javax.swing.JSpinner spnRicochetFlag17;
+    private javax.swing.JSpinner spnRicochetFlag18;
+    private javax.swing.JSpinner spnRicochetFlag19;
+    private javax.swing.JSpinner spnRicochetFlag2;
+    private javax.swing.JSpinner spnRicochetFlag20;
+    private javax.swing.JSpinner spnRicochetFlag21;
+    private javax.swing.JSpinner spnRicochetFlag22;
+    private javax.swing.JSpinner spnRicochetFlag23;
+    private javax.swing.JSpinner spnRicochetFlag24;
+    private javax.swing.JSpinner spnRicochetFlag25;
+    private javax.swing.JSpinner spnRicochetFlag26;
+    private javax.swing.JSpinner spnRicochetFlag27;
+    private javax.swing.JSpinner spnRicochetFlag28;
+    private javax.swing.JSpinner spnRicochetFlag29;
+    private javax.swing.JSpinner spnRicochetFlag3;
+    private javax.swing.JSpinner spnRicochetFlag30;
+    private javax.swing.JSpinner spnRicochetFlag31;
+    private javax.swing.JSpinner spnRicochetFlag32;
+    private javax.swing.JSpinner spnRicochetFlag33;
+    private javax.swing.JSpinner spnRicochetFlag34;
+    private javax.swing.JSpinner spnRicochetFlag35;
+    private javax.swing.JSpinner spnRicochetFlag36;
+    private javax.swing.JSpinner spnRicochetFlag37;
+    private javax.swing.JSpinner spnRicochetFlag38;
+    private javax.swing.JSpinner spnRicochetFlag39;
+    private javax.swing.JSpinner spnRicochetFlag4;
+    private javax.swing.JSpinner spnRicochetFlag5;
+    private javax.swing.JSpinner spnRicochetFlag6;
+    private javax.swing.JSpinner spnRicochetFlag7;
+    private javax.swing.JSpinner spnRicochetFlag8;
+    private javax.swing.JSpinner spnRicochetFlag9;
+    private javax.swing.JSpinner spnSpamTime;
     private javax.swing.JSpinner spnWorldSize;
-    private javax.swing.JPanel tabAdmin;
-    private javax.swing.JPanel tabChat;
+    private javax.swing.JTabbedPane tabAllTabs;
     private javax.swing.JPanel tabFlags;
     private javax.swing.JPanel tabGamePlay;
-    private javax.swing.JPanel tabMisc;
     private javax.swing.JPanel tabServer;
-    private javax.swing.JPanel tabWorld;
-    private javax.swing.JTabbedPane tabs;
+    private javax.swing.JTextField txtBanAddresses;
+    private javax.swing.JTextArea txtBroadcastMessage;
+    private javax.swing.JTextField txtListeningAddress;
+    private javax.swing.JTextField txtListeningPort;
+    private javax.swing.JTextField txtPathToBadWords;
+    private javax.swing.JTextField txtPathToBanFile;
+    private javax.swing.JTextField txtPathToGroupDatabase;
+    private javax.swing.JTextField txtPathToPIDFile;
+    private javax.swing.JTextField txtPathToPasswordDatabase;
+    private javax.swing.JTextField txtPathToUserDatabase;
+    private javax.swing.JTextField txtPublicAddress;
+    private javax.swing.JTextField txtPublicMessage;
+    private javax.swing.JTextField txtRegisteredGroupName;
+    private javax.swing.JTextArea txtWelcomeMessage;
     // End of variables declaration//GEN-END:variables
 
 }
