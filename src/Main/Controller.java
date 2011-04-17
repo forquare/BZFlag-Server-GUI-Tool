@@ -13,10 +13,10 @@ import GUI.MainFrame;
  */
 public class Controller {
 
-
+    MainFrame gui;
 
     public Controller(MainFrame mf){
-        
+        gui = mf;
     }
 
 }
