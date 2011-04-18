@@ -397,7 +397,7 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="cmbMaps">
               <Properties>
-                <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;This list is generated from the contents of a directory. &lt;br /&gt;&#xa;It will look for map or bzw files in the following directories:&#xa;&lt;ul&gt;&#xa;&lt;li&gt;On Windows&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;C:\Program Files\BZFlag*\maps&lt;/li&gt;&#xa;&lt;li&gt;Path\to\user\home\maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&#xa;&lt;li&gt;On UNIX&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;/opt/local/lib/bzflag/maps&lt;/li&gt;&#xa;&lt;li&gt;~/.maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+                <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;This list is generated from the contents of a directory. &lt;br /&gt;&#xa;It will look for map or bzw files in the following directories:&#xa;&lt;ul&gt;&#xa;&lt;li&gt;On Windows&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;C:\Program Files\BZFlag*\maps&lt;/li&gt;&#xa;&lt;li&gt;Path\to\user\home\My Documents\&#xfeff;My BZFlag Files\maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&#xa;&lt;li&gt;On UNIX&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;/opt/local/lib/bzflag/maps&lt;/li&gt;&#xa;&lt;li&gt;~/.maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

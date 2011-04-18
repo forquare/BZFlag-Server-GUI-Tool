@@ -8,26 +8,6 @@ import java.io.File;
  */
 public class Main {
 
-    private static getMaps(){
-        String systemMapPath;
-        String homeMapPath;
-
-        //Get maps
-        if(System.getProperty("os.name").toLowerCase().contains("windows")){
-            systemMapPath = "C:\\Program Files\\BZFlag*\\maps";
-            homeMapPath = System.getProperty("user.home") + "\\maps";
-        }else{
-            //We assume UNIX based
-            systemMapPath = "/opt/local/lib/bzflag/maps";
-            homeMapPath = System.getProperty("user.home") + "/.maps";
-        }
-
-        File path = new File(systemMapPath);
-        String[] systemMaps = path.list();
-        path = new File(homeMapPath);
-        String[] homeMaps = path.list();
-    }
-
     /**
      * @param args the command line arguments
      */

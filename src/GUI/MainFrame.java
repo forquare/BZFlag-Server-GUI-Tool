@@ -348,7 +348,7 @@ public class MainFrame extends javax.swing.JFrame {
         chkRandomWorld.setText("Generate random world");
         tabGamePlay.add(chkRandomWorld, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
-        cmbMaps.setToolTipText("<html>\nThis list is generated from the contents of a directory. <br />\nIt will look for map or bzw files in the following directories:\n<ul>\n<li>On Windows</li>\n<ul>\n<li>C:\\Program Files\\BZFlag*\\maps</li>\n<li>Path\\to\\user\\home\\maps</li>\n</ul>\n\n<li>On UNIX</li>\n<ul>\n<li>/opt/local/lib/bzflag/maps</li>\n<li>~/.maps</li>\n</ul>\n</ul>\n</html>");
+        cmbMaps.setToolTipText("<html>\nThis list is generated from the contents of a directory. <br />\nIt will look for map or bzw files in the following directories:\n<ul>\n<li>On Windows</li>\n<ul>\n<li>C:\\Program Files\\BZFlag*\\maps</li>\n<li>Path\\to\\user\\home\\My Documents\\﻿My BZFlag Files\\maps</li>\n</ul>\n\n<li>On UNIX</li>\n<ul>\n<li>/opt/local/lib/bzflag/maps</li>\n<li>~/.maps</li>\n</ul>\n</ul>\n</html>");
         tabGamePlay.add(cmbMaps, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, -1));
 
         chkRandomHeightBuildings.setText("Buildings have random height");
