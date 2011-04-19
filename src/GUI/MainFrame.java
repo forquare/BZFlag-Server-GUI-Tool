@@ -334,27 +334,36 @@ public class MainFrame extends javax.swing.JFrame {
         tabGamePlay.add(lblWorldSize, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, -1, -1));
 
         spnWorldSize.setModel(new javax.swing.SpinnerNumberModel(800, 10, 9990, 10));
+        spnWorldSize.setEnabled(false);
         tabGamePlay.add(spnWorldSize, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
 
         lblBuildingDensity.setText("Building density");
         tabGamePlay.add(lblBuildingDensity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, -1, -1));
 
         spnBuildingDensity.setModel(new javax.swing.SpinnerNumberModel(5, 0, 10, 1));
+        spnBuildingDensity.setEnabled(false);
         tabGamePlay.add(spnBuildingDensity, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
 
         lblMap.setText("Map");
         tabGamePlay.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
         chkRandomWorld.setText("Generate random world");
+        chkRandomWorld.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkRandomWorldActionPerformed(evt);
+            }
+        });
         tabGamePlay.add(chkRandomWorld, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
         cmbMaps.setToolTipText("<html>\nThis list is generated from the contents of a directory. <br />\nIt will look for map or bzw files in the following directories:\n<ul>\n<li>On Windows</li>\n<ul>\n<li>C:\\Program Files\\BZFlag*\\maps</li>\n<li>Path\\to\\user\\home\\My Documents\\﻿My BZFlag Files\\maps</li>\n</ul>\n\n<li>On UNIX</li>\n<ul>\n<li>/opt/local/lib/bzflag/maps</li>\n<li>~/.maps</li>\n</ul>\n</ul>\n</html>");
         tabGamePlay.add(cmbMaps, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, -1));
 
         chkRandomHeightBuildings.setText("Buildings have random height");
+        chkRandomHeightBuildings.setEnabled(false);
         tabGamePlay.add(chkRandomHeightBuildings, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, -1, -1));
 
         chkRandomRotateObjects.setText("Randomly rotate world objects");
+        chkRandomRotateObjects.setEnabled(false);
         tabGamePlay.add(chkRandomRotateObjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
 
         chkAddTeleporters.setText("Add teleporters");
@@ -1539,13 +1548,29 @@ public class MainFrame extends javax.swing.JFrame {
         if(passAdminPassword.getPassword().equals(passConfirmAdminPassword.getPassword())){
             //Launch server
         }else{
-            JOptionPane.showMessageDialog(null, "Admin passwords don't match!");
+            JOptionPane.showMessageDialog(null, passAdminPassword.getPassword().equals(passConfirmAdminPassword.getPassword()));
         }
     }//GEN-LAST:event_btnLaunchServerActionPerformed
 
     private void sldDebugLevelStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDebugLevelStateChanged
         
     }//GEN-LAST:event_sldDebugLevelStateChanged
+
+    private void chkRandomWorldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRandomWorldActionPerformed
+        if(chkRandomWorld.isSelected()){
+            cmbMaps.setEnabled(false);
+            chkRandomRotateObjects.setEnabled(true);
+            chkRandomHeightBuildings.setEnabled(true);
+            spnBuildingDensity.setEnabled(true);
+            spnWorldSize.setEnabled(true);
+        }else{
+            cmbMaps.setEnabled(true);
+            chkRandomRotateObjects.setEnabled(false);
+            chkRandomHeightBuildings.setEnabled(false);
+            spnBuildingDensity.setEnabled(false);
+            spnWorldSize.setEnabled(false);
+        }
+    }//GEN-LAST:event_chkRandomWorldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
