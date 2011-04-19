@@ -55,7 +55,20 @@ public class Exporter {
         sb.delete(0, sb.length());
 
         //Set world path
+        sb.append("-world \"");
+        sb.append(gui.getCmbGameStyle().getSelectedItem().toString());
+        sb.append("\"");
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
 
+        //Set rotate objects if set
+        if(gui.getChkRandomRotateObjects().isSelected()){
+            sb.append("-b");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        
         
     }
 
