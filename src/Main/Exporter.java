@@ -54,19 +54,100 @@ public class Exporter {
         options.add(sb.toString());
         sb.delete(0, sb.length());
 
-        //Set world path
-        sb.append("-world \"");
-        sb.append(gui.getCmbGameStyle().getSelectedItem().toString());
-        sb.append("\"");
-        options.add(sb.toString());
-        sb.delete(0, sb.length());
+        //Setup world/maps
+        if(gui.getChkRandomWorld().isSelected()){
+            if(gui.getChkRandomRotateObjects().isSelected()){
+                sb.append("-b");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
 
-        //Set rotate objects if set
-        if(gui.getChkRandomRotateObjects().isSelected()){
-            sb.append("-b");
+            sb.append("-density");
+            sb.append(gui.getSpnBuildingDensity().getValue());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+
+            sb.append("-worldsize");
+            sb.append(gui.getSpnWorldSize().getValue());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+
+            if(gui.getCmbGameStyle().getSelectedItem().toString().equalsIgnoreCase("capture the flag")){
+                sb.append("-cr");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(gui.getChkRandomHeightBuildings().isSelected()){
+                sb.append("-h");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+        }else{
+            sb.append("-world \"");
+            sb.append(gui.getCmbGameStyle().getSelectedItem().toString());
+            sb.append("\"");
             options.add(sb.toString());
             sb.delete(0, sb.length());
         }
+
+        
+        //Set teleporters
+        if(gui.getChkAddTeleporters().isSelected()){
+            sb.append("-t");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set game style
+        sb.append("-");
+        if(gui.getCmbGameStyle().getSelectedItem().toString().equalsIgnoreCase("free for all")){
+            //Do nothing
+        }
+        if(gui.getCmbGameStyle().getSelectedItem().toString().equalsIgnoreCase("capture the flag")){
+            if(!gui.getChkRandomWorld().isSelected()){
+                sb.append("c");
+                options.add(sb.toString());
+            }
+        }
+        if(gui.getCmbGameStyle().getSelectedItem().toString().equalsIgnoreCase("rabbit based on score")){
+            sb.append("rabbit score");
+            options.add(sb.toString());
+        }
+        if(gui.getCmbGameStyle().getSelectedItem().toString().equalsIgnoreCase("rabbit based on killer")){
+            sb.append("rabbit killer");
+            options.add(sb.toString());
+        }
+        if(gui.getCmbGameStyle().getSelectedItem().toString().equalsIgnoreCase("rabbit random")){
+            sb.append("rabbit random");
+            options.add(sb.toString());
+        }
+        sb.delete(0, sb.length());
+
+        //Set max shots
+        sb.append("-ms ");
+        sb.append(gui.getSpnMaxShots().getValue());
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
+
+        //Make shots ricochet
+        if(gui.getChkRicochet().isSelected()){
+            sb.append("+r");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Allow jumping
+        if(gui.getChkJumping().isSelected()){
+            sb.append("-j");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+
+
+
+
 
         
         
