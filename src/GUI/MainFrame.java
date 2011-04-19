@@ -57,7 +57,7 @@ public class MainFrame extends javax.swing.JFrame {
         lblMaxShots = new javax.swing.JLabel();
         chkRicochet = new javax.swing.JCheckBox();
         chkJumping = new javax.swing.JCheckBox();
-        chkSpanOnBuilding = new javax.swing.JCheckBox();
+        chkSpawnOnBuilding = new javax.swing.JCheckBox();
         chkDieOnTeamKill = new javax.swing.JCheckBox();
         lblMaxTeamKills = new javax.swing.JLabel();
         chkDisableBots = new javax.swing.JCheckBox();
@@ -280,8 +280,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
         tabGamePlay.add(chkJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 40, -1, -1));
 
-        chkSpanOnBuilding.setText("Spawn tanks on buildings");
-        tabGamePlay.add(chkSpanOnBuilding, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 63, -1, -1));
+        chkSpawnOnBuilding.setText("Spawn tanks on buildings");
+        tabGamePlay.add(chkSpawnOnBuilding, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 63, -1, -1));
 
         chkDieOnTeamKill.setSelected(true);
         chkDieOnTeamKill.setText("Die on team kill");
@@ -1097,8 +1097,8 @@ public class MainFrame extends javax.swing.JFrame {
         return chkRicochet;
     }
 
-    public JCheckBox getChkSpanOnBuilding() {
-        return chkSpanOnBuilding;
+    public JCheckBox getChkSpawnOnBuilding() {
+        return chkSpawnOnBuilding;
     }
 
     public JCheckBox getChkSyncTimeWithServer() {
@@ -1601,7 +1601,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JCheckBox chkRandomWorld;
     private javax.swing.JCheckBox chkRequireUDP;
     private javax.swing.JCheckBox chkRicochet;
-    private javax.swing.JCheckBox chkSpanOnBuilding;
+    private javax.swing.JCheckBox chkSpawnOnBuilding;
     private javax.swing.JCheckBox chkSyncTimeWithServer;
     private javax.swing.JComboBox cmbGameStyle;
     private javax.swing.JComboBox cmbMaps;

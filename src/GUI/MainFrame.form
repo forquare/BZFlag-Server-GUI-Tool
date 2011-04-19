@@ -157,7 +157,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkSpanOnBuilding">
+            <Component class="javax.swing.JCheckBox" name="chkSpawnOnBuilding">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Spawn tanks on buildings"/>
               </Properties>
