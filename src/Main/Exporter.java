@@ -144,14 +144,88 @@ public class Exporter {
             sb.delete(0, sb.length());
         }
 
+        //Allow players to spawn on buildings
+        if(gui.getChkSpawnOnBuilding().isSelected()){
+            sb.append("-sb");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
 
+        //Turn off team kills
+        if(!gui.getChkDieOnTeamKill().isSelected()){
+            sb.append("-tk");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
 
+        //Announce team kills on admin channel
+        if(gui.getChkAnnounceTKToAdmins().isSelected()){
+            sb.append("-tkannounce");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
 
+        //Kick player for high percentage of TKs
+        sb.append("-tkkr ");
+        sb.append(gui.getSpnMaxTeamKills().getValue());
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
 
+        //Disable bots
+        if(gui.getChkDisableBots().isSelected()){
+            sb.append("-disableBots");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
 
+        //Quit server after one game
+        if(gui.getChkQuiteAfterOneGame().isSelected()){
+            sb.append("-q");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set max score for players
+        if(Integer.parseInt(gui.getSpnMaxPlayerScore().getValue().toString()) > 0){
+            sb.append("-mps");
+            sb.append(gui.getSpnMaxPlayerScore().getValue().toString());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set max score for teams
+        if(Integer.parseInt(gui.getSpnMaxTeamScore().getValue().toString()) > 0){
+            sb.append("-mts");
+            sb.append(gui.getSpnMaxTeamScore().getValue().toString());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
         
+        //Set print score to console
+        if(gui.getChkPrintScoreToConsole().isSelected()){
+            sb.append("-printscore");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set time for game
+        if(Integer.parseInt(gui.getSpnGameTime().getValue().toString()) > 0){
+            sb.append("-time");
+            sb.append(gui.getSpnGameTime().getValue().toString());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set manual start of game
+        if(gui.getChkManuallyStartTimedGame().isSelected()){
+            sb.append("-timemanual");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+        
+        
+
+
         
     }
-
-
 }
