@@ -49,7 +49,6 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFileChooser1 = new javax.swing.JFileChooser();
         tabAllTabs = new javax.swing.JTabbedPane();
         tabGamePlay = new javax.swing.JPanel();
         cmbGameStyle = new javax.swing.JComboBox();
@@ -564,7 +563,7 @@ public class MainFrame extends javax.swing.JFrame {
         spnInertiaX.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
         tabServer.add(spnInertiaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
-        spnInertiaY.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
+        spnInertiaY.setModel(new javax.swing.SpinnerNumberModel(38, 0, 999, 1));
         tabServer.add(spnInertiaY, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
 
         chkPrintScoreToConsole.setText("Print score to console");
@@ -1605,7 +1604,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JCheckBox chkSyncTimeWithServer;
     private javax.swing.JComboBox cmbGameStyle;
     private javax.swing.JComboBox cmbMaps;
-    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
