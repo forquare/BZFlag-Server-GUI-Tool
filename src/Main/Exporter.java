@@ -222,6 +222,105 @@ public class Exporter {
             options.add(sb.toString());
             sb.delete(0, sb.length());
         }
+
+        //Set public message
+        sb.append("-public ");
+        sb.append(gui.getTxtPublicMessage().getText());
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
+
+        //Set public address
+        sb.append("-publicaddr ");
+        sb.append(gui.getTxtPublicAddress().getText());
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
+
+        //Set server listening port
+        sb.append("-p ");
+        sb.append(gui.getTxtListeningPort().getText());
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
+
+        //Set server to not respond to pings
+        if(gui.getChkMakeServerPrivate().isSelected()){
+            sb.append("-q");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set interface
+        if(!gui.getTxtListeningAddress().getText().isEmpty()){
+            sb.append("-i ");
+            sb.append(gui.getTxtListeningAddress().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set require UDP
+        if(gui.getChkRequireUDP().isSelected()){
+            sb.append("-requireudp");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set auto team
+        if(gui.getChkAutoTeam().isSelected()){
+            sb.append("-autoTeam");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set max players
+        sb.append("-mp ");
+        sb.append(gui.getSpnMaxPlayers().getValue());
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
+
+        //Set passwd file
+        if(!gui.getTxtPathToPasswordDatabase().getText().isEmpty()){
+            sb.append("-passdb ");
+            sb.append(gui.getTxtPathToPasswordDatabase().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set user file
+        if(!gui.getTxtPathToUserDatabase().getText().isEmpty()){
+            sb.append("-userdb ");
+            sb.append(gui.getTxtPathToUserDatabase().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set groups file
+        if(!gui.getTxtPathToGroupDatabase().getText().isEmpty()){
+            sb.append("-groupdb ");
+            sb.append(gui.getTxtPathToGroupDatabase().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set registered group
+        if(!gui.getTxtRegisteredGroupName().getText().isEmpty()){
+            sb.append("-advertise ");
+            sb.append(gui.getTxtRegisteredGroupName().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set max idle time
+        sb.append("-maxidle ");
+        sb.append(gui.getSpnMaxIdleTime().getValue());
+        options.add(sb.toString());
+        sb.delete(0, sb.length());
+
+        //Set lag announce to admin
+        if(Integer.parseInt(gui.getSpnAdminAnnounceLag().getValue().toString()) > 0){
+            sb.append("-adminlagannounce ");
+            sb.append(gui.getSpnAdminAnnounceLag().getValue());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
         
         
 
