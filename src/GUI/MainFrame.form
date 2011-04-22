@@ -826,7 +826,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblAnnounceLag1">
+            <Component class="javax.swing.JLabel" name="lblKickPlayerAfterLag">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Kick player after this many lag warnings"/>
               </Properties>
@@ -836,7 +836,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spnAnnounceLag1">
+            <Component class="javax.swing.JSpinner" name="spnKickPlayerAfterLag">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="3" maximum="999" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
