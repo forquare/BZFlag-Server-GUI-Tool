@@ -119,8 +119,8 @@ public class MainFrame extends javax.swing.JFrame {
         spnAdminAnnounceLag = new javax.swing.JSpinner();
         spnAnnounceLag = new javax.swing.JSpinner();
         lblAnnounceLag = new javax.swing.JLabel();
-        lblAnnounceLag1 = new javax.swing.JLabel();
-        spnAnnounceLag1 = new javax.swing.JSpinner();
+        lblKickPlayerAfterLag = new javax.swing.JLabel();
+        spnKickPlayerAfterLag = new javax.swing.JSpinner();
         lblPathToBanFile = new javax.swing.JLabel();
         txtPathToBanFile = new javax.swing.JTextField();
         txtBanAddresses = new javax.swing.JTextField();
@@ -482,11 +482,11 @@ public class MainFrame extends javax.swing.JFrame {
         lblAnnounceLag.setText("Annouce lag time (milliseconds)");
         tabServer.add(lblAnnounceLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, -1, -1));
 
-        lblAnnounceLag1.setText("Kick player after this many lag warnings");
-        tabServer.add(lblAnnounceLag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, -1, -1));
+        lblKickPlayerAfterLag.setText("Kick player after this many lag warnings");
+        tabServer.add(lblKickPlayerAfterLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, -1, -1));
 
-        spnAnnounceLag1.setModel(new javax.swing.SpinnerNumberModel(3, 1, 999, 1));
-        tabServer.add(spnAnnounceLag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 57, -1));
+        spnKickPlayerAfterLag.setModel(new javax.swing.SpinnerNumberModel(3, 1, 999, 1));
+        tabServer.add(spnKickPlayerAfterLag, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 57, -1));
 
         lblPathToBanFile.setText("Path to ban file");
         tabServer.add(lblPathToBanFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
@@ -1140,8 +1140,8 @@ public class MainFrame extends javax.swing.JFrame {
         return spnAnnounceLag;
     }
 
-    public JSpinner getSpnAnnounceLag1() {
-        return spnAnnounceLag1;
+    public JSpinner getSpnKickPlayerAfterlag() {
+        return spnKickPlayerAfterLag;
     }
 
     public JSpinner getSpnBlindness() {
@@ -1612,7 +1612,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblAdminPassword;
     private javax.swing.JLabel lblAgility;
     private javax.swing.JLabel lblAnnounceLag;
-    private javax.swing.JLabel lblAnnounceLag1;
     private javax.swing.JLabel lblBanAddresses;
     private javax.swing.JLabel lblBlindness;
     private javax.swing.JLabel lblBouncy;
@@ -1636,6 +1635,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblInvisibleBullet;
     private javax.swing.JLabel lblJamming;
     private javax.swing.JLabel lblJumpingFlag;
+    private javax.swing.JLabel lblKickPlayerAfterLag;
     private javax.swing.JLabel lblLaser;
     private javax.swing.JLabel lblLeftTurnOnly;
     private javax.swing.JLabel lblListeningAddress;
@@ -1691,7 +1691,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSpinner spnAdminAnnounceLag;
     private javax.swing.JSpinner spnAgility;
     private javax.swing.JSpinner spnAnnounceLag;
-    private javax.swing.JSpinner spnAnnounceLag1;
     private javax.swing.JSpinner spnBlindness;
     private javax.swing.JSpinner spnBouncy;
     private javax.swing.JSpinner spnBuildingDensity;
@@ -1708,6 +1707,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSpinner spnInvisibleBullet;
     private javax.swing.JSpinner spnJamming;
     private javax.swing.JSpinner spnJumpingFlag;
+    private javax.swing.JSpinner spnKickPlayerAfterLag;
     private javax.swing.JSpinner spnLaser;
     private javax.swing.JSpinner spnLeftTurnOnly;
     private javax.swing.JSpinner spnMachineGun;

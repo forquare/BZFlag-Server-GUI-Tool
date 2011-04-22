@@ -322,6 +322,22 @@ public class Exporter {
             sb.delete(0, sb.length());
         }
         
+        //Set lag announce to player
+        if(Integer.parseInt(gui.getSpnAnnounceLag().getValue().toString()) > 0){
+            sb.append("-lagannounce ");
+            sb.append(gui.getSpnAnnounceLag().getValue());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set ban file
+        if(!gui.getTxtPathToBanFile().getText().isEmpty()){
+            sb.append("-banfile ");
+            sb.append(gui.getTxtPathToBanFile().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
         
 
 
