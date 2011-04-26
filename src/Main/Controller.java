@@ -15,14 +15,19 @@ public class Controller {
 
     private MainFrame gui;
 
-    public Controller(MainFrame mf){
-        gui = mf;
+    public Controller(){
+        gui = new MainFrame();
         gui.setController(this);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                gui.setVisible(true);
+            }
+        });
     }
 
     public void launchServer(){
-        System.out.println("HERE");
         exportSettings();
+        //Run server
     }
 
     public void killServer(){
