@@ -455,6 +455,88 @@ public class Exporter {
             options.add(sb.toString());
             sb.delete(0, sb.length());
         }
+
+        if(gui.getChkAllGoodflagsOn().isSelected()){
+            sb.append("+f good");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }else{
+            if(Integer.parseInt(gui.getSpnAgility().getValue().toString()) == -1){
+                sb.append("-f A");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnAgility().getValue().toString()) == 0){
+                sb.append("+f A{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f A{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl A ");
+                sb.append(gui.getSpnAgility().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnCloaking().getValue().toString()) == -1){
+                sb.append("-f CL");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnCloaking().getValue().toString()) == 0){
+                sb.append("+f CL{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f CL{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl CL ");
+                sb.append(gui.getSpnCloaking().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnRapidFire().getValue().toString()) == -1){
+                sb.append("-f F");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnRapidFire().getValue().toString()) == 0){
+                sb.append("+f F{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f F{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl F ");
+                sb.append(gui.getSpnRapidFire().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnGenocide().getValue().toString()) == -1){
+                sb.append("-f G");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnGenocide().getValue().toString()) == 0){
+                sb.append("+f G{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f G{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl G ");
+                sb.append(gui.getSpnGenocide().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+        }
     }
 
     private void exportData() {

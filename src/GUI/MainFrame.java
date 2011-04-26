@@ -1532,14 +1532,17 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void btnKillServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKillServerActionPerformed
         JOptionPane.showMessageDialog(null, "I will kill the server");
+        //controller.killServer();
     }//GEN-LAST:event_btnKillServerActionPerformed
 
     private void btnExportSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportSettingsActionPerformed
         JOptionPane.showMessageDialog(null, "I will export your settings");
+        //controller.exportSettings();
     }//GEN-LAST:event_btnExportSettingsActionPerformed
 
     private void btnImportSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportSettingsActionPerformed
         JOptionPane.showMessageDialog(null, "I will import your settings");
+        //controller.importSettings();
     }//GEN-LAST:event_btnImportSettingsActionPerformed
 
     private void btnLaunchServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaunchServerActionPerformed
