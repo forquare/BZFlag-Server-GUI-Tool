@@ -5,7 +5,14 @@
 
 package Main;
 import GUI.MainFrame;
+import util.FileReadWrite;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.StringReader;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
 
 /**
  *
@@ -19,13 +26,14 @@ public class Exporter {
     final int INITIAL_VECTOR_COUNT = 99;
     private Vector<String> options = new Vector<String>(INITIAL_VECTOR_COUNT);
 
-    public Exporter(MainFrame mf, String p){
-        gui = mf;
+    public Exporter(JFrame mf, String p){
+        gui = (MainFrame) mf;
         path = p;
-        export();
+        gatherData();
+        exportData();
     }
 
-    private void export(){
+    private void gatherData(){
         //Go through each editable widget and get their value.
         //Set an element in the array as the output
 
@@ -41,13 +49,13 @@ public class Exporter {
 
         //Set admin password
         //We check passwords are the same before we leave the GUI
-        sb.append("-");
+        sb.append("-password ");
         sb.append(gui.getPassAdminPassword().getPassword());
         options.add(sb.toString());
         sb.delete(0, sb.length());
 
         //Set inertia
-        sb.append("- ");
+        sb.append("-a ");
         sb.append(gui.getSpnInertiaX().getValue());
         sb.append(" ");
         sb.append(gui.getSpnInertiaY().getValue());
@@ -85,7 +93,7 @@ public class Exporter {
             }
         }else{
             sb.append("-world \"");
-            sb.append(gui.getCmbGameStyle().getSelectedItem().toString());
+            sb.append(gui.getCmbMaps().getSelectedItem().toString());
             sb.append("\"");
             options.add(sb.toString());
             sb.delete(0, sb.length());
@@ -187,7 +195,7 @@ public class Exporter {
 
         //Set max score for players
         if(Integer.parseInt(gui.getSpnMaxPlayerScore().getValue().toString()) > 0){
-            sb.append("-mps");
+            sb.append("-mps ");
             sb.append(gui.getSpnMaxPlayerScore().getValue().toString());
             options.add(sb.toString());
             sb.delete(0, sb.length());
@@ -195,7 +203,7 @@ public class Exporter {
 
         //Set max score for teams
         if(Integer.parseInt(gui.getSpnMaxTeamScore().getValue().toString()) > 0){
-            sb.append("-mts");
+            sb.append("-mts ");
             sb.append(gui.getSpnMaxTeamScore().getValue().toString());
             options.add(sb.toString());
             sb.delete(0, sb.length());
@@ -210,7 +218,7 @@ public class Exporter {
 
         //Set time for game
         if(Integer.parseInt(gui.getSpnGameTime().getValue().toString()) > 0){
-            sb.append("-time");
+            sb.append("-time ");
             sb.append(gui.getSpnGameTime().getValue().toString());
             options.add(sb.toString());
             sb.delete(0, sb.length());
@@ -224,8 +232,9 @@ public class Exporter {
         }
 
         //Set public message
-        sb.append("-public ");
+        sb.append("-public \"");
         sb.append(gui.getTxtPublicMessage().getText());
+        sb.append("\"");
         options.add(sb.toString());
         sb.delete(0, sb.length());
 
@@ -330,6 +339,14 @@ public class Exporter {
             sb.delete(0, sb.length());
         }
 
+        //Set kick if lag is too high
+        if(Integer.parseInt(gui.getSpnKickPlayerAfterlag().getValue().toString()) > 0){
+            sb.append("-lagdrop ");
+            sb.append(gui.getSpnKickPlayerAfterlag().getValue());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
         //Set ban file
         if(!gui.getTxtPathToBanFile().getText().isEmpty()){
             sb.append("-banfile ");
@@ -338,9 +355,110 @@ public class Exporter {
             sb.delete(0, sb.length());
         }
 
-        
+        //Set banned addresses
+        if(!gui.getTxtBanAddresses().getText().isEmpty()){
+            sb.append("-ban ");
+            sb.append(gui.getTxtBanAddresses().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
 
+        //Add timestamps to log
+        if(gui.getChkAddTimestampToLog().isSelected()){
+            sb.append("-ts");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
 
-        
+        //Set PID file
+        if(!gui.getTxtPathToPIDFile().getText().isEmpty()){
+            sb.append("-pidfile ");
+            sb.append(gui.getTxtPathToPIDFile().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set server message
+        if(!gui.getTxtWelcomeMessage().getText().isEmpty()){
+            BufferedReader buf = new BufferedReader(new StringReader(gui.getTxtWelcomeMessage().getText()));
+            String messageLine = new String();
+            try {
+                while ((messageLine = buf.readLine()) != null) {
+                    sb.append("-srvmsg \"");
+                    sb.append(messageLine);
+                    sb.append("\"");
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(Exporter.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        //Set admin message
+        if(!gui.getTxtBroadcastMessage().getText().isEmpty()){
+            BufferedReader buf = new BufferedReader(new StringReader(gui.getTxtBroadcastMessage().getText()));
+            String messageLine = new String();
+            try {
+                while ((messageLine = buf.readLine()) != null) {
+                    sb.append("-admsg \"");
+                    sb.append(messageLine);
+                    sb.append("\"");
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(Exporter.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        //Set spam time
+        if(Integer.parseInt(gui.getSpnSpamTime().getValue().toString()) > 0){
+            sb.append("-spamtime ");
+            sb.append(gui.getSpnSpamTime().getValue());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set PID file
+        if(!gui.getTxtPathToBadWords().getText().isEmpty()){
+            sb.append("-badwords ");
+            sb.append(gui.getTxtPathToBadWords().getText());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set filter chat
+        if(gui.getChkFilterChat().isSelected()){
+            sb.append("-filterChat");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set filter call signs
+        if(gui.getChkFilterCallSigns().isSelected()){
+            sb.append("-filterCallsigns");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set simple filter
+        if(gui.getChkFilterChatSimple().isSelected()){
+            sb.append("-filterSimple");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set sync time
+        if(gui.getChkSyncTimeWithServer().isSelected()){
+            sb.append("-synctime");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+    }
+
+    private void exportData() {
+        FileReadWrite frw = new FileReadWrite();
+        frw.writer(options, path);
     }
 }

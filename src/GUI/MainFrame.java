@@ -1543,12 +1543,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnImportSettingsActionPerformed
 
     private void btnLaunchServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaunchServerActionPerformed
-        JOptionPane.showMessageDialog(null, "I will launch the server");
-        if(passAdminPassword.getPassword().equals(passConfirmAdminPassword.getPassword())){
-            //Launch server
-        }else{
-            JOptionPane.showMessageDialog(null, passAdminPassword.getPassword().equals(passConfirmAdminPassword.getPassword()));
-        }
+        //JOptionPane.showMessageDialog(null, "I will launch the server");
+        controller.launchServer();
     }//GEN-LAST:event_btnLaunchServerActionPerformed
 
     private void sldDebugLevelStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDebugLevelStateChanged
