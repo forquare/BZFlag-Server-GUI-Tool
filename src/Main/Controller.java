@@ -17,10 +17,12 @@ public class Controller {
 
     public Controller(MainFrame mf){
         gui = mf;
+        gui.setController(this);
     }
 
     public void launchServer(){
-        
+        System.out.println("HERE");
+        exportSettings();
     }
 
     public void killServer(){
@@ -32,7 +34,7 @@ public class Controller {
     }
 
     public void exportSettings(){
-
+        Exporter exp = new Exporter(gui, "/tmp/myTest.txt");
     }
 
 }
