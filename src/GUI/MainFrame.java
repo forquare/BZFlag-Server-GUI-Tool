@@ -1550,6 +1550,10 @@ public class MainFrame extends javax.swing.JFrame {
         controller.launchServer();
     }//GEN-LAST:event_btnLaunchServerActionPerformed
 
+    public void printError(String error){
+        JOptionPane.showMessageDialog(null, error);
+    }
+
     private void sldDebugLevelStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldDebugLevelStateChanged
         
     }//GEN-LAST:event_sldDebugLevelStateChanged
