@@ -70,12 +70,12 @@ public class Exporter {
                 sb.delete(0, sb.length());
             }
 
-            sb.append("-density");
+            sb.append("-density ");
             sb.append(gui.getSpnBuildingDensity().getValue());
             options.add(sb.toString());
             sb.delete(0, sb.length());
 
-            sb.append("-worldsize");
+            sb.append("-worldsize ");
             sb.append(gui.getSpnWorldSize().getValue());
             options.add(sb.toString());
             sb.delete(0, sb.length());
@@ -536,6 +536,711 @@ public class Exporter {
                 options.add(sb.toString());
                 sb.delete(0, sb.length());
             }
+
+            if(Integer.parseInt(gui.getSpnGuidedMissile().getValue().toString()) == -1){
+                sb.append("-f GM");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnGuidedMissile().getValue().toString()) == 0){
+                sb.append("+f GM{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f GM{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl GM ");
+                sb.append(gui.getSpnGuidedMissile().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnInvisibleBullet().getValue().toString()) == -1){
+                sb.append("-f IB");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnInvisibleBullet().getValue().toString()) == 0){
+                sb.append("+f IB{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f IB{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl IB ");
+                sb.append(gui.getSpnInvisibleBullet().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnLaser().getValue().toString()) == -1){
+                sb.append("-f L");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnLaser().getValue().toString()) == 0){
+                sb.append("+f L{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f L{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl L ");
+                sb.append(gui.getSpnLaser().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnMachineGun().getValue().toString()) == -1){
+                sb.append("-f MG");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnMachineGun().getValue().toString()) == 0){
+                sb.append("+f MG{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f MG{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl MG ");
+                sb.append(gui.getSpnMachineGun().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnNarrow().getValue().toString()) == -1){
+                sb.append("-f N");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnNarrow().getValue().toString()) == 0){
+                sb.append("+f N{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f N{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl N ");
+                sb.append(gui.getSpnNarrow().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnOscillationOverthruster().getValue().toString()) == -1){
+                sb.append("-f OO");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnOscillationOverthruster().getValue().toString()) == 0){
+                sb.append("+f OO{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f OO{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl OO ");
+                sb.append(gui.getSpnOscillationOverthruster().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnPhantomZone().getValue().toString()) == -1){
+                sb.append("-f PZ");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnPhantomZone().getValue().toString()) == 0){
+                sb.append("+f PZ{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f PZ{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl PZ ");
+                sb.append(gui.getSpnPhantomZone().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnQuickturn().getValue().toString()) == -1){
+                sb.append("-f QT");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnQuickturn().getValue().toString()) == 0){
+                sb.append("+f QT{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f QT{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl QT ");
+                sb.append(gui.getSpnQuickturn().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnSuperBullet().getValue().toString()) == -1){
+                sb.append("-f SB");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnSuperBullet().getValue().toString()) == 0){
+                sb.append("+f SB{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f SB{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl SB ");
+                sb.append(gui.getSpnSuperBullet().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnSeer().getValue().toString()) == -1){
+                sb.append("-f SE");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnSeer().getValue().toString()) == 0){
+                sb.append("+f SE{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f SE{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl SE ");
+                sb.append(gui.getSpnSeer().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnSheild().getValue().toString()) == -1){
+                sb.append("-f SH");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnSheild().getValue().toString()) == 0){
+                sb.append("+f SH{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f SH{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl SH ");
+                sb.append(gui.getSpnSheild().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnSteamroller().getValue().toString()) == -1){
+                sb.append("-f SR");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnSteamroller().getValue().toString()) == 0){
+                sb.append("+f SR{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f SR{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl SR ");
+                sb.append(gui.getSpnSteamroller().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnStealth().getValue().toString()) == -1){
+                sb.append("-f ST");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnStealth().getValue().toString()) == 0){
+                sb.append("+f ST{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f ST{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl ST ");
+                sb.append(gui.getSpnStealth().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnShockwave().getValue().toString()) == -1){
+                sb.append("-f SW");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnShockwave().getValue().toString()) == 0){
+                sb.append("+f SW{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f SW{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl SW ");
+                sb.append(gui.getSpnShockwave().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnTiny().getValue().toString()) == -1){
+                sb.append("-f T");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnTiny().getValue().toString()) == 0){
+                sb.append("+f T{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f T{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl T ");
+                sb.append(gui.getSpnTiny().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnTheif().getValue().toString()) == -1){
+                sb.append("-f TH");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnTheif().getValue().toString()) == 0){
+                sb.append("+f TH{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f TH{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl TH ");
+                sb.append(gui.getSpnTheif().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnUseless().getValue().toString()) == -1){
+                sb.append("-f US");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnUseless().getValue().toString()) == 0){
+                sb.append("+f US{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f US{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl US ");
+                sb.append(gui.getSpnUseless().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnHighSpeed().getValue().toString()) == -1){
+                sb.append("-f V");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnHighSpeed().getValue().toString()) == 0){
+                sb.append("+f V{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f V{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl V ");
+                sb.append(gui.getSpnHighSpeed().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnWings().getValue().toString()) == -1){
+                sb.append("-f WG");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnWings().getValue().toString()) == 0){
+                sb.append("+f WG{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f WG{2}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl WG ");
+                sb.append(gui.getSpnWings().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(gui.getSpnJumpingFlag().isEnabled()){
+                if(Integer.parseInt(gui.getSpnJumpingFlag().getValue().toString()) == -1){
+                   sb.append("-f J");
+                   options.add(sb.toString());
+                   sb.delete(0, sb.length());
+                }else if(Integer.parseInt(gui.getSpnJumpingFlag().getValue().toString()) == 0){
+                   sb.append("+f J{1}");
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+                }else{
+                    sb.append("+f J{1}");
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+
+                    sb.append("-sl J ");
+                    sb.append(gui.getSpnJumpingFlag().getValue().toString());
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+                }
+            }
+
+            if(gui.getSpnRicochetingFlag().isEnabled()){
+                if(Integer.parseInt(gui.getSpnRicochetingFlag().getValue().toString()) == -1){
+                   sb.append("-f R");
+                   options.add(sb.toString());
+                   sb.delete(0, sb.length());
+                }else if(Integer.parseInt(gui.getSpnRicochetingFlag().getValue().toString()) == 0){
+                   sb.append("+f R{1}");
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+                }else{
+                    sb.append("+f R{1}");
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+
+                    sb.append("-sl R ");
+                    sb.append(gui.getSpnRicochetingFlag().getValue().toString());
+                    options.add(sb.toString());
+                    sb.delete(0, sb.length());
+                }
+            }
+        }
+
+        if(gui.getChkAllBadflagsOn().isSelected()){
+            sb.append("+f bad");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }else{
+            if(Integer.parseInt(gui.getSpnBlindness().getValue().toString()) == -1){
+                sb.append("-f B");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnBlindness().getValue().toString()) == 0){
+                sb.append("+f B{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f B{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl B ");
+                sb.append(gui.getSpnBlindness().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnBouncy().getValue().toString()) == -1){
+                sb.append("-f BY");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnBouncy().getValue().toString()) == 0){
+                sb.append("+f BY{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f BY{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl BY ");
+                sb.append(gui.getSpnBouncy().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnColourBlindness().getValue().toString()) == -1){
+                sb.append("-f CB");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnColourBlindness().getValue().toString()) == 0){
+                sb.append("+f CB{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f CB{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl CB ");
+                sb.append(gui.getSpnColourBlindness().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnForwardOnly().getValue().toString()) == -1){
+                sb.append("-f FO");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnForwardOnly().getValue().toString()) == 0){
+                sb.append("+f FO{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f FO{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl FO ");
+                sb.append(gui.getSpnForwardOnly().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnJamming().getValue().toString()) == -1){
+                sb.append("-f JM");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnJamming().getValue().toString()) == 0){
+                sb.append("+f JM{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f JM{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl JM ");
+                sb.append(gui.getSpnJamming().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnLeftTurnOnly().getValue().toString()) == -1){
+                sb.append("-f LT");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnLeftTurnOnly().getValue().toString()) == 0){
+                sb.append("+f LT{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f LT{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl LT ");
+                sb.append(gui.getSpnLeftTurnOnly().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnMomentum().getValue().toString()) == -1){
+                sb.append("-f M");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnMomentum().getValue().toString()) == 0){
+                sb.append("+f M{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f M{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl M ");
+                sb.append(gui.getSpnMomentum().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnNoJumping().getValue().toString()) == -1){
+                sb.append("-f NJ");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnNoJumping().getValue().toString()) == 0){
+                sb.append("+f NJ{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f NJ{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl NJ ");
+                sb.append(gui.getSpnNoJumping().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnObesity().getValue().toString()) == -1){
+                sb.append("-f O");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnObesity().getValue().toString()) == 0){
+                sb.append("+f O{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f O{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl O ");
+                sb.append(gui.getSpnObesity().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnReverseControlls().getValue().toString()) == -1){
+                sb.append("-f RC");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnReverseControlls().getValue().toString()) == 0){
+                sb.append("+f RC{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f RC{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl RC ");
+                sb.append(gui.getSpnReverseControlls().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnReverseOnly().getValue().toString()) == -1){
+                sb.append("-f RO");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnReverseOnly().getValue().toString()) == 0){
+                sb.append("+f RO{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f RO{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl RO ");
+                sb.append(gui.getSpnReverseOnly().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnRightTurnOnly().getValue().toString()) == -1){
+                sb.append("-f RT");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnRightTurnOnly().getValue().toString()) == 0){
+                sb.append("+f RT{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f RT{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl RT ");
+                sb.append(gui.getSpnRightTurnOnly().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnTriggerHappy().getValue().toString()) == -1){
+                sb.append("-f TR");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnTriggerHappy().getValue().toString()) == 0){
+                sb.append("+f TR{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f TR{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl TR ");
+                sb.append(gui.getSpnTriggerHappy().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+
+            if(Integer.parseInt(gui.getSpnWideAngle().getValue().toString()) == -1){
+                sb.append("-f WA");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else if(Integer.parseInt(gui.getSpnWideAngle().getValue().toString()) == 0){
+                sb.append("+f WA{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }else{
+                sb.append("+f WA{1}");
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+
+                sb.append("-sl WA ");
+                sb.append(gui.getSpnWideAngle().getValue().toString());
+                options.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+        }
+
+        //Set flags to spawn on buildings
+        if(gui.getChkFlagsOnBuildings().isSelected()){
+            sb.append("-fb");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set antidote flags
+        if(gui.getChkAntidoteFlags().isSelected()){
+            sb.append("-sa");
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set extra flags
+        if(Integer.parseInt(gui.getSpnExtraFlags().getValue().toString()) != 0){
+            sb.append("+s ");
+            sb.append(gui.getSpnExtraFlags().getValue().toString());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        //Set number of flags
+        if(Integer.parseInt(gui.getSpnNumberOfFlags().getValue().toString()) != 0){
+            sb.append("-s ");
+            sb.append(gui.getSpnNumberOfFlags().getValue().toString());
+            options.add(sb.toString());
+            sb.delete(0, sb.length());
         }
     }
 

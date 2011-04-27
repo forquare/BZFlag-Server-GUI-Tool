@@ -17,6 +17,10 @@ public class Controller {
 
     public Controller(){
         gui = new MainFrame();
+
+        //Temp add random map
+        gui.getCmbMaps().addItem("BOOM");
+
         gui.setController(this);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
