@@ -398,7 +398,7 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="cmbMaps">
               <Properties>
-                <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;This list is generated from the contents of a directory. &lt;br /&gt;&#xa;It will look for map or bzw files in the following directories:&#xa;&lt;ul&gt;&#xa;&lt;li&gt;On Windows&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;Path\to\user\home\My Documents\&#xfeff;My BZFlag Files\maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&#xa;&lt;li&gt;On UNIX&lt;/li&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;~/.maps&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
+                <Property name="toolTipText" type="java.lang.String" value="&lt;html&gt;&#xa;These maps are those placed in the &quot;maps&quot; folder located in the &quot;My BZFlag Files&quot;&lt;br /&gt;&#xa;which should be situated in the Documents folder in your home directory.&lt;br /&gt;&#xa;&lt;br /&gt;&#xa;For example:&lt;br /&gt;&#xa;C:\Documents and Settings\My Documents\My BZFlag Files\maps&lt;br /&gt;&#xa;~/Documents/My BZFlag Files/maps&#xa;&lt;/html&gt;"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
