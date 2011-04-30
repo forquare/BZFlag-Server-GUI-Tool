@@ -16,11 +16,19 @@ public class Controller {
 
     private MainFrame gui;
     private Process server;
+    private File confFile;
 
     /**
      * Automagically sets up the GUI
      */
     public Controller(){
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+
+            public void run() {
+                killServer();
+            }
+        });
+
         gui = new MainFrame();
 
         //Set maps for GUI
@@ -94,44 +102,28 @@ public class Controller {
      * @return True if the launching of the server was successful, False if it was not.
      */
     public boolean launchServer(){
+        try {
+            confFile = File.createTempFile("bzflag-server-gui-temp-config", ".conf");
+        } catch (IOException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
         if(System.getProperty("os.name").toLowerCase().contains("window")){
-            if(exportSettings(System.getenv("windir") + File.separator + "TEMP" + File.separator+ "bzflag-server-gui-temp-config")){
-                //Launch Windows server
+            if(exportSettings(confFile.getPath())){
+                return launchWindows();
+            }else{
+                return false;
             }
         }else{
-            if(exportSettings("/tmp/bzflag-server-gui-temp-config")){
+            if(exportSettings(confFile.getPath())){
                 if(System.getProperty("os.name").toLowerCase().contains("mac")){
-                    try {
-                        File appDir = new File ("/Applications");
-                        String[] files = appDir.list();
-                        String BZFlag = new String();
-                        for(int i = 0; i < files.length; i++){
-                            if(files[i].toLowerCase().contains("bzflag")){
-                                BZFlag = files[i];
-                                i = files.length;
-                            }
-                        }
-                        if(BZFlag.isEmpty()){
-                            gui.printError("Cannot find BZFlag server...");
-                            return false;
-                        }
-                        server = Runtime.getRuntime().exec(
-                            "/Applications/" + BZFlag + "/Contents/MacOS/bzfs -conf /tmp/bzflag-server-gui-temp-config"
-                        );
-                    } catch (IOException ex) {
-                        gui.printError("An error has occured in launching the server");
-                        Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-                        return false;
-                    }
+                    return launchMac();
                 }else{
-                    //Launch Linux server from /usr/games
+                    return launchUNIX();
                 }
             }else{
                 return false;
             }
         }
-        gui.serverLaunched();
-        return true;
     }
 
     /**
@@ -139,13 +131,7 @@ public class Controller {
      */
     public void killServer(){
         server.destroy();
-        if(System.getProperty("os.name").toLowerCase().contains("window")){
-            File f = new File(System.getenv("windir") + File.separator + "TEMP" + File.separator+ "bzflag-server-gui-temp-config");
-            f.delete();
-        }else{
-            File f = new File("/tmp/bzflag-server-gui-temp-config");
-            f.delete();
-        }
+        confFile.delete();
         gui.serverKilled();
     }
 
@@ -170,6 +156,78 @@ public class Controller {
             Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
+        return true;
+    }
+
+    private boolean launchMac(){
+        try {
+            File appDir = new File("/Applications");
+            String[] files = appDir.list();
+            String BZFlag = new String();
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].toLowerCase().contains("bzflag")) {
+                    BZFlag = files[i];
+                    i = files.length;
+                }
+            }
+            if (BZFlag.isEmpty()) {
+                gui.printError("Cannot find BZFlag server...");
+                return false;
+            }
+            server = Runtime.getRuntime().exec(
+                        "/Applications/" + BZFlag + "/Contents/MacOS/bzfs -conf " + confFile.getPath()
+                     );
+        } catch (IOException ex) {
+            gui.printError("An error has occured in launching the server");
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+        gui.serverLaunched();
+        return true;
+    }
+
+    private boolean launchUNIX(){
+        try {
+            File bzfs = new File("/usr/games/bzfs");
+            if(!bzfs.exists()){
+                gui.printError("Cannot find BZFlag server in \"/usr/games\" ...");
+                return false;
+            }
+            server = Runtime.getRuntime().exec(bzfs.getPath() + " -conf " + confFile.getPath());
+        } catch (IOException ex) {
+            gui.printError("An error has occured in launching the server");
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+        gui.serverLaunched();
+        return true;
+    }
+
+    private boolean launchWindows(){
+        try {
+            File appDir = new File("C:" + File.separator + "Program Files");
+            String[] files = appDir.list();
+            String BZFlag = new String();
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].toLowerCase().contains("bzflag")) {
+                    BZFlag = files[i];
+                    i = files.length;
+                }
+            }
+            if (BZFlag.isEmpty()) {
+                gui.printError("Cannot find BZFlag server...");
+                return false;
+            }
+            server = Runtime.getRuntime().exec(
+                        appDir.getPath() + File.separator + BZFlag + File.separator +
+                        "bzfs -conf " + confFile.getPath()
+                    );
+        } catch (IOException ex) {
+            gui.printError("An error has occured in launching the server");
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+        gui.serverLaunched();
         return true;
     }
 }
