@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 public class Controller {
 
     private MainFrame gui;
+    private Process server;
 
     /**
      * Automagically sets up the GUI
@@ -94,21 +95,42 @@ public class Controller {
      */
     public boolean launchServer(){
         if(System.getProperty("os.name").toLowerCase().contains("window")){
-            exportSettings(System.getenv("windir") + "\\TEMP\\bzflag-server-gui-temp-config");
+            if(exportSettings(System.getenv("windir") + File.separator + "TEMP" + File.separator+ "bzflag-server-gui-temp-config")){
+                //Launch Windows server
+            }
         }else{
             if(exportSettings("/tmp/bzflag-server-gui-temp-config")){
-                try {
-                    Process p = Runtime.getRuntime().exec("/usr/games/bzfs -conf /tmp/bzflag-server-gui-temp-config");
-                } catch (IOException ex) {
-                    gui.printError("An error has occured in launching the server");
-                    Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
-                    return false;
+                if(System.getProperty("os.name").toLowerCase().contains("mac")){
+                    try {
+                        File appDir = new File ("/Applications");
+                        String[] files = appDir.list();
+                        String BZFlag = new String();
+                        for(int i = 0; i < files.length; i++){
+                            if(files[i].toLowerCase().contains("bzflag")){
+                                BZFlag = files[i];
+                                i = files.length;
+                            }
+                        }
+                        if(BZFlag.isEmpty()){
+                            gui.printError("Cannot find BZFlag server...");
+                            return false;
+                        }
+                        server = Runtime.getRuntime().exec(
+                            "/Applications/" + BZFlag + "/Contents/MacOS/bzfs -conf /tmp/bzflag-server-gui-temp-config"
+                        );
+                    } catch (IOException ex) {
+                        gui.printError("An error has occured in launching the server");
+                        Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+                        return false;
+                    }
+                }else{
+                    //Launch Linux server from /usr/games
                 }
             }else{
                 return false;
             }
         }
-        
+        gui.serverLaunched();
         return true;
     }
 
@@ -116,7 +138,15 @@ public class Controller {
      * Allows the suer to manually kill the server
      */
     public void killServer(){
-
+        server.destroy();
+        if(System.getProperty("os.name").toLowerCase().contains("window")){
+            File f = new File(System.getenv("windir") + File.separator + "TEMP" + File.separator+ "bzflag-server-gui-temp-config");
+            f.delete();
+        }else{
+            File f = new File("/tmp/bzflag-server-gui-temp-config");
+            f.delete();
+        }
+        gui.serverKilled();
     }
 
     /**
