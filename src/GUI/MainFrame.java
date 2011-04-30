@@ -354,7 +354,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         tabGamePlay.add(chkRandomWorld, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
-        cmbMaps.setToolTipText("<html>\nThis list is generated from the contents of a directory. <br />\nIt will look for map or bzw files in the following directories:\n<ul>\n<li>On Windows</li>\n<ul>\n<li>Path\\to\\user\\home\\My Documents\\﻿My BZFlag Files\\maps</li>\n</ul>\n\n<li>On UNIX</li>\n<ul>\n<li>~/.maps</li>\n</ul>\n</ul>\n</html>");
+        cmbMaps.setToolTipText("<html>\nThese maps are those placed in the \"maps\" folder located in the \"My BZFlag Files\"<br />\nwhich should be situated in the Documents folder in your home directory.<br />\n<br />\nFor example:<br />\nC:\\Documents and Settings\\My Documents\\My BZFlag Files\\maps<br />\n~/Documents/My BZFlag Files/maps\n</html>");
         tabGamePlay.add(cmbMaps, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, -1));
 
         chkRandomHeightBuildings.setText("Buildings have random height");
@@ -1559,6 +1559,21 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_sldDebugLevelStateChanged
 
     private void chkRandomWorldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRandomWorldActionPerformed
+        setRandomWorld();
+    }//GEN-LAST:event_chkRandomWorldActionPerformed
+
+    public void setRandomWorld(boolean isSelected){
+        chkRandomWorld.setSelected(isSelected);
+        setRandomWorld();
+    }
+
+    public void setRandomWorld(boolean isSelected, boolean isEnabled){
+        chkRandomWorld.setSelected(isSelected);
+        chkRandomWorld.setEnabled(isEnabled);
+        setRandomWorld();
+    }
+
+    private void setRandomWorld(){
         if(chkRandomWorld.isSelected()){
             cmbMaps.setEnabled(false);
             chkRandomRotateObjects.setEnabled(true);
@@ -1572,8 +1587,7 @@ public class MainFrame extends javax.swing.JFrame {
             spnBuildingDensity.setEnabled(false);
             spnWorldSize.setEnabled(false);
         }
-    }//GEN-LAST:event_chkRandomWorldActionPerformed
-
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExportSettings;

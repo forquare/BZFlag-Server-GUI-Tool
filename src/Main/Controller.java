@@ -13,7 +13,6 @@ import java.util.logging.Logger;
 /**
  *
  * @author benlavery
- * @version 110417
  */
 public class Controller {
 
@@ -36,28 +35,50 @@ public class Controller {
     private void setMaps(){
         String OS = System.getProperty("os.name");
         String homeDir = System.getProperty("user.home");
-        File mapsDir;
-        String mapsPath;
+        StringBuilder sb = new StringBuilder();
+        File mapsDirectory;
+        String[] maps;
 
         if(OS.toLowerCase().contains("window")){
-            mapsPath = homeDir + "\\My Documents\\My BZFlag Files\\maps";
+            sb.append(homeDir);
+            sb.append(File.separator);
+            sb.append("My Documents");
+            sb.append(File.separator);
+            sb.append("My BZFlag Files");
+            sb.append(File.separator);
+            sb.append("maps");
         }else{
-            mapsPath = homeDir + "/.maps";
+            //Assume UNIX based
+            sb.append(homeDir);
+            sb.append(File.separator);
+            sb.append("Documents");
+            sb.append(File.separator);
+            sb.append("My BZFlag Files");
+            sb.append(File.separator);
+            sb.append("maps");
         }
 
-        mapsDir = new File(mapsPath);
-        if(!mapsDir.exists()){
-            gui.printError("There is no maps folder in " + mapsPath);
-            System.exit(0);
-        }
-        String[] maps = mapsDir.list();
-        if(maps.length == 0){
-            gui.printError("There are no suitable maps in " + mapsPath);
-            System.exit(0);
-        }
-        for(int i = 0; i < maps.length; i++){
-            if(maps[i].toLowerCase().contains("bzw") || maps[i].toLowerCase().contains("map")){
-                gui.getCmbMaps().addItem(maps[i]);
+        mapsDirectory = new File(sb.toString());
+        if(!mapsDirectory.exists() || !mapsDirectory.isDirectory()){
+            //If the maps directory doesn't exist, force the user to
+            //use a random map
+            gui.setRandomWorld(true, false);
+            //Tell user of this action
+            gui.printError("Because I can't find \"" + mapsDirectory.getPath() +
+                    "\"\nI will only allow you to use random maps.");
+        }else{
+            maps = mapsDirectory.list();
+            for(int i = 0; i < maps.length; i++){
+                if(maps[i].toLowerCase().contains("bzw") || maps[i].toLowerCase().contains("map")){
+                    gui.getCmbMaps().addItem(maps[i]);
+                }
+            }
+
+            //If there are no maps, force user to use a random map
+            if(gui.getCmbMaps().getItemCount() == 0){
+                gui.setRandomWorld(true, false);
+                gui.printError("Because I can't find any suitable files in\n\"" + mapsDirectory.getPath() +
+                    "\"\nI will only allow you to use random maps.");
             }
         }
     }
