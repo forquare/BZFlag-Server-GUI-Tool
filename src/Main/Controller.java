@@ -1,9 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Main;
+
 import GUI.MainFrame;
 import java.io.File;
 import java.io.IOException;
@@ -11,13 +7,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * This controller class is responsible for instantiating the GUI and other components in the system.
+ * 
  * @author benlavery
+ * @version 110430
  */
 public class Controller {
 
     private MainFrame gui;
 
+    /**
+     * Automagically sets up the GUI
+     */
     public Controller(){
         gui = new MainFrame();
 
@@ -32,6 +33,9 @@ public class Controller {
         });
     }
 
+    /**
+     * Looks at pre-defined directories for map files
+     */
     private void setMaps(){
         String OS = System.getProperty("os.name");
         String homeDir = System.getProperty("user.home");
@@ -83,31 +87,59 @@ public class Controller {
         }
     }
 
-    public void launchServer(){
+    /**
+     * Launches the server
+     *
+     * @return True if the launching of the server was successful, False if it was not.
+     */
+    public boolean launchServer(){
         if(System.getProperty("os.name").toLowerCase().contains("window")){
             exportSettings(System.getenv("windir") + "\\TEMP\\bzflag-server-gui-temp-config");
         }else{
-            exportSettings("/tmp/bzflag-server-gui-temp-config");
-            try {
-                Process p = Runtime.getRuntime().exec("/usr/games/bzfs -conf /tmp/bzflag-server-gui-temp-config");
-            } catch (IOException ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            if(exportSettings("/tmp/bzflag-server-gui-temp-config")){
+                try {
+                    Process p = Runtime.getRuntime().exec("/usr/games/bzfs -conf /tmp/bzflag-server-gui-temp-config");
+                } catch (IOException ex) {
+                    gui.printError("An error has occured in launching the server");
+                    Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+                    return false;
+                }
+            }else{
+                return false;
             }
         }
         
-        
+        return true;
     }
 
+    /**
+     * Allows the suer to manually kill the server
+     */
     public void killServer(){
 
     }
 
+    /**
+     * Allows the user to import settings from a file into the GUI.
+     */
     public void importSettings(){
 
     }
 
-    public void exportSettings(String path){
-        Exporter exp = new Exporter(gui, path);
+    /**
+     * Allows user to export data from the GUI into a file.
+     *
+     * @param path - A String containing the path of the file to write.
+     * @return True if the writing of the file was successful, False if it was not.
+     */
+    public boolean exportSettings(String path){
+        try {
+            new Exporter(gui, path);
+        } catch (IOException ex) {
+            gui.printError("An error has occured in exporting your settings");
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+        return true;
     }
-
 }

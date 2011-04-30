@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package util;
 
 import java.io.*;
@@ -10,9 +6,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * This class allows easy reading and writing of plain text files.<br />
+ * This class has remained mostly unchanged since 080416
  *
  * @author Ben Lavery
- * @version 16/4/08
+ * @version 110427
  */
 public class FileReadWrite {
 
@@ -26,57 +24,47 @@ public class FileReadWrite {
      * a Vector.
      *
      * @return An array of String containing all of the values from the file.
+     * @param path - A String containing the path of the file to read.
+     * @throws FileNotFoundException
+     * @throws IOException
      */
-    public Vector<String> read(String path) {
+    public Vector<String> read(String path) throws FileNotFoundException, IOException {
         file = new File(path);
-        try {
-            fread = new FileReader(file);
-            buf = new BufferedReader(fread);
-        } catch (FileNotFoundException e) {
-            Logger.getLogger(FileReadWrite.class.getName()).log(Level.SEVERE, null, e);
-        } catch (NullPointerException e) {
-            Logger.getLogger(FileReadWrite.class.getName()).log(Level.SEVERE, null, e);
-        }
-
+        fread = new FileReader(file);
+        buf = new BufferedReader(fread);
 
         String temp;
         Vector<String> working = new Vector<String>();
 
         while (true) {
-            try {
-                temp = buf.readLine();
+            temp = buf.readLine();
 
-                if (temp == null) {
-                    break;
-                } else {
-                    working.add(temp);
-                }
-            } catch (IOException e) {
-                Logger.getLogger(FileReadWrite.class.getName()).log(Level.SEVERE, null, e);
-            } catch (NullPointerException e) {
-                Logger.getLogger(FileReadWrite.class.getName()).log(Level.SEVERE, null, e);
+            if (temp == null) {
+                break;
+            } else {
+                working.add(temp);
             }
         }
 
         return working;
     }
 
-    public void writer(Vector<String> toWrite, String path) {
+     /**
+     * Writes out, line by line, the values from a Vector into
+     * a file.
+     *
+     * @param toWrite - A Vector, each element will be a new line in the file.
+     * @param path - A String containing the path of the file to write.
+      * @throws IOException
+     */
+    public void writer(Vector<String> toWrite, String path) throws IOException {
         file = new File(path);
-        try {
-            fw = new FileWriter(file);
-        } catch (IOException e) {
-            Logger.getLogger(FileReadWrite.class.getName()).log(Level.SEVERE, null, e);
-        }
+        fw = new FileWriter(file);
 
         for (int i = 0; i < toWrite.size(); i++) {
-            try {
-                fw.write(toWrite.get(i));
-                fw.write('\n');
-                fw.flush();
-            } catch (IOException e) {
-                Logger.getLogger(FileReadWrite.class.getName()).log(Level.SEVERE, null, e);
-            }
+            fw.write(toWrite.get(i));
+            fw.write('\n');
+            fw.flush();
         }
     }
 }
