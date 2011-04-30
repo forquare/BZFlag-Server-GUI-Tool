@@ -243,6 +243,11 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("BZFlag Server GUI");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         tabAllTabs.setAutoscrolls(true);
 
@@ -959,6 +964,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         btnKillServer.setText("Kill Server");
+        btnKillServer.setEnabled(false);
         btnKillServer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnKillServerActionPerformed(evt);
@@ -1531,8 +1537,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_chkAllBadFlagsOnActionPerformed
 
     private void btnKillServerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKillServerActionPerformed
-        JOptionPane.showMessageDialog(null, "I will kill the server");
-        //controller.killServer();
+        //JOptionPane.showMessageDialog(null, "I will kill the server");
+        controller.killServer();
     }//GEN-LAST:event_btnKillServerActionPerformed
 
     private void btnExportSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportSettingsActionPerformed
@@ -1562,6 +1568,10 @@ public class MainFrame extends javax.swing.JFrame {
         setRandomWorld();
     }//GEN-LAST:event_chkRandomWorldActionPerformed
 
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+
+    }//GEN-LAST:event_formWindowClosed
+
     public void setRandomWorld(boolean isSelected){
         chkRandomWorld.setSelected(isSelected);
         setRandomWorld();
@@ -1587,6 +1597,16 @@ public class MainFrame extends javax.swing.JFrame {
             spnBuildingDensity.setEnabled(false);
             spnWorldSize.setEnabled(false);
         }
+    }
+
+    public void serverLaunched(){
+        btnLaunchServer.setEnabled(false);
+        btnKillServer.setEnabled(true);
+    }
+
+    public void serverKilled(){
+        btnLaunchServer.setEnabled(true);
+        btnKillServer.setEnabled(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
