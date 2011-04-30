@@ -1,9 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Main;
+
 import GUI.MainFrame;
 import util.FileReadWrite;
 import java.io.BufferedReader;
@@ -15,9 +11,10 @@ import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
+ * This class gathers data from each widget on the GUI and writes it to a defined file.
  *
  * @author benlavery
- * @version 110417
+ * @version 110426
  */
 public class Exporter {
 
@@ -26,8 +23,14 @@ public class Exporter {
     final int INITIAL_VECTOR_COUNT = 99;
     private Vector<String> options = new Vector<String>(INITIAL_VECTOR_COUNT);
 
-    public Exporter(JFrame mf, String p){
-        gui = (MainFrame) mf;
+    /**
+     * Creates an Exporter
+     *
+     * @param mf - An instance of a MainFrame
+     * @param p - A String containing a path of the file where data should be exported to
+     */
+    public Exporter(MainFrame mf, String p) throws IOException{
+        gui = mf;
         path = p;
         gatherData();
         exportData();
@@ -1244,7 +1247,7 @@ public class Exporter {
         }
     }
 
-    private void exportData() {
+    private void exportData() throws IOException {
         FileReadWrite frw = new FileReadWrite();
         frw.writer(options, path);
     }
