@@ -3,6 +3,7 @@ package Main;
 import GUI.MainFrame;
 import util.FileReadWrite;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.Vector;
@@ -95,7 +96,23 @@ public class Exporter {
                 sb.delete(0, sb.length());
             }
         }else{
+            String homeDir = System.getProperty("user.home");
+            String OS = System.getProperty("os.name");
+
             sb.append("-world \"");
+
+            sb.append(homeDir);
+            sb.append(File.separator);
+            if(OS.toLowerCase().contains("window")){
+                sb.append("My Documents");
+            }else{
+                sb.append("Documents");
+            }
+            sb.append(File.separator);
+            sb.append("My BZFlag Files");
+            sb.append(File.separator);
+            sb.append("maps");
+            sb.append(File.separator);
             sb.append(gui.getCmbMaps().getSelectedItem().toString());
             sb.append("\"");
             options.add(sb.toString());
