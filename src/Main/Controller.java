@@ -3,6 +3,7 @@ package Main;
 import GUI.MainFrame;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -183,6 +184,7 @@ public class Controller {
             return false;
         }
         gui.serverLaunched();
+        monitorServerProcess();
         return true;
     }
 
@@ -200,6 +202,7 @@ public class Controller {
             return false;
         }
         gui.serverLaunched();
+        monitorServerProcess();
         return true;
     }
 
@@ -228,6 +231,29 @@ public class Controller {
             return false;
         }
         gui.serverLaunched();
+        monitorServerProcess();
         return true;
+    }
+
+    //If the server process exits, we can automagically reset parts of the GUI
+    private void monitorServerProcess(){
+
+        Thread t = new Thread(new Runnable() {
+
+            public void run() {
+                while (true) {
+                    try {
+                        Thread.sleep(5000);
+                        server.exitValue();
+                        killServer();
+                        return;
+                    } catch (IllegalThreadStateException e) {
+                    } catch (InterruptedException e) {
+                    }
+                }
+            }
+        });
+
+        t.start();
     }
 }
