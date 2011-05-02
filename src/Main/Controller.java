@@ -41,6 +41,8 @@ import java.util.logging.Logger;
  */
 public class Controller {
 
+    private final String CURRENT_VERSION = "Beta 1";
+
     private MainFrame gui;
     private Process server;
     private File confFile;
@@ -50,13 +52,13 @@ public class Controller {
      */
     public Controller(){
         Runtime.getRuntime().addShutdownHook(new Thread() {
-
             public void run() {
                 killServer();
             }
         });
 
         gui = new MainFrame();
+        gui.getLblVersion().setText("Version: " + CURRENT_VERSION);
 
         //Set maps for GUI
         setMaps();
@@ -157,15 +159,21 @@ public class Controller {
      * Allows the suer to manually kill the server
      */
     public void killServer(){
-        server.destroy();
-        confFile.delete();
+        if(server != null){
+            server.destroy();
+        }
+        if(confFile != null){
+            if(confFile.exists()){
+                confFile.delete();
+            }
+        }
         gui.serverKilled();
     }
 
     /**
      * Allows the user to import settings from a file into the GUI.
      */
-    public void importSettings(){
+    public void importSettings(String path){
 
     }
 
