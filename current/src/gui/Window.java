@@ -45,7 +45,7 @@ public class Window extends JFrame{
 	
 	private GamePlay tabGamePlay = new GamePlay();
 	private Server tabServer = new Server();
-	private Flags tabFlags = new Flags();
+	private Flags tabFlags = new Flags(this);
 	
 	private JTabbedPane tabMainPane = new JTabbedPane();
 	private JButton btnLaunchServer = new JButton("Launch Server");
@@ -75,6 +75,7 @@ public class Window extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("BZFlag Server GUI - BETA");
         setResizable(true);
+        pack();
         setVisible(true);
 	}
 	
