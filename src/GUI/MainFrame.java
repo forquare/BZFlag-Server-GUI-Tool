@@ -32,6 +32,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JSlider;
@@ -253,6 +254,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnImportSettings = new javax.swing.JButton();
         btnExportSettings = new javax.swing.JButton();
         btnKillServer = new javax.swing.JButton();
+        lblVersion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BZFlag Server GUI");
@@ -280,6 +282,7 @@ public class MainFrame extends javax.swing.JFrame {
         lblGameStyle.setText("Game Style");
         tabGamePlay.add(lblGameStyle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 22, -1, -1));
 
+        lblMaxShots.setLabelFor(spnMaxShots);
         lblMaxShots.setText("Max. Shots before reload");
         tabGamePlay.add(lblMaxShots, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
 
@@ -289,7 +292,7 @@ public class MainFrame extends javax.swing.JFrame {
                 chkRicochetActionPerformed(evt);
             }
         });
-        tabGamePlay.add(chkRicochet, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 17, -1, -1));
+        tabGamePlay.add(chkRicochet, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
 
         chkJumping.setText("Allow jumping");
         chkJumping.addActionListener(new java.awt.event.ActionListener() {
@@ -297,20 +300,20 @@ public class MainFrame extends javax.swing.JFrame {
                 chkJumpingActionPerformed(evt);
             }
         });
-        tabGamePlay.add(chkJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 40, -1, -1));
+        tabGamePlay.add(chkJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, -1, -1));
 
         chkSpawnOnBuilding.setText("Spawn tanks on buildings");
-        tabGamePlay.add(chkSpawnOnBuilding, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 63, -1, -1));
+        tabGamePlay.add(chkSpawnOnBuilding, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, -1, -1));
 
         chkDieOnTeamKill.setSelected(true);
         chkDieOnTeamKill.setText("Die on team kill");
-        tabGamePlay.add(chkDieOnTeamKill, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 86, -1, -1));
+        tabGamePlay.add(chkDieOnTeamKill, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
 
         lblMaxTeamKills.setText("Kick on percentage of team kills");
         tabGamePlay.add(lblMaxTeamKills, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, -1));
 
         chkDisableBots.setText("Disable bots");
-        tabGamePlay.add(chkDisableBots, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 109, -1, -1));
+        tabGamePlay.add(chkDisableBots, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, -1));
 
         lblMaxPlayerScore.setText("Max player score");
         tabGamePlay.add(lblMaxPlayerScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
@@ -322,11 +325,11 @@ public class MainFrame extends javax.swing.JFrame {
         tabGamePlay.add(lblGameTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
 
         chkManuallyStartTimedGame.setText("Manually start timed game");
-        tabGamePlay.add(chkManuallyStartTimedGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 132, -1, -1));
+        tabGamePlay.add(chkManuallyStartTimedGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, -1, -1));
 
         chkAutoTeam.setSelected(true);
         chkAutoTeam.setText("Auto-team");
-        tabGamePlay.add(chkAutoTeam, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 155, -1, -1));
+        tabGamePlay.add(chkAutoTeam, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, -1, -1));
 
         lblMaxPlayers.setText("Max number of players");
         tabGamePlay.add(lblMaxPlayers, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
@@ -391,35 +394,35 @@ public class MainFrame extends javax.swing.JFrame {
 
         passAdminPassword.setText("abcdef");
         passAdminPassword.setPreferredSize(new java.awt.Dimension(125, 28));
-        tabGamePlay.add(passAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
+        tabGamePlay.add(passAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, -1, -1));
 
         passConfirmAdminPassword.setText("abcdef");
         passConfirmAdminPassword.setPreferredSize(new java.awt.Dimension(125, 28));
-        tabGamePlay.add(passConfirmAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
+        tabGamePlay.add(passConfirmAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, -1, -1));
 
         lblAdminPassword.setText("Admin password");
-        tabGamePlay.add(lblAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, -1, -1));
+        tabGamePlay.add(lblAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, -1, -1));
 
         lblConfirmAdminPassword.setText("Confirm admin password");
-        tabGamePlay.add(lblConfirmAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, -1, -1));
+        tabGamePlay.add(lblConfirmAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, -1, -1));
 
         chkAnnounceTKToAdmins.setText("Announce team kills to admins");
-        tabGamePlay.add(chkAnnounceTKToAdmins, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, -1, -1));
+        tabGamePlay.add(chkAnnounceTKToAdmins, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, -1, -1));
 
         txtPathToBadWords.setToolTipText("None is used if left blank");
-        tabGamePlay.add(txtPathToBadWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 130, -1));
+        tabGamePlay.add(txtPathToBadWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 130, -1));
 
         lblPathToBadWords.setText("Path to bad word file");
-        tabGamePlay.add(lblPathToBadWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
+        tabGamePlay.add(lblPathToBadWords, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, -1, -1));
 
         chkFilterChat.setText("Filter chat");
-        tabGamePlay.add(chkFilterChat, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
+        tabGamePlay.add(chkFilterChat, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, -1, -1));
 
         chkFilterChatSimple.setText("Filter chat simple");
-        tabGamePlay.add(chkFilterChatSimple, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
+        tabGamePlay.add(chkFilterChatSimple, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, -1, -1));
 
         chkFilterCallSigns.setText("Filter callsigns");
-        tabGamePlay.add(chkFilterCallSigns, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, -1, -1));
+        tabGamePlay.add(chkFilterCallSigns, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
 
         tabAllTabs.addTab("Game Play", tabGamePlay);
 
@@ -427,7 +430,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabServer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         chkQuiteAfterOneGame.setText("Quit after one game");
-        tabServer.add(chkQuiteAfterOneGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
+        tabServer.add(chkQuiteAfterOneGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, -1, -1));
 
         txtPublicMessage.setText("Noo BZFlag Server");
         tabServer.add(txtPublicMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 208, -1));
@@ -448,7 +451,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabServer.add(lblListeningPort, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
 
         chkMakeServerPrivate.setText("Private server");
-        tabServer.add(chkMakeServerPrivate, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, -1, -1));
+        tabServer.add(chkMakeServerPrivate, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, -1, -1));
 
         lblListeningAddress.setText("Listening address (interface)");
         tabServer.add(lblListeningAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, -1, -1));
@@ -458,7 +461,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         chkRequireUDP.setSelected(true);
         chkRequireUDP.setText("Require UDP");
-        tabServer.add(chkRequireUDP, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, -1, -1));
+        tabServer.add(chkRequireUDP, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
 
         txtPathToPasswordDatabase.setToolTipText("None is used if left blank");
         tabServer.add(txtPathToPasswordDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 129, -1));
@@ -527,7 +530,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabServer.add(txtPathToPIDFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 129, -1));
 
         lblWelcomeMessage.setText("Server welcome message");
-        tabServer.add(lblWelcomeMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
+        tabServer.add(lblWelcomeMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
 
         txtWelcomeMessage.setColumns(19);
         txtWelcomeMessage.setRows(5);
@@ -535,7 +538,7 @@ public class MainFrame extends javax.swing.JFrame {
         txtWelcomeMessage.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txtWelcomeMessage);
 
-        tabServer.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, -1, 111));
+        tabServer.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, -1, 111));
 
         txtBroadcastMessage.setColumns(19);
         txtBroadcastMessage.setRows(5);
@@ -543,10 +546,10 @@ public class MainFrame extends javax.swing.JFrame {
         txtBroadcastMessage.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtBroadcastMessage);
 
-        tabServer.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, 111));
+        tabServer.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, -1, 111));
 
         lblBroadcastMessage.setText("Server broadcast message");
-        tabServer.add(lblBroadcastMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, -1));
+        tabServer.add(lblBroadcastMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, -1, -1));
 
         spnSpamTime.setModel(new javax.swing.SpinnerNumberModel(15, 1, 999, 1));
         tabServer.add(spnSpamTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 57, -1));
@@ -555,7 +558,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabServer.add(lblSpamTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
 
         chkSyncTimeWithServer.setText("Sync time with server");
-        tabServer.add(chkSyncTimeWithServer, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
+        tabServer.add(chkSyncTimeWithServer, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
 
         lblInertiaX.setText("Inertia X");
         tabServer.add(lblInertiaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
@@ -575,10 +578,10 @@ public class MainFrame extends javax.swing.JFrame {
                 sldDebugLevelStateChanged(evt);
             }
         });
-        tabServer.add(sldDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 89, -1));
+        tabServer.add(sldDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, 89, -1));
 
         lblDebugLevel.setText("Debug level");
-        tabServer.add(lblDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 470, -1, -1));
+        tabServer.add(lblDebugLevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, -1, -1));
 
         spnInertiaX.setModel(new javax.swing.SpinnerNumberModel(50, 0, 999, 1));
         tabServer.add(spnInertiaX, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
@@ -587,10 +590,10 @@ public class MainFrame extends javax.swing.JFrame {
         tabServer.add(spnInertiaY, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
 
         chkPrintScoreToConsole.setText("Print score to console");
-        tabServer.add(chkPrintScoreToConsole, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, -1, -1));
+        tabServer.add(chkPrintScoreToConsole, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, -1, -1));
 
         chkAddTimestampToLog.setText("Add timestamps to log");
-        tabServer.add(chkAddTimestampToLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, -1, -1));
+        tabServer.add(chkAddTimestampToLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, -1, -1));
 
         tabAllTabs.addTab("Server", tabServer);
 
@@ -603,7 +606,7 @@ public class MainFrame extends javax.swing.JFrame {
         tabFlags.add(chkAntidoteFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, -1, -1));
 
         lblGoodFlags.setText("Bad Flags");
-        tabFlags.add(lblGoodFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
+        tabFlags.add(lblGoodFlags, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
         lblAgility.setText("Agility");
         tabFlags.add(lblAgility, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
@@ -796,119 +799,119 @@ public class MainFrame extends javax.swing.JFrame {
                 chkAllBadFlagsOnActionPerformed(evt);
             }
         });
-        tabFlags.add(chkAllBadFlagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
+        tabFlags.add(chkAllBadFlagsOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, -1, -1));
 
         lblBlindness.setText("Blindness");
-        tabFlags.add(lblBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
+        tabFlags.add(lblBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
 
         spnBlindness.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnBlindness.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnBlindness.setEnabled(false);
-        tabFlags.add(spnBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, -1, -1));
+        tabFlags.add(spnBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, -1, -1));
 
         spnBouncy.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnBouncy.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnBouncy.setEnabled(false);
-        tabFlags.add(spnBouncy, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
+        tabFlags.add(spnBouncy, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, -1, -1));
 
         lblBouncy.setText("Bouncy");
-        tabFlags.add(lblBouncy, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, -1, -1));
+        tabFlags.add(lblBouncy, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, -1, -1));
 
         spnColourBlindness.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnColourBlindness.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnColourBlindness.setEnabled(false);
-        tabFlags.add(spnColourBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
+        tabFlags.add(spnColourBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, -1));
 
         lblColourBlindness.setText("Colour blindness");
-        tabFlags.add(lblColourBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
+        tabFlags.add(lblColourBlindness, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
 
         spnForwardOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnForwardOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnForwardOnly.setEnabled(false);
-        tabFlags.add(spnForwardOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
+        tabFlags.add(spnForwardOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, -1, -1));
 
         lblForwardOnly.setText("Forward only");
-        tabFlags.add(lblForwardOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
+        tabFlags.add(lblForwardOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
 
         spnJamming.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnJamming.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnJamming.setEnabled(false);
-        tabFlags.add(spnJamming, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, -1, -1));
+        tabFlags.add(spnJamming, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, -1, -1));
 
         lblJamming.setText("Jamming");
-        tabFlags.add(lblJamming, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, -1, -1));
+        tabFlags.add(lblJamming, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, -1, -1));
 
         spnLeftTurnOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnLeftTurnOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnLeftTurnOnly.setEnabled(false);
-        tabFlags.add(spnLeftTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
+        tabFlags.add(spnLeftTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, -1, -1));
 
         lblLeftTurnOnly.setText("Left turn only");
-        tabFlags.add(lblLeftTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, -1, -1));
+        tabFlags.add(lblLeftTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, -1, -1));
 
         spnMomentum.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnMomentum.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnMomentum.setEnabled(false);
-        tabFlags.add(spnMomentum, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
+        tabFlags.add(spnMomentum, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, -1, -1));
 
         lblMomentum.setText("Momentum");
-        tabFlags.add(lblMomentum, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, -1, -1));
+        tabFlags.add(lblMomentum, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, -1, -1));
 
         spnNoJumping.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnNoJumping.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnNoJumping.setEnabled(false);
-        tabFlags.add(spnNoJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
+        tabFlags.add(spnNoJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, -1, -1));
 
         lblNoJumping.setText("No jumping");
-        tabFlags.add(lblNoJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
+        tabFlags.add(lblNoJumping, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, -1));
 
         spnObesity.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnObesity.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnObesity.setEnabled(false);
-        tabFlags.add(spnObesity, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, -1, -1));
+        tabFlags.add(spnObesity, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, -1, -1));
 
         lblObesity.setText("Obesity");
-        tabFlags.add(lblObesity, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
+        tabFlags.add(lblObesity, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, -1, -1));
 
         spnReverseControlls.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnReverseControlls.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnReverseControlls.setEnabled(false);
-        tabFlags.add(spnReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
+        tabFlags.add(spnReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, -1, -1));
 
         lblReverseControlls.setText("Reverse controlls");
-        tabFlags.add(lblReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, -1, -1));
+        tabFlags.add(lblReverseControlls, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, -1, -1));
 
         spnReverseOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnReverseOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnReverseOnly.setEnabled(false);
-        tabFlags.add(spnReverseOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
+        tabFlags.add(spnReverseOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, -1, -1));
 
         lblReverseOnly.setText("Reverse only");
-        tabFlags.add(lblReverseOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, -1, -1));
+        tabFlags.add(lblReverseOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, -1));
 
         spnRightTurnOnly.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnRightTurnOnly.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnRightTurnOnly.setEnabled(false);
-        tabFlags.add(spnRightTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
+        tabFlags.add(spnRightTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, -1, -1));
 
         lblRightTurnOnly.setText("Right turn only");
-        tabFlags.add(lblRightTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
+        tabFlags.add(lblRightTurnOnly, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, -1, -1));
 
         spnTriggerHappy.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnTriggerHappy.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnTriggerHappy.setEnabled(false);
-        tabFlags.add(spnTriggerHappy, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, -1, -1));
+        tabFlags.add(spnTriggerHappy, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, -1, -1));
 
         lblTriggerHappy.setText("Trigger happy");
-        tabFlags.add(lblTriggerHappy, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, -1, -1));
+        tabFlags.add(lblTriggerHappy, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, -1, -1));
 
         spnWideAngle.setModel(new javax.swing.SpinnerNumberModel(0, -1, 100, 1));
         spnWideAngle.setToolTipText("<html>-1 is OFF<br />0 is ON<br />Positive numbers are ON WITH X SHOTS</html>");
         spnWideAngle.setEnabled(false);
-        tabFlags.add(spnWideAngle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, -1, -1));
+        tabFlags.add(spnWideAngle, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, -1, -1));
 
         lblWideAngle.setText("Wide angle");
-        tabFlags.add(lblWideAngle, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
+        tabFlags.add(lblWideAngle, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 440, -1, -1));
 
         lblGoodFlags1.setText("Good Flags");
         tabFlags.add(lblGoodFlags1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
@@ -986,19 +989,23 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        lblVersion.setText("Version: BLAH");
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(tabAllTabs, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 620, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, tabAllTabs, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE)
                     .add(layout.createSequentialGroup()
                         .add(btnImportSettings)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(btnExportSettings)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(18, 18, 18)
+                        .add(lblVersion)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 27, Short.MAX_VALUE)
                         .add(btnKillServer)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(btnLaunchServer)))
@@ -1006,20 +1013,26 @@ public class MainFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+            .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(tabAllTabs, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 615, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(btnLaunchServer)
                     .add(btnImportSettings)
                     .add(btnExportSettings)
-                    .add(btnKillServer))
-                .addContainerGap())
+                    .add(btnKillServer)
+                    .add(lblVersion))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JLabel getLblVersion() {
+        return lblVersion;
+    }
+
 
     public void setCmbMaps(JComboBox cmbMaps) {
         this.cmbMaps = cmbMaps;
@@ -1733,6 +1746,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblTiny;
     private javax.swing.JLabel lblTriggerHappy;
     private javax.swing.JLabel lblUseless;
+    private javax.swing.JLabel lblVersion;
     private javax.swing.JLabel lblWelcomeMessage;
     private javax.swing.JLabel lblWideAngle;
     private javax.swing.JLabel lblWings;
