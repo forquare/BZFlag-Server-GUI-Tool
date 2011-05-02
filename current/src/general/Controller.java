@@ -24,7 +24,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package general
+package general;
 
 import gui.MainFrame;
 import util.Exporter;
