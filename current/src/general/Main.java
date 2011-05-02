@@ -39,6 +39,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        final Controller controller = new Controller();
+        //new Controller();
+    	new gui.Window();
     }
 }

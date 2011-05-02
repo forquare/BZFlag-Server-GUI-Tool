@@ -26,6 +26,8 @@
 
 package gui;
 
+import java.awt.event.KeyEvent;
+
 import javax.swing.*;
 
 import general.Controller;
@@ -41,16 +43,15 @@ public class Window extends JFrame{
 	
 	private Controller controller;
 	
-	private GamePlay tabGamePlay;
-	private Server tabServer;
-	private Flags tabFlags;
+	private GamePlay tabGamePlay = new GamePlay();
+	private Server tabServer = new Server();
+	private Flags tabFlags = new Flags();
 	
-	private JTabbedPane tabMainPane;
-	private JButton btnLaunchServer;
-	private JButton btnKillServer;
-	private JButton btnImportSettings;
-	private JButton btnExportSettings;
-	private JLabel lblVersion;
+	private JTabbedPane tabMainPane = new JTabbedPane();
+	private JButton btnLaunchServer = new JButton("Launch Server");
+	private JButton btnKillServer = new JButton("Kill Server");
+	private JButton btnImportSettings = new JButton("Import Settings");
+	private JButton btnExportSettings = new JButton("Export Settings");
 	
 	private final String NORTH = SpringLayout.NORTH;
 	private final String EAST = SpringLayout.EAST;
@@ -62,7 +63,7 @@ public class Window extends JFrame{
 		controller = c;
 		init();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("BZFlag Server GUI");
+        setTitle("BZFlag Server GUI - BETA");
         setResizable(false);
 	}
 	
@@ -72,18 +73,41 @@ public class Window extends JFrame{
 	public Window(){
 		init();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("BZFlag Server GUI");
-        setResizable(false);
+        setTitle("BZFlag Server GUI - BETA");
+        setResizable(true);
+        setVisible(true);
 	}
 	
 	private void init(){
 		SpringLayout layout = new SpringLayout();
 		this.setLayout(layout);
 		
+		tabMainPane.addTab("Game Play", tabGamePlay);
+		tabMainPane.setMnemonicAt(0, KeyEvent.VK_1);
+		tabMainPane.addTab("Server", tabServer);
+		tabMainPane.setMnemonicAt(1, KeyEvent.VK_2);
+		tabMainPane.addTab("Flags", tabFlags);
+		tabMainPane.setMnemonicAt(2, KeyEvent.VK_3);
+		
 		this.add(tabMainPane);
 		layout.putConstraint(NORTH, tabMainPane, 10, NORTH, this);
 		layout.putConstraint(WEST, tabMainPane, 10, WEST, this);
-		layout.putConstraint(EAST, tabMainPane, 10, EAST, this);
+		
+		this.add(btnImportSettings);
+		layout.putConstraint(NORTH, btnImportSettings, 5, SOUTH, tabMainPane);
+		layout.putConstraint(WEST, btnImportSettings, 0, WEST, tabMainPane);
+		
+		this.add(btnExportSettings);
+		layout.putConstraint(NORTH, btnExportSettings, 5, SOUTH, tabMainPane);
+		layout.putConstraint(WEST, btnExportSettings, 5, EAST, btnImportSettings);
+		
+		this.add(btnLaunchServer);
+		layout.putConstraint(NORTH, btnLaunchServer, 5, SOUTH, tabMainPane);
+		layout.putConstraint(EAST, btnLaunchServer, 0, EAST, tabMainPane);
+		
+		this.add(btnKillServer);
+		layout.putConstraint(NORTH, btnKillServer, 5, SOUTH, tabMainPane);
+		layout.putConstraint(EAST, btnKillServer, 5, WEST, btnLaunchServer);
 		
 	}
 
