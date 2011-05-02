@@ -24,10 +24,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package Main;
+package util;
 
-import GUI.MainFrame;
-import util.FileReadWrite;
+import gui.MainFrame;
+import general.Controller;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;

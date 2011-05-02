@@ -24,9 +24,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package GUI;
-import GUI.MainFrame;
-import Main.Controller;
+package gui;
+import gui.MainFrame;
+import general.Controller;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

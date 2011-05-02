@@ -24,9 +24,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package Main;
-import GUI.MainFrame;
-import java.io.File;
+package general;
 /**
  * This main class is purely for instantiating basic classes.
  *

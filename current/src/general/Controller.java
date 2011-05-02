@@ -24,9 +24,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package Main;
+package general
 
-import GUI.MainFrame;
+import gui.MainFrame;
+import util.Exporter;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
