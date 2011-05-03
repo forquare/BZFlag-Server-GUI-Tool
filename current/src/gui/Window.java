@@ -26,7 +26,14 @@
 
 package gui;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ContainerEvent;
+import java.awt.event.ContainerListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.awt.event.WindowStateListener;
 
 import javax.swing.*;
 
@@ -75,7 +82,7 @@ public class Window extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("BZFlag Server GUI - BETA");
         setResizable(true);
-        pack();
+        setSize(665, 730);
         setVisible(true);
 	}
 	
@@ -84,11 +91,8 @@ public class Window extends JFrame{
 		this.setLayout(layout);
 		
 		tabMainPane.addTab("Game Play", tabGamePlay);
-		tabMainPane.setMnemonicAt(0, KeyEvent.VK_1);
 		tabMainPane.addTab("Server", tabServer);
-		tabMainPane.setMnemonicAt(1, KeyEvent.VK_2);
 		tabMainPane.addTab("Flags", tabFlags);
-		tabMainPane.setMnemonicAt(2, KeyEvent.VK_3);
 		
 		this.add(tabMainPane);
 		layout.putConstraint(NORTH, tabMainPane, 10, NORTH, this);
@@ -109,7 +113,6 @@ public class Window extends JFrame{
 		this.add(btnKillServer);
 		layout.putConstraint(NORTH, btnKillServer, 5, SOUTH, tabMainPane);
 		layout.putConstraint(EAST, btnKillServer, 5, WEST, btnLaunchServer);
-		
 	}
 
 }
