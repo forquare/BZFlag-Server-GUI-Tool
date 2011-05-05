@@ -1,8 +1,15 @@
 package gui;
 
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.JCheckBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.SpringLayout;
 
 public class Flags extends JPanel {
 	
@@ -52,7 +59,7 @@ public class Flags extends JPanel {
 	protected JSpinner spnWideAngle = new JSpinner(new SpinnerNumberModel(-1, -1, 999, 1));
 	
 	//Other editable fields
-	protected JCheckBox chkAllGoodFlags = new JCheckBox("All good flags on", true);
+	protected JCheckBox chkAllGoodFlags = new JCheckBox("All good flags on", false);
 	protected JCheckBox chkAllBadFlags = new JCheckBox("All bad flags on", true);
 	protected JCheckBox chkAntidoteFlags = new JCheckBox("Antidote flags", false);
 	protected JCheckBox chkFlagsOnBuildings = new JCheckBox("Flags on buildings", false);
@@ -306,6 +313,11 @@ public class Flags extends JPanel {
 		this.add(chkAllGoodFlags);
 		layout.putConstraint(NORTH, chkAllGoodFlags, 5, SOUTH, spnRicocheting);
 		layout.putConstraint(WEST, chkAllGoodFlags, 250, WEST, this);
+		chkAllGoodFlags.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0){
+				setGoodFlagsEnabled();
+			}
+		});
 		
 		this.add(lblBadFlags);
 		layout.putConstraint(NORTH, lblBadFlags, 10, NORTH, this);
@@ -426,6 +438,11 @@ public class Flags extends JPanel {
 		this.add(chkAllBadFlags);
 		layout.putConstraint(NORTH, chkAllBadFlags, 5, SOUTH, spnWideAngle);
 		layout.putConstraint(WEST, chkAllBadFlags, 430, WEST, this);
+		chkAllBadFlags.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent arg0){
+				setBadFlagsEnabled();
+			}
+		});
 		
 		this.add(chkAntidoteFlags);
 		layout.putConstraint(NORTH, chkAntidoteFlags, 0, NORTH, spnSeer);
@@ -810,11 +827,93 @@ public class Flags extends JPanel {
 		spnNumberOfFlags.setValue(i);
 	}
 	
-	private void setGoodFlagsEnabled(boolean b){
-		
+	private void setGoodFlagsEnabled(){
+		if(chkAllGoodFlags.isSelected()){
+			spnAgility.setEnabled(false);
+			spnCloaking.setEnabled(false);
+			spnRapidFire.setEnabled(false);
+			spnGenocide.setEnabled(false);
+			spnGuidedMissile.setEnabled(false);
+			spnInvisibleBullet.setEnabled(false);
+			spnLaser.setEnabled(false);
+			spnMachineGun.setEnabled(false);
+			spnNarrow.setEnabled(false);
+			spnOscillationOverthruster.setEnabled(false);
+			spnPhantomZone.setEnabled(false);
+			spnQuickTurn.setEnabled(false);
+			spnSuperBullet.setEnabled(false);
+			spnSeer.setEnabled(false);
+			spnShield.setEnabled(false);
+			spnSteamroller.setEnabled(false);
+			spnStealth.setEnabled(false);
+			spnShockwave.setEnabled(false);
+			spnTiny.setEnabled(false);
+			spnTheif.setEnabled(false);
+			spnUseless.setEnabled(false);
+			spnHighSpeed.setEnabled(false);
+			spnWings.setEnabled(false);
+			spnJumping.setEnabled(false);
+			spnRicocheting.setEnabled(false);
+		}else{
+			spnAgility.setEnabled(true);
+			spnCloaking.setEnabled(true);
+			spnRapidFire.setEnabled(true);
+			spnGenocide.setEnabled(true);
+			spnGuidedMissile.setEnabled(true);
+			spnInvisibleBullet.setEnabled(true);
+			spnLaser.setEnabled(true);
+			spnMachineGun.setEnabled(true);
+			spnNarrow.setEnabled(true);
+			spnOscillationOverthruster.setEnabled(true);
+			spnPhantomZone.setEnabled(true);
+			spnQuickTurn.setEnabled(true);
+			spnSuperBullet.setEnabled(true);
+			spnSeer.setEnabled(true);
+			spnShield.setEnabled(true);
+			spnSteamroller.setEnabled(true);
+			spnStealth.setEnabled(true);
+			spnShockwave.setEnabled(true);
+			spnTiny.setEnabled(true);
+			spnTheif.setEnabled(true);
+			spnUseless.setEnabled(true);
+			spnHighSpeed.setEnabled(true);
+			spnWings.setEnabled(true);
+			spnJumping.setEnabled(true);
+			spnRicocheting.setEnabled(true);
+		}
 	}
 	
-	private void setBadFlagsEnabled(boolean b){
-		
+	private void setBadFlagsEnabled(){
+		if(chkAllBadFlags.isSelected()){
+			spnBlindness.setEnabled(false);
+			spnBouncy.setEnabled(false);
+			spnColourBlindness.setEnabled(false);
+			spnForwardOnly.setEnabled(false);
+			spnJamming.setEnabled(false);
+			spnLeftTurnOnly.setEnabled(false);
+			spnMomentum.setEnabled(false);
+			spnNoJumping.setEnabled(false);
+			spnObesity.setEnabled(false);
+			spnReverseControlls.setEnabled(false);
+			spnReverseOnly.setEnabled(false);
+			spnRightTurnOnly.setEnabled(false);
+			spnTriggerHappy.setEnabled(false);
+			spnWideAngle.setEnabled(false);
+		}else{
+			spnBlindness.setEnabled(true);
+			spnBouncy.setEnabled(true);
+			spnColourBlindness.setEnabled(true);
+			spnForwardOnly.setEnabled(true);
+			spnJamming.setEnabled(true);
+			spnLeftTurnOnly.setEnabled(true);
+			spnMomentum.setEnabled(true);
+			spnNoJumping.setEnabled(true);
+			spnObesity.setEnabled(true);
+			spnReverseControlls.setEnabled(true);
+			spnReverseOnly.setEnabled(true);
+			spnRightTurnOnly.setEnabled(true);
+			spnTriggerHappy.setEnabled(true);
+			spnWideAngle.setEnabled(true);
+		}
 	}
 }
